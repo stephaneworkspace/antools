@@ -1,0 +1,18 @@
+//
+// Created by Stéphane on 25.09.22.
+//
+
+#ifndef ASTRONUMEROLOGIE_GENERATE_DRAW_HOUSE_ANGLE_H
+#define ASTRONUMEROLOGIE_GENERATE_DRAW_HOUSE_ANGLE_H
+
+#include "draw.h"
+#include "sign.h"
+#include "house.h"
+
+class DrawHouseAngle
+{
+public:
+    static double angle_size();
+    static Offset angle(H* house, angle angle);
+};
+#endif //ASTRONUMEROLOGIE_GENERATE_DRAW_HOUSE_ANGLE_H

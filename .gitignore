@@ -1,0 +1,16 @@
+build/
+build.sim/
+build.ios/
+cmake-build-debug/
+antools.build/
+antools.xcodeproj/
+CMakeFiles/
+CMakeScripts/
+EagerLinkingTBDs/
+exe/cmake-build-debug/
+Debug/
+.cmake/
+Testing/
+lib/
+output.txt
+error.txt

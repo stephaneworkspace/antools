@@ -1,0 +1,11 @@
+*.o
+build/
+build.sim/
+build.ios/
+cmake-build-debug/
+antools.build/
+antools.xcodeproj/
+CMakeFiles/
+CMakeScripts/
+EagerLinkingTBDs/
+lib/

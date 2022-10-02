@@ -1,0 +1,14 @@
+build/
+build.sim/
+build.ios/
+cmake-build-debug/
+antools.build/
+antools.xcodeproj/
+CMakeFiles/
+CMakeScripts/
+EagerLinkingTBDs/
+exe/cmake-build-debug/
+subproject/
+antools_exe.build/
+antools_exe.xcodeproj/
+Testing/
