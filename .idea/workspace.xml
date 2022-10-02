@@ -44,6 +44,7 @@
     <option name="minorVersion" value="1" />
   </component>
   <component name="ProjectId" id="2FZy99ZIh9wtV4qTrDZQtlawmOz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -213,7 +214,7 @@
       <workItem from="1664713748068" duration="3666000" />
       <workItem from="1664717485744" duration="2019000" />
       <workItem from="1664719907146" duration="8906000" />
-      <workItem from="1664738606501" duration="8164000" />
+      <workItem from="1664738606501" duration="8474000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
