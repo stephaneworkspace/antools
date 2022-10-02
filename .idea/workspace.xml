@@ -19,7 +19,7 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="ajout debug" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="add license" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,7 +214,7 @@
       <workItem from="1664713748068" duration="3666000" />
       <workItem from="1664717485744" duration="2019000" />
       <workItem from="1664719907146" duration="8906000" />
-      <workItem from="1664738606501" duration="8474000" />
+      <workItem from="1664738606501" duration="8612000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -335,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664748216341</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add license">
+      <created>1664748809951</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664748809951</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +367,7 @@
     <MESSAGE value="changement dans la structure" />
     <MESSAGE value="fonction pour logger dans ios&#10;file:///private/var/mobile/Containers/Shared/AppGroup/357F0235-E689-4894-8F7C-5FF91826021E/&#10;&#10;let groupPath = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: &quot;stephane.bressani.dev.astronumerologie&quot;)&#10;print(groupPath?.absoluteURL)" />
     <MESSAGE value="ajout debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout debug" />
+    <MESSAGE value="add license" />
+    <option name="LAST_COMMIT_MESSAGE" value="add license" />
   </component>
 </project>
