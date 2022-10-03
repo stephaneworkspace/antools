@@ -1,7 +1,9 @@
+mod svg;
+
 extern crate base64;
 
 use std::ffi::{CStr, CString};
-use std::os::raw::c_char;
+use std::os::raw::{c_char, c_float, c_int};
 use base64::{encode, decode, DecodeError};
 use image::{ColorType, GenericImageView, ImageFormat};
 use miniz_oxide::deflate::{compress_to_vec_zlib, CompressionLevel};
@@ -282,6 +284,26 @@ fn create_pdf(data: Vec<u8>) -> Result<String, B64> {
     content.restore_state();
     writer.stream(content_id, &content.finish());
     Ok(encode(writer.finish()))
+}
+
+#[repr(C)]
+#[derive(Debug)]
+pub struct SvgData {
+    pub data: c_char,
+    pub point_idx: c_int,
+    pub point_size: c_int
+}
+
+#[repr(C)]
+#[derive(Debug)]
+pub struct SvgPoint {
+    pub point_idx: c_int,
+    pub point: c_float,
+}
+
+#[no_mangle]
+pub extern "C" fn svg_rust(data: *const SvgData, point: *const SvgPoint, data_size: c_int, point_size: c_int) {
+    svg::svg_rust_path(data, point, data_size as isize, point_size as isize);
 }
 
 
