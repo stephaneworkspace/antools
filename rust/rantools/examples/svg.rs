@@ -1,13 +1,11 @@
 extern crate core;
 
-use std::ffi::{CStr, CString};
 use std::os::raw::{c_char, c_float, c_int};
 use svg::Document;
 use svg::node::element::Path;
 use svg::node::element::path::{Data, Parameters, Position};
 
 use svg::node::element::path::Command;
-use usvg::Point;
 
 #[repr(C)]
 #[derive(Debug)]
@@ -179,19 +177,22 @@ fn main() {
     let svg_command_slice = vec.as_slice();
     let svg_command: *const SvgCommand = svg_command_slice.as_ptr();
 
+    let mut data_str: String = "".to_string();
+
     // SvgDataCommand
     let cmd = SvgDataCommand {
         svg_command,
         svg_command_size
     };
-    println!("{:?}", &cmd);
+    //println!("{:?}", &cmd);
     for i in 0..cmd.svg_command_size as isize {
         // SvgCommand
         let svg_command_extract = unsafe { cmd.svg_command.offset(i).as_ref().unwrap() };
         let c = svg_command_extract.command;
         let point_i = svg_command_extract.point_i;
+        let point_size = svg_command_extract.point_size;
         let cstr = char::from_u32(c as u32).unwrap();
-        println!("{:?} - {}", &svg_command_extract, cstr);
+        //println!("{:?} - {}", &svg_command_extract, cstr);
 
         // SvgPoint
         let svg_point_slice = vec_point.as_slice();
@@ -207,49 +208,31 @@ fn main() {
                 });
             }
         }
-        println!("{:?}", vec_point_sortie);
-    }
-
-
-    /*
-    for i in 0..cmd.size as isize {
-        let svg_command_extract = unsafe { cmd.svg_command.offset(i).as_ref().unwrap() };
-        unsafe {
-            for j in 0..svg_command_extract.point_size as isize {
-                let point = unsafe { svg_command_extract.point.offset(j).as_ref().unwrap() };
-                println!("{:?}", point.point)
+        //println!("{:?}", vec_point_sortie);
+        data_str += format!("{}", cstr.to_string()).as_str();
+        for (j, x) in vec_point_sortie.iter().enumerate() {
+            if point_size == j as c_int {
+                data_str += format!("{}", x.point).as_str();
+            } else {
+                data_str += format!("{},", x.point).as_str();
             }
         }
-        let c = svg_command_extract.command;
-        let cstr = char::from_u32(c as u32).unwrap();
-        println!("{:?} - {}", &svg_command_extract, cstr);
     }
 
-    */
+    let data2 = Data::parse(data_str.as_str()).unwrap();
+    //println!("data2: {:?}", data2);
 
-/*
-    let mut data2 = Data::new()
-        .move_to((10, 10))
-        .line_by((0, 50))
-        .line_by((50, 0))
-        .line_by((0, -50))
-        .close();
-    data2.move_to((1,2,2));
-
-    let data = Data::parse("M1,2 l3,4").unwrap();
-*/
-    /*
 
     let path = Path::new()
         .set("fill", "none")
         .set("stroke", "black")
         .set("stroke-width", 3)
-        .set("d", data);
+        .set("d", data2);
 
     let document = Document::new()
         .set("viewBox", (0, 0, 70, 70))
         .add(path);
 
     //svg::save("image.svg", &document).unwrap();
-    println!("{:?}", &document.to_string());*/
+    println!("{:?}", &document.to_string());
 }
