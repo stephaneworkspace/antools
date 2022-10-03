@@ -7,34 +7,29 @@ use svg::node::element::Path;
 use svg::node::element::path::{Data, Parameters, Position};
 
 use svg::node::element::path::Command;
+use usvg::Point;
 
-/*
- command
- 0 = Move (Position, Parameters)
- 1 = Line (Position, Parameters)
- 2 = HorizonalLine (Position, Parameters)
- 3 = VerticalLine (Position, Parameters)
- 4 = QuadraticCurve (Position, Parameters)
- 5 = SmoothQuadraticCurve (Position, Parameters)
- 6 = CubicCurve (Position, Parameters)
- 7 = SmoothCubicCurve (Position, Parameters)
- 8 = EllipticalArc (Position, Parameters)
- 99 = Close
-
- */
 #[repr(C)]
 #[derive(Debug)]
 pub struct SvgCommand {
     pub command: c_char,
-    pub point: *const i32,
+    pub point_i: i32,
     pub point_size: c_int
+}
+
+#[repr(C)]
+#[derive(Debug)]
+pub struct SvgPoint {
+    pub i: i32,
+    pub j: i32,
+    pub point: f32,
 }
 
 #[repr(C)]
 #[derive(Debug)]
 pub struct SvgDataCommand {
     pub svg_command: *const SvgCommand,
-    pub size: c_int,
+    pub svg_command_size: c_int,
 }
 
 
@@ -48,23 +43,27 @@ fn main() {
     //println!("{:?}", &data);
 
     let mut vec: Vec<SvgCommand> = Vec::new();
+    let mut vec_point: Vec<SvgPoint> = Vec::new();
 
-    let closure = |c: char, param: &Parameters| -> SvgCommand {
-        let mut vec_point: Vec<i32> = Vec::new();
+    let closure = |i: usize, c: char, param: &Parameters| -> SvgCommand {
         let point_size: c_int = param.len() as c_int;
-        for i in 0..point_size as usize {
-            vec_point.push(param[i] as i32)
+        let mut vec_point: Vec<SvgPoint> = Vec::new();
+        for j in 0..point_size as usize {
+            let point: f32 = *&param[j];
+            vec_point.push(SvgPoint {
+                i: i as i32,
+                j: j as i32,
+                point
+            })
         };
-        let vec_point_slice = vec_point.as_slice();
-        let point: *const i32 = vec_point_slice.as_ptr();
         SvgCommand {
             command: c as c_char,
-            point,
+            point_i: i as i32,
             point_size
         }
     };
 
-    for x in data.iter().as_slice() {
+    for (i, x) in data.iter().enumerate().into_iter() {
         let svg_command = match x {
             Command::Move(pos, param) => {
                 let c = match pos {
@@ -75,7 +74,7 @@ fn main() {
                         'm' // Move by
                     }
                 };
-                closure(c, param)
+                closure(i, c, param)
             }
             Command::Line(pos, param) => {
                 let c = match pos {
@@ -86,7 +85,7 @@ fn main() {
                         'l' // Line by
                     }
                 };
-                closure(c, param)
+                closure(i, c, param)
             }
             Command::HorizontalLine(pos, param) => {
                 let c = match pos {
@@ -97,7 +96,7 @@ fn main() {
                         'h'
                     }
                 };
-                closure(c, param)
+                closure(i, c, param)
             }
             Command::VerticalLine(pos, param) => {
                 let c = match pos {
@@ -108,7 +107,7 @@ fn main() {
                         'v'
                     }
                 };
-                closure(c, param)
+                closure(i, c, param)
             }
             Command::QuadraticCurve(pos, param) => {
                 let c = match pos {
@@ -119,7 +118,7 @@ fn main() {
                         'q'
                     }
                 };
-                closure(c, param)
+                closure(i, c, param)
             }
             Command::SmoothQuadraticCurve(pos, param) => {
                 let c = match pos {
@@ -130,7 +129,7 @@ fn main() {
                         't'
                     }
                 };
-                closure(c, param)
+                closure(i, c, param)
             }
             Command::CubicCurve(pos, param) => {
                 let c = match pos {
@@ -141,7 +140,7 @@ fn main() {
                         'c'
                     }
                 };
-                closure(c, param)
+                closure(i, c, param)
             }
             Command::SmoothCubicCurve(pos, param) => {
                 let c = match pos {
@@ -152,7 +151,7 @@ fn main() {
                         's'
                     }
                 };
-                closure(c, param)
+                closure(i, c, param)
             }
             Command::EllipticalArc(pos, param) => {
                 let c = match pos {
@@ -163,42 +162,46 @@ fn main() {
                         'a'
                     }
                 };
-                closure(c, param)
+                closure(i, c, param)
             },
             Command::Close => {
-                let vec_point: Vec<i32> = Vec::new();
-                let vec_point_slice = vec_point.as_slice();
-                let point: *const i32 = vec_point_slice.as_ptr();
                 SvgCommand {
                     command: 'Z' as c_char,
-                    point,
+                    point_i: i as i32,
                     point_size: 0,
                 }
             }
         };
         vec.push(svg_command);
-        //println!("{:?}", &x);
     }
     //println!("{:?}", &vec);
     let size_usize = vec.len();
-    let size: c_int = size_usize as c_int;
+    let svg_command_size: c_int = size_usize as c_int;
     let svg_command_slice = vec.as_slice();
     let svg_command: *const SvgCommand = svg_command_slice.as_ptr();
 
     let cmd = SvgDataCommand {
         svg_command,
-        size
+        svg_command_size
     };
-    //println!("{:?}", &cmd);
+    println!("{:?}", &cmd);
 
-    let svg_command_extract = unsafe { cmd.svg_command.offset(0).as_ref().unwrap() };
-    for i in 0..svg_command_extract.point_size as isize {
-        let point = unsafe { svg_command_extract.point.offset(i).as_ref() }.unwrap();
-        println!("{}", point);
+    /*
+    for i in 0..cmd.size as isize {
+        let svg_command_extract = unsafe { cmd.svg_command.offset(i).as_ref().unwrap() };
+        unsafe {
+            for j in 0..svg_command_extract.point_size as isize {
+                let point = unsafe { svg_command_extract.point.offset(j).as_ref().unwrap() };
+                println!("{:?}", point.point)
+            }
+        }
+        let c = svg_command_extract.command;
+        let cstr = char::from_u32(c as u32).unwrap();
+        println!("{:?} - {}", &svg_command_extract, cstr);
     }
-    let c = svg_command_extract.command;
-    let cstr = char::from_u32(c as u32).unwrap();
-    println!("{:?} - {}", &svg_command_extract, cstr);
+
+    */
+
 /*
     let mut data2 = Data::new()
         .move_to((10, 10))
