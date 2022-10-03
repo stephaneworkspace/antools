@@ -102,5 +102,8 @@ void Data::create_svg() {
     string p = filesystem::current_path().parent_path().parent_path();
     p += "/temp/svg_rust.svg";
     const char* path = p.c_str();
-    svg_rust(data, point, idx_data, idx_point, path);
+    const char* res = svg_rust(data, point, idx_data, idx_point, path);
+    string s;
+    s.assign(res);
+    cout << s << endl;
 }

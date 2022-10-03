@@ -302,16 +302,20 @@ pub struct SvgPoint {
 }
 
 #[no_mangle]
-pub extern "C" fn svg_rust(data: *const SvgData, point: *const SvgPoint, data_size: c_int, point_size: c_int, path: *const c_char) {
-    svg::svg_rust_path(data, point, data_size as isize, point_size as isize, path);
+pub extern "C" fn svg_rust(data: *const SvgData, point: *const SvgPoint, data_size: c_int, point_size: c_int, path: *const c_char) -> *const c_char {
+    let res= svg::svg_rust_path(data, point, data_size as isize, point_size as isize, path);
+    let res_c_str = CString::new(res).unwrap();
+    let res_ptr = res_c_str.into_raw();
+    return res_ptr;
 }
 
 
 #[cfg(test)]
 mod tests {
+    use std::ffi::{CStr, CString};
     use std::os::raw::{c_char, c_float, c_int};
     use svg::node::element::path::{Command, Data, Parameters, Position};
-    use crate::{SvgData, SvgPoint};
+    use crate::{svg_rust, SvgData, SvgPoint};
 
     #[test]
     fn it_works() {
@@ -458,13 +462,23 @@ mod tests {
             vec_data.push(svg_command);
         }
 
-        let _data = vec_data.as_ptr();
-        let _point = vec_point.as_ptr();
-        let _data_size = vec_data.len();
-        let _point_size = vec_point.len();
+        let data = vec_data.as_ptr();
+        let point = vec_point.as_ptr();
+        let data_size = vec_data.len();
+        let point_size = vec_point.len();
+        let path_cstring = CString::new("svg_rust.svg").unwrap();
+        let path = path_cstring.as_ptr();
 
-        //svg_rust(data, point, data_size as c_int, point_size as c_int, "temp/svg_rust.svg");
+        let res = svg_rust(data, point, data_size as c_int, point_size as c_int, path);
 
-        assert_eq!(true, true);
+        let res_cstr = unsafe { CStr::from_ptr(res) };
+        let res_str = res_cstr.to_str().unwrap();
+        println!("{}", res_str);
+
+        let assert = r#"<svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+<path d="M10,10 l0,50 l50,0 l0,-50 z" fill="none" stroke="black" stroke-width="3"/>
+</svg>"#;
+
+        assert_eq!(assert, res_str);
     }
 }

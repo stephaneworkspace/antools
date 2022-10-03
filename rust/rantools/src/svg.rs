@@ -7,7 +7,7 @@ use svg::Document;
 use svg::node::element::Path;
 use svg::node::element::path::Data;
 
-pub(crate) fn svg_rust_path(data: *const SvgData, point: *const SvgPoint, data_size: isize, point_size: isize, path: *const c_char) {
+pub(crate) fn svg_rust_path(data: *const SvgData, point: *const SvgPoint, data_size: isize, point_size: isize, path: *const c_char) -> String {
     let path_string = unsafe { CStr::from_ptr(path).to_str().unwrap() };
     // SvgData
     let mut vec_data: Vec<SvgData> = Vec::new();
@@ -57,7 +57,9 @@ pub(crate) fn svg_rust_path(data: *const SvgData, point: *const SvgPoint, data_s
         .set("viewBox", (0, 0, 70, 70))
         .add(path);
 
+    let res = document.clone().to_string();
+
     svg::save(path_string, &document).unwrap();
-    //println!("{:?}", &document.to_string());
+    res
 }
 
