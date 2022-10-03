@@ -53,11 +53,11 @@ pub(crate) fn svg_rust_path(data: *const SvgData, point: *const SvgPoint, data_s
         .set("stroke-width", 3)
         .set("d", data);
 
+    let res = path.clone().to_string();
+
     let document = Document::new()
         .set("viewBox", (0, 0, 70, 70))
         .add(path);
-
-    let res = document.clone().to_string();
 
     svg::save(path_string, &document).unwrap();
     res

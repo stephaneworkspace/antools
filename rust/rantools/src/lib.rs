@@ -473,12 +473,8 @@ mod tests {
 
         let res_cstr = unsafe { CStr::from_ptr(res) };
         let res_str = res_cstr.to_str().unwrap();
-        println!("{}", res_str);
 
-        let assert = r#"<svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
-<path d="M10,10 l0,50 l50,0 l0,-50 z" fill="none" stroke="black" stroke-width="3"/>
-</svg>"#;
-
+        let assert = r#"<path d="M10,10 l0,50 l50,0 l0,-50 z" fill="none" stroke="black" stroke-width="3"/>"#;
         assert_eq!(assert, res_str);
     }
 }
