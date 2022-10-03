@@ -20,19 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="fonction c++ fonctionne avec alignement de structure rust">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antools" beforeDir="false" afterPath="$PROJECT_DIR$/antools" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exe/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/exe/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/antools.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/antools.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/make_macos.sh" beforeDir="false" afterPath="$PROJECT_DIR$/make_macos.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/svg.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/svg.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/mypdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/temp/mypdf.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/mypng.png" beforeDir="false" afterPath="$PROJECT_DIR$/temp/mypng.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/mysvg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/temp/mysvg.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +31,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -274,7 +264,8 @@
       <workItem from="1664717485744" duration="2019000" />
       <workItem from="1664719907146" duration="8906000" />
       <workItem from="1664738606501" duration="8612000" />
-      <workItem from="1664793321538" duration="20982000" />
+      <workItem from="1664793321538" duration="25376000" />
+      <workItem from="1664821181797" duration="1770000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -465,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664813994149</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fonction c++ fonctionne avec alignement de structure rust">
+      <created>1664814999334</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1664814999334</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,5 +498,16 @@
     <MESSAGE value="ajout dans antools.h" />
     <MESSAGE value="fonction c++ fonctionne avec alignement de structure rust" />
     <option name="LAST_COMMIT_MESSAGE" value="fonction c++ fonctionne avec alignement de structure rust" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exe/main.cpp</url>
+          <line>127</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
