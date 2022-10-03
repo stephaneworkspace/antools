@@ -22,4 +22,5 @@ cp antools ../
 cd ..
 rm -rf build
 chmod +x antools
-./antools
+#cd exe
+#./../antools

@@ -36,6 +36,7 @@ extern "C" B64 create_pdf_b64(const char* p_svg_b64);
 extern "C" void svg_rust(const SvgData* data,
                          const SvgPoint* point,
                          int data_size,
-                         int point_size);
+                         int point_size,
+                         const char* path);
 
 #endif //ANTOOLS_LIBRARY_H

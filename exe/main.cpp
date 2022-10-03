@@ -68,7 +68,11 @@ int svg() {
     data[i].point_size = 0;
     i++;
 
-    svg_rust(data, point, i, j);
+    string p = filesystem::current_path().parent_path().parent_path();
+    p += "/temp/svg_rust.svg";
+    const char* path = p.c_str();
+
+    svg_rust(data, point, i, j, path);
 }
 int main() {
     /*

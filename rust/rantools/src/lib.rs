@@ -302,8 +302,8 @@ pub struct SvgPoint {
 }
 
 #[no_mangle]
-pub extern "C" fn svg_rust(data: *const SvgData, point: *const SvgPoint, data_size: c_int, point_size: c_int) {
-    svg::svg_rust_path(data, point, data_size as isize, point_size as isize);
+pub extern "C" fn svg_rust(data: *const SvgData, point: *const SvgPoint, data_size: c_int, point_size: c_int, path: *const c_char) {
+    svg::svg_rust_path(data, point, data_size as isize, point_size as isize, path);
 }
 
 
@@ -311,7 +311,7 @@ pub extern "C" fn svg_rust(data: *const SvgData, point: *const SvgPoint, data_si
 mod tests {
     use std::os::raw::{c_char, c_float, c_int};
     use svg::node::element::path::{Command, Data, Parameters, Position};
-    use crate::{svg_rust, SvgData, SvgPoint};
+    use crate::{SvgData, SvgPoint};
 
     #[test]
     fn it_works() {
@@ -458,12 +458,12 @@ mod tests {
             vec_data.push(svg_command);
         }
 
-        let data = vec_data.as_ptr();
-        let point = vec_point.as_ptr();
-        let data_size = vec_data.len();
-        let point_size = vec_point.len();
+        let _data = vec_data.as_ptr();
+        let _point = vec_point.as_ptr();
+        let _data_size = vec_data.len();
+        let _point_size = vec_point.len();
 
-        svg_rust(data, point, data_size as c_int, point_size as c_int);
+        //svg_rust(data, point, data_size as c_int, point_size as c_int, "temp/svg_rust.svg");
 
         assert_eq!(true, true);
     }
