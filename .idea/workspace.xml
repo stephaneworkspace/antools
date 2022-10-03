@@ -19,7 +19,9 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="work in progress" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="ça fonctionne reste plus qu'a tester depuis le c++">
+      <change beforePath="$PROJECT_DIR$/rust/rantools/examples/svg.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/examples/svg.rs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +241,7 @@
       <workItem from="1664717485744" duration="2019000" />
       <workItem from="1664719907146" duration="8906000" />
       <workItem from="1664738606501" duration="8612000" />
-      <workItem from="1664793321538" duration="13525000" />
+      <workItem from="1664793321538" duration="14607000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -395,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664807401875</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="ça fonctionne reste plus qu'a tester depuis le c++">
+      <created>1664808082944</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664808082944</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,6 +433,7 @@
     <MESSAGE value="travail sur svg pour éviter les problème de mémoire de la libraire que j'ai pris sur le net pour le c++ pour svg" />
     <MESSAGE value="problème de pointer i32 ou f32" />
     <MESSAGE value="work in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="work in progress" />
+    <MESSAGE value="ça fonctionne reste plus qu'a tester depuis le c++" />
+    <option name="LAST_COMMIT_MESSAGE" value="ça fonctionne reste plus qu'a tester depuis le c++" />
   </component>
 </project>

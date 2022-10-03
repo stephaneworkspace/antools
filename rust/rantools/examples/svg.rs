@@ -9,25 +9,25 @@ use svg::node::element::path::Command;
 
 #[repr(C)]
 #[derive(Debug)]
-pub struct SvgCommand {
-    pub command: c_char,
-    pub point_i: c_int,
+pub struct SvgData {
+    pub data_idx: c_int,
+    pub data: c_char,
+    pub point_idx: c_int,
     pub point_size: c_int
 }
 
 #[repr(C)]
 #[derive(Debug)]
 pub struct SvgPoint {
-    pub i: c_int,
-    pub j: c_int,
+    pub point_idx: c_int,
     pub point: c_float,
 }
 
 #[repr(C)]
 #[derive(Debug)]
-pub struct SvgDataCommand {
-    pub svg_command: *const SvgCommand,
-    pub svg_command_size: c_int,
+pub struct SvgDataPath {
+    pub data_path_idx: c_int,
+    pub data_path_size: c_int,
 }
 
 
@@ -40,22 +40,24 @@ fn main() {
         .close();
     //println!("{:?}", &data);
 
-    let mut vec: Vec<SvgCommand> = Vec::new();
+    let svg_command_i = 0;
+
+    let mut vec: Vec<SvgData> = Vec::new();
     let mut vec_point: Vec<SvgPoint> = Vec::new();
 
-    let mut closure = |i: usize, c: char, param: &Parameters| -> SvgCommand {
+    let mut closure = |i: usize, c: char, param: &Parameters| -> SvgData {
         let point_size: c_int = param.len() as c_int;
         for j in 0..point_size as usize {
             let point: c_float = *&param[j];
             vec_point.push(SvgPoint {
-                i: i as c_int,
-                j: j as c_int,
+                point_idx: i as c_int,
                 point
             })
         };
-        SvgCommand {
-            command: c as c_char,
-            point_i: i as c_int,
+        SvgData {
+            data_idx: svg_command_i,
+            data: c as c_char,
+            point_idx: i as c_int,
             point_size
         }
     };
@@ -162,9 +164,10 @@ fn main() {
                 closure(i, c, param)
             },
             Command::Close => {
-                SvgCommand {
-                    command: 'Z' as c_char,
-                    point_i: i as c_int,
+                SvgData {
+                    data_idx: svg_command_i,
+                    data: 'Z' as c_char,
+                    point_idx: i as c_int,
                     point_size: 0,
                 }
             }
@@ -175,21 +178,21 @@ fn main() {
     let size_usize = vec.len();
     let svg_command_size: c_int = size_usize as c_int;
     let svg_command_slice = vec.as_slice();
-    let svg_command: *const SvgCommand = svg_command_slice.as_ptr();
+    let svg_command: *const SvgData = svg_command_slice.as_ptr();
 
     let mut data_str: String = "".to_string();
 
     // SvgDataCommand
-    let cmd = SvgDataCommand {
-        svg_command,
-        svg_command_size
+    let cmd = SvgDataPath {
+        data_path_idx: svg_command_i,
+        data_path_size: svg_command_size
     };
     //println!("{:?}", &cmd);
-    for i in 0..cmd.svg_command_size as isize {
+    for i in 0..cmd.data_path_size as isize {
         // SvgCommand
-        let svg_command_extract = unsafe { cmd.svg_command.offset(i).as_ref().unwrap() };
-        let c = svg_command_extract.command;
-        let point_i = svg_command_extract.point_i;
+        let svg_command_extract = unsafe { svg_command.offset(i).as_ref().unwrap() };
+        let c = svg_command_extract.data;
+        let point_i = svg_command_extract.point_idx;
         let point_size = svg_command_extract.point_size;
         let cstr = char::from_u32(c as u32).unwrap();
         //println!("{:?} - {}", &svg_command_extract, cstr);
@@ -200,10 +203,9 @@ fn main() {
         let mut vec_point_sortie: Vec<SvgPoint> = Vec::new();
         for j in 0..vec_point.len() as isize {
             let e = unsafe { svg_point.offset(j).as_ref().unwrap() };
-            if e.i == point_i {
+            if e.point_idx == point_i {
                 vec_point_sortie.push(SvgPoint {
-                    i: e.i,
-                    j: e.j,
+                    point_idx: e.point_idx,
                     point: e.point
                 });
             }
