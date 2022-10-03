@@ -309,9 +309,162 @@ pub extern "C" fn svg_rust(data: *const SvgData, point: *const SvgPoint, data_si
 
 #[cfg(test)]
 mod tests {
+    use std::os::raw::{c_char, c_float, c_int};
+    use svg::node::element::path::{Command, Data, Parameters, Position};
+    use crate::{svg_rust, SvgData, SvgPoint};
+
     #[test]
     fn it_works() {
         let result = 2 + 2;
         assert_eq!(result, 4);
+    }
+    #[test]
+    fn svg_rust_works() {
+        let data = Data::new()
+            .move_to((10, 10))
+            .line_by((0, 50))
+            .line_by((50, 0))
+            .line_by((0, -50))
+            .close();
+
+        let mut vec_data: Vec<SvgData> = Vec::new();
+        let mut vec_point: Vec<SvgPoint> = Vec::new();
+
+        let mut closure = |i: usize, c: char, param: &Parameters| -> SvgData {
+            let point_size: c_int = param.len() as c_int;
+            for j in 0..point_size as usize {
+                let point: c_float = *&param[j];
+                vec_point.push(SvgPoint {
+                    point_idx: i as c_int,
+                    point
+                })
+            };
+            SvgData {
+                data: c as c_char,
+                point_idx: i as c_int,
+                point_size
+            }
+        };
+
+        for (i, x) in data.iter().enumerate().into_iter() {
+            let svg_command = match x {
+                Command::Move(pos, param) => {
+                    let c = match pos {
+                        Position::Absolute => {
+                            'M' // Move to
+                        }
+                        Position::Relative => {
+                            'm' // Move by
+                        }
+                    };
+                    closure(i, c, &param)
+                }
+                Command::Line(pos, param) => {
+                    let c = match pos {
+                        Position::Absolute => {
+                            'L' // Line to
+                        }
+                        Position::Relative => {
+                            'l' // Line by
+                        }
+                    };
+                    closure(i, c, &param)
+                }
+                Command::HorizontalLine(pos, param) => {
+                    let c = match pos {
+                        Position::Absolute => {
+                            'H'
+                        }
+                        Position::Relative => {
+                            'h'
+                        }
+                    };
+                    closure(i, c, &param)
+                }
+                Command::VerticalLine(pos, param) => {
+                    let c = match pos {
+                        Position::Absolute => {
+                            'V'
+                        }
+                        Position::Relative => {
+                            'v'
+                        }
+                    };
+                    closure(i, c, &param)
+                }
+                Command::QuadraticCurve(pos, param) => {
+                    let c = match pos {
+                        Position::Absolute => {
+                            'Q'
+                        }
+                        Position::Relative => {
+                            'q'
+                        }
+                    };
+                    closure(i, c, &param)
+                }
+                Command::SmoothQuadraticCurve(pos, param) => {
+                    let c = match pos {
+                        Position::Absolute => {
+                            'T'
+                        }
+                        Position::Relative => {
+                            't'
+                        }
+                    };
+                    closure(i, c, &param)
+                }
+                Command::CubicCurve(pos, param) => {
+                    let c = match pos {
+                        Position::Absolute => {
+                            'C'
+                        }
+                        Position::Relative => {
+                            'c'
+                        }
+                    };
+                    closure(i, c, &param)
+                }
+                Command::SmoothCubicCurve(pos, param) => {
+                    let c = match pos {
+                        Position::Absolute => {
+                            'S'
+                        }
+                        Position::Relative => {
+                            's'
+                        }
+                    };
+                    closure(i, c, &param)
+                }
+                Command::EllipticalArc(pos, param) => {
+                    let c = match pos {
+                        Position::Absolute => {
+                            'A'
+                        }
+                        Position::Relative => {
+                            'a'
+                        }
+                    };
+                    closure(i, c, &param)
+                },
+                Command::Close => {
+                    SvgData {
+                        data: 'Z' as c_char,
+                        point_idx: i as c_int,
+                        point_size: 0,
+                    }
+                }
+            };
+            vec_data.push(svg_command);
+        }
+
+        let data = vec_data.as_ptr();
+        let point = vec_point.as_ptr();
+        let data_size = vec_data.len();
+        let point_size = vec_point.len();
+
+        svg_rust(data, point, data_size as c_int, point_size as c_int);
+
+        assert_eq!(true, true);
     }
 }

@@ -13,6 +13,17 @@ struct B64 {
     const char* err;
 };
 
+struct SvgData {
+    char data;
+    int point_idx;
+    int point_size;
+};
+
+struct SvgPoint {
+    int point_idx;
+    float point;
+};
+
 // ./src
 
 extern "C" B64 theme_astral(int year, int month, int day, int hour, int min, double lat, double lng, int tz);
@@ -22,5 +33,9 @@ extern "C" B64 theme_astral(int year, int month, int day, int hour, int min, dou
 
 extern "C" B64 create_png_b64(const char* p_svg_b64);
 extern "C" B64 create_pdf_b64(const char* p_svg_b64);
+extern "C" void svg_rust(const SvgData* data,
+                         const SvgPoint* point,
+                         int data_size,
+                         int point_size);
 
 #endif //ANTOOLS_LIBRARY_H

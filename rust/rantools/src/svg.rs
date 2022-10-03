@@ -28,12 +28,12 @@ pub(crate) fn svg_rust_path(data: *const SvgData, point: *const SvgPoint, data_s
     // Data
     let mut data_str: String = "".to_string();
     for a in vec_data.iter() {
+        let c = char::from_u32(a.data as u32).unwrap();
+        data_str += format!("{}", c.to_string()).as_str();
         for (j, b) in vec_point.iter()
             .filter(|f| a.point_idx == f.point_idx)
             .enumerate()
         {
-            let c = char::from_u32(a.data as u32).unwrap();
-            data_str += format!("{}", c.to_string()).as_str();
             if a.point_size as usize == j {
                 data_str += format!("{}", b.point).as_str();
             } else {
