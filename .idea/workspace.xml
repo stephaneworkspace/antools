@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="fonction c++ fonctionne avec alignement de structure rust">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/exe/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -84,7 +82,7 @@
       <recent name="$PROJECT_DIR$/other_cmake/Swe" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.antools_exe">
+  <component name="RunManager" selected="Shell Script.make_ios.sh">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -243,8 +241,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Shell Script.make_macos.sh" />
         <item itemvalue="Shell Script.make_ios.sh" />
+        <item itemvalue="Shell Script.make_macos.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +263,7 @@
       <workItem from="1664719907146" duration="8906000" />
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
-      <workItem from="1664821181797" duration="1770000" />
+      <workItem from="1664821181797" duration="2806000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -463,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664814999334</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fonction c++ fonctionne avec alignement de structure rust">
+      <created>1664823576937</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1664823576937</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,16 +503,5 @@
     <MESSAGE value="ajout dans antools.h" />
     <MESSAGE value="fonction c++ fonctionne avec alignement de structure rust" />
     <option name="LAST_COMMIT_MESSAGE" value="fonction c++ fonctionne avec alignement de structure rust" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/exe/main.cpp</url>
-          <line>127</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
