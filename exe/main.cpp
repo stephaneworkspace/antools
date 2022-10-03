@@ -8,6 +8,68 @@
 
 using namespace std;
 
+int svg() {
+    /*
+<svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+<path d="M10,10 l0,50 l50,0 l0,-50 z" fill="none" stroke="black" stroke-width="3"/>
+</svg>
+     */
+    int i = 0;
+    int j = 0;
+    SvgData* data = new SvgData[5];
+    SvgPoint* point = new SvgPoint[8];
+    // i == 0
+    data[i].data = 'M';
+    data[i].point_idx = i;
+    data[i].point_size = 2;
+    point[j].point_idx = data[i].point_idx;
+    point[j].point = 10;
+    j++;
+    point[j].point_idx = data[i].point_idx;
+    point[j].point = 10;
+    j++;
+    i++;
+    // i == 1
+    data[i].data = 'l';
+    data[i].point_idx = i;
+    data[i].point_size = 2;
+    point[j].point_idx = data[i].point_idx;
+    point[j].point = 0;
+    j++;
+    point[j].point_idx = data[i].point_idx;
+    point[j].point = 50;
+    j++;
+    i++;
+    // i == 2
+    data[i].data = 'l';
+    data[i].point_idx = i;
+    data[i].point_size = 2;
+    point[j].point_idx = data[i].point_idx;
+    point[j].point = 50;
+    j++;
+    point[j].point_idx = data[i].point_idx;
+    point[j].point = 0;
+    j++;
+    i++;
+    // i == 3
+    data[i].data = 'l';
+    data[i].point_idx = i;
+    data[i].point_size = 2;
+    point[j].point_idx = data[i].point_idx;
+    point[j].point = 0;
+    j++;
+    point[j].point_idx = data[i].point_idx;
+    point[j].point = -50;
+    j++;
+    i++;
+    // i == 4
+    data[i].data = 'z';
+    data[i].point_idx = i;
+    data[i].point_size = 0;
+    i++;
+
+    svg_rust(data, point, i, j);
+}
 int main() {
     /*
     string path_string_log = filesystem::current_path().parent_path().parent_path();
@@ -17,7 +79,7 @@ int main() {
     const char* log_error_p = log_error.data();
     log_app(log_output_p, log_error_p);
     */
-
+    svg();
     cout << "Hello, World!" << endl;
 
     // Créer un pdf du thème astral dans /temp/mypdf.pdf

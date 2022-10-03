@@ -22,5 +22,4 @@ cp antools ../
 cd ..
 rm -rf build
 chmod +x antools
-./remove_logs.sh
 ./antools
