@@ -13,16 +13,16 @@ use usvg::Point;
 #[derive(Debug)]
 pub struct SvgCommand {
     pub command: c_char,
-    pub point_i: i32,
+    pub point_i: c_int,
     pub point_size: c_int
 }
 
 #[repr(C)]
 #[derive(Debug)]
 pub struct SvgPoint {
-    pub i: i32,
-    pub j: i32,
-    pub point: f32,
+    pub i: c_int,
+    pub j: c_int,
+    pub point: c_float,
 }
 
 #[repr(C)]
@@ -45,20 +45,19 @@ fn main() {
     let mut vec: Vec<SvgCommand> = Vec::new();
     let mut vec_point: Vec<SvgPoint> = Vec::new();
 
-    let closure = |i: usize, c: char, param: &Parameters| -> SvgCommand {
+    let mut closure = |i: usize, c: char, param: &Parameters| -> SvgCommand {
         let point_size: c_int = param.len() as c_int;
-        let mut vec_point: Vec<SvgPoint> = Vec::new();
         for j in 0..point_size as usize {
-            let point: f32 = *&param[j];
+            let point: c_float = *&param[j];
             vec_point.push(SvgPoint {
-                i: i as i32,
-                j: j as i32,
+                i: i as c_int,
+                j: j as c_int,
                 point
             })
         };
         SvgCommand {
             command: c as c_char,
-            point_i: i as i32,
+            point_i: i as c_int,
             point_size
         }
     };
@@ -167,7 +166,7 @@ fn main() {
             Command::Close => {
                 SvgCommand {
                     command: 'Z' as c_char,
-                    point_i: i as i32,
+                    point_i: i as c_int,
                     point_size: 0,
                 }
             }
@@ -180,11 +179,37 @@ fn main() {
     let svg_command_slice = vec.as_slice();
     let svg_command: *const SvgCommand = svg_command_slice.as_ptr();
 
+    // SvgDataCommand
     let cmd = SvgDataCommand {
         svg_command,
         svg_command_size
     };
     println!("{:?}", &cmd);
+    for i in 0..cmd.svg_command_size as isize {
+        // SvgCommand
+        let svg_command_extract = unsafe { cmd.svg_command.offset(i).as_ref().unwrap() };
+        let c = svg_command_extract.command;
+        let point_i = svg_command_extract.point_i;
+        let cstr = char::from_u32(c as u32).unwrap();
+        println!("{:?} - {}", &svg_command_extract, cstr);
+
+        // SvgPoint
+        let svg_point_slice = vec_point.as_slice();
+        let svg_point: *const SvgPoint = svg_point_slice.as_ptr();
+        let mut vec_point_sortie: Vec<SvgPoint> = Vec::new();
+        for j in 0..vec_point.len() as isize {
+            let e = unsafe { svg_point.offset(j).as_ref().unwrap() };
+            if e.i == point_i {
+                vec_point_sortie.push(SvgPoint {
+                    i: e.i,
+                    j: e.j,
+                    point: e.point
+                });
+            }
+        }
+        println!("{:?}", vec_point_sortie);
+    }
+
 
     /*
     for i in 0..cmd.size as isize {
