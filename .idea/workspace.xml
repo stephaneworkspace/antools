@@ -20,8 +20,10 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="ajout de la classe document">
-      <change beforePath="$PROJECT_DIR$/make_ios.sh" beforeDir="false" afterPath="$PROJECT_DIR$/make_ios.sh" afterDir="false" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="correction de warning">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antools" beforeDir="false" afterPath="$PROJECT_DIR$/antools" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +33,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -89,7 +92,7 @@
       <recent name="$PROJECT_DIR$/other_cmake/Svg" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.make_ios.sh">
+  <component name="RunManager" selected="CMake Application.antools_exe">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -259,8 +262,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Shell Script.make_ios.sh" />
         <item itemvalue="Shell Script.make_macos.sh" />
+        <item itemvalue="Shell Script.make_ios.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +285,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="13848000" />
+      <workItem from="1664867814726" duration="15943000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -599,7 +602,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664882821262</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="fix error">
+      <created>1664883301190</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1664883301190</updated>
+    </task>
+    <task id="LOCAL-00047" summary="enum angle renomé en Angles">
+      <created>1664883767542</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1664883767542</updated>
+    </task>
+    <task id="LOCAL-00048" summary="correction de warning">
+      <created>1664884204742</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1664884204742</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,9 +641,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changement dans la structure" />
-    <MESSAGE value="fonction pour logger dans ios&#10;file:///private/var/mobile/Containers/Shared/AppGroup/357F0235-E689-4894-8F7C-5FF91826021E/&#10;&#10;let groupPath = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: &quot;stephane.bressani.dev.astronumerologie&quot;)&#10;print(groupPath?.absoluteURL)" />
-    <MESSAGE value="ajout debug" />
     <MESSAGE value="add license" />
     <MESSAGE value="travail sur svg pour éviter les problème de mémoire de la libraire que j'ai pris sur le net pour le c++ pour svg" />
     <MESSAGE value="problème de pointer i32 ou f32" />
@@ -642,6 +663,9 @@
     <MESSAGE value="image + document avec test unitaire (petites corrections)" />
     <MESSAGE value="ajout classe pour les images" />
     <MESSAGE value="ajout de la classe document" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de la classe document" />
+    <MESSAGE value="fix error" />
+    <MESSAGE value="enum angle renomé en Angles" />
+    <MESSAGE value="correction de warning" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction de warning" />
   </component>
 </project>

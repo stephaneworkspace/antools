@@ -2,6 +2,8 @@
 // Created by Stéphane on 01.10.22.
 //
 
+#include "../Svg/document.h"
+#include "../Svg/circle.h"
 #include "SweInterface.h"
 #include "base64.h"
 #include "draw.h"
@@ -73,12 +75,21 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     Dimensions dimensions(CHART_SIZE, CHART_SIZE);
     Document doc("mysvg.svg", Layout(dimensions, Layout::BottomLeft));
 
+    SDocument svg_doc(CHART_SIZE, CHART_SIZE);
+    SFill svg_fill;
+    SStroke svg_stroke;
+
     // Draw circles natal
     DrawCircle dz;
     for (int i = 0; i <= 8; ++i) {
         CircleZod cz = dz.circle(static_cast<circle_position>(i));
         if (cz.sw) {
             doc << Circle(Point(CHART_SIZE / 2, CHART_SIZE / 2), cz.radius_multiplier, Fill(Color::Transparent), Stroke(1, Color::Black));
+            svg_fill.fill = "transparent";
+            svg_stroke.stroke = "black";
+            svg_stroke.stroke_width = 1;
+            SCircle svg_circle(svg_fill, svg_stroke);
+            svg_doc << svg_circle.generate(CHART_SIZE / 2, CHART_SIZE / 2, cz.radius_divider);
         }
     }
 
@@ -266,8 +277,10 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
         }
     }
 
+    // cout << doc.toString() << endl;
+
     static std::string encoded;
-    if(!Base64::Encode(doc.toString(), &encoded)) {
+    if(!Base64::Encode(svg_doc.generate(), &encoded)) {
         std::cout << "Failed to encode input string" << std::endl;
         //return false;
     }
