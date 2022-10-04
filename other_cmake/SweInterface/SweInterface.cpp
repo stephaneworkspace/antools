@@ -143,18 +143,22 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     }
 
     // Draw house angle image
+    Size angle_size;
     Angle house_angle;
-    double angle_size = DrawHouseAngle::angle_size();
     Offset offset;
     // Asc
     offset = DrawHouseAngle::angle(house, Angles::asc);
-    doc << Image::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::asc).c_str());
+    angle_size = DrawHouseAngle::angle_size(Angles::asc);
+    doc << Image::generate(angle_size.width, angle_size.height, offset.x, offset.y, Angle::read_svg(Angles::asc).c_str());
     offset = DrawHouseAngle::angle(house, Angles::fc);
-    doc << Image::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::fc).c_str());
+    angle_size = DrawHouseAngle::angle_size(Angles::fc);
+    doc << Image::generate(angle_size.width, angle_size.height, offset.x, offset.y, Angle::read_svg(Angles::fc).c_str());
     offset = DrawHouseAngle::angle(house, Angles::desc);
-    doc << Image::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::desc).c_str());
+    angle_size = DrawHouseAngle::angle_size(Angles::desc);
+    doc << Image::generate(angle_size.width, angle_size.height, offset.x, offset.y, Angle::read_svg(Angles::desc).c_str());
     offset = DrawHouseAngle::angle(house, Angles::mc);
-    doc << Image::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::mc).c_str());
+    angle_size = DrawHouseAngle::angle_size(Angles::mc);
+    doc << Image::generate(angle_size.width, angle_size.height, offset.x, offset.y, Angle::read_svg(Angles::mc).c_str());
 
     // Draw zodiac lines
     svg_stroke.stroke = "black";

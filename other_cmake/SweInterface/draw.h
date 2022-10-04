@@ -16,6 +16,11 @@ const double CHART_SIZE_DIVID = 0.6;
 double const STROKE_FINE = 0.5;
 double const STROKE_BOLD = 2;
 
+struct Size {
+    double width;
+    double height;
+};
+
 struct Offset {
     double x;
     double y;
@@ -58,6 +63,7 @@ public:
     static double get_fixed_center(double pos_value);
     static double get_fixed_pos(double pos_value);
     static Offset get_center_item(double size, Offset offset);
+    static Offset get_center_item(double width, double height, Offset offset);
     static Offset get_pos_trigo(double angular, double radius_circle);
     static double get_radius_total();
     static Offset* get_line_trigo(double angular, double radius_circle_begin, double radius_circle_end);

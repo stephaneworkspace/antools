@@ -12,7 +12,7 @@
 class DrawHouseAngle
 {
 public:
-    static double angle_size();
+    static Size angle_size(Angles angle);
     static Offset angle(H* house, Angles angle);
 };
 #endif //ASTRONUMEROLOGIE_GENERATE_DRAW_HOUSE_ANGLE_H

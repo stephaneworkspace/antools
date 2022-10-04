@@ -32,6 +32,12 @@ Offset Draw::get_center_item(double size, Offset offset) {
     return res;
 }
 
+Offset Draw::get_center_item(double width, double height, Offset offset) {
+    Offset res;
+    res.x = offset.x - (width / 2);
+    res.y = offset.y - (height / 2);
+    return res;
+}
 
 Offset Draw::get_pos_trigo(double angular, double radius_circle) {
     double center = Draw::get_radius_total();

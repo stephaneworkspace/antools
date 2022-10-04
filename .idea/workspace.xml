@@ -20,24 +20,19 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="refactor svg_doc -&gt; doc">
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="refactor and fix bug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/antools" beforeDir="false" afterPath="$PROJECT_DIR$/antools" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/circle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/circle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/circle.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/circle.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/data.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/data.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/data.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/document.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/document.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/document.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/document.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/image.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/image.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/image.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/line.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/line.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/line.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/svg.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/svg.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/angle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/angle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_line.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,14 +294,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="22317000" />
-    </task>
-    <task id="LOCAL-00003" summary="gitignore à jour">
-      <created>1664715969885</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1664715969885</updated>
+      <workItem from="1664867814726" duration="24889000" />
     </task>
     <task id="LOCAL-00004" summary="gitignore à jour">
       <created>1664716028725</created>
@@ -644,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664891160168</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="refactor and fix bug">
+      <created>1664891771990</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1664891771990</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -662,7 +657,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="work in progress" />
     <MESSAGE value="ça fonctionne reste plus qu'a tester depuis le c++" />
     <MESSAGE value="fin de la fonction src/svg.rs svg_rust_path" />
     <MESSAGE value="ajout dans antools.h" />
@@ -687,6 +681,7 @@
     <MESSAGE value="début avec circle" />
     <MESSAGE value="grosse modif, intégration avec ma nouvelle libraire Svg" />
     <MESSAGE value="refactor svg_doc -&gt; doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor svg_doc -&gt; doc" />
+    <MESSAGE value="refactor and fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor and fix bug" />
   </component>
 </project>
