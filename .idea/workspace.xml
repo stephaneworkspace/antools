@@ -20,8 +20,9 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="angle en svg à l'aide de https://fontsvg.com">
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" afterDir="false" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="clean up">
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_line.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,14 +284,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="25206000" />
-    </task>
-    <task id="LOCAL-00005" summary="gitignore à jour">
-      <created>1664716062200</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1664716062200</updated>
+      <workItem from="1664867814726" duration="25531000" />
     </task>
     <task id="LOCAL-00006" summary="gitignore à jour">
       <created>1664716099690</created>
@@ -628,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664894261430</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="clean up">
+      <created>1664894540654</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1664894540654</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,7 +654,6 @@
     <MESSAGE value="retourne le résultat en const char*" />
     <MESSAGE value="retourne le path uniquement" />
     <MESSAGE value="créer un cmake pour Svg" />
-    <MESSAGE value="clean up" />
     <MESSAGE value="test unitaire circle en rust" />
     <MESSAGE value="ajout de circle dans Svg c++" />
     <MESSAGE value="ajout de line dans rust avec test unitaire" />
@@ -671,6 +671,7 @@
     <MESSAGE value="refactor svg_doc -&gt; doc" />
     <MESSAGE value="refactor and fix bug" />
     <MESSAGE value="angle en svg à l'aide de https://fontsvg.com" />
-    <option name="LAST_COMMIT_MESSAGE" value="angle en svg à l'aide de https://fontsvg.com" />
+    <MESSAGE value="clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
 </project>

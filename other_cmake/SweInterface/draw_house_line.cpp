@@ -67,7 +67,7 @@ LineXY DrawHouseLines::angle_lines(H *house, Angles angle) {
             break;
         case Angles::desc:
             pos = Draw::get_fixed_pos(off_house + house[6].longitude);
-            line_top -= 3;
+            line_top -= 2;
             break;
         case Angles::mc:
             pos = Draw::get_fixed_pos(off_house + house[9].longitude);
