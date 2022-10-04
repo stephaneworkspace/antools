@@ -194,6 +194,15 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+Svg_BINARY_DIR:STATIC=/Users/stephane/Code/CL/C++/antools/exe/subproject/Svg
+
+//Value Computed by CMake
+Svg_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Svg_SOURCE_DIR:STATIC=/Users/stephane/Code/CL/C++/antools/other_cmake/Svg
+
+//Value Computed by CMake
 SweInterface_BINARY_DIR:STATIC=/Users/stephane/Code/CL/C++/antools/exe/subproject/SweInterface
 
 //Value Computed by CMake
@@ -309,7 +318,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -353,11 +362,15 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Stored Xcode object GUID
+PROJECT_Svg_GUID_CMAKE:INTERNAL=562A7BE0C2DB4C9388391D9C
+//Stored Xcode object GUID
 PROJECT_SweInterface_GUID_CMAKE:INTERNAL=B5122ECA2B0D454CAEB32BBF
 //Stored Xcode object GUID
 PROJECT_antools_exe_GUID_CMAKE:INTERNAL=F684E10F406E45269580EB04
 //Stored Xcode object GUID
 PROJECT_cswisseph_GUID_CMAKE:INTERNAL=E01AFE0CBE0B4257A03EA475
+//Stored Xcode object GUID
+Svg_GUID_CMAKE:INTERNAL=869B9351E3FC468F8A096AF9
 //Stored Xcode object GUID
 SweInterface_GUID_CMAKE:INTERNAL=A872BCAF8370408D839C8C57
 //Stored Xcode object GUID

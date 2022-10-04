@@ -6,7 +6,7 @@
 #include <vector>
 #include "../include/antools.h"
 #include "../other_cmake/SweInterface/base64.h"
-#include "svg_data.h"
+#include "../other_cmake/Svg/svg_data.h"
 
 using namespace std;
 
@@ -23,12 +23,11 @@ int main() {
     // Svg
     Data data = Data();
     data.move_to("10.0,10.0");
-    data.line_by("0.56,50.0");
-    data.line_by("50,5.10");
-    data.line_by("0.59,-50");
+    data.line_by("0.50,50.0");
+    data.line_by("50,0");
+    data.line_by("0,-50");
     data.close_by();
     data.create_svg();
-
 
     cout << "Hello, World!" << endl;
 

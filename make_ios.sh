@@ -60,6 +60,9 @@ lipo -create "lib/ios_debug/libantools.a" "lib/sim_debug/libantools.a" -output "
 rm -r ./build.ios
 rm -r ./build.sim
 
+cd ./other_cmake/Svg
+./make_svg_ios.sh
+cd ..
 cd ./other_cmake/SweInterface
 ./make_sweinterface_ios.sh
 cd ..

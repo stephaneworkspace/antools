@@ -1,4 +1,12 @@
 #!/bin/sh
+# Create dir
+mkdir lib
+mkdir lib/generic
+mkdir lib/generic_debug
+mkdir lib/ios
+mkdir lib/ios_debug
+mkdir lib/sim
+mkdir lib/sim_debug
 
 # Compilation pour iOs - Release
 make clean

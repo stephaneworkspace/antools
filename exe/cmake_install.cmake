@@ -41,6 +41,11 @@ set(CMAKE_BINARY_DIR "/Users/stephane/Code/CL/C++/antools/exe")
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/stephane/Code/CL/C++/antools/exe/subproject/Svg/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/stephane/Code/CL/C++/antools/exe/subproject/Swe/cmake_install.cmake")
 endif()
 

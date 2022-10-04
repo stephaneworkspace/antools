@@ -14,8 +14,7 @@ SWEOBJ = angle.o aspect.o astre.o draw.o draw_aspect_line.o draw_bodie_astre.o d
 draw_zodiac_circle.o draw_zodiac_line.o draw_zodiac_sign.o draw_house_angle.o draw_house_line.o draw_house_number.o\
 swe02.o swe03.o swe08.o swe14.o swe17.o house.o sign.o timezone.o SweInterface.o
 
-# create an archive and a dynamic link libary fro SwissEph
-# a user of this library will inlcude swephexp.h  and link with -lswe
+# create an archive
 
 libSweInterface.a: $(SWEOBJ)
 	ar r libSweInterface.a	$(SWEOBJ)
