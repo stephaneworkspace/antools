@@ -74,7 +74,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     astres[9] = Astres::pluto;
     astres[10] = Astres::noeud_lunaire;
 
-    SDocument svg_doc(CHART_SIZE, CHART_SIZE);
+    SDocument doc(CHART_SIZE, CHART_SIZE);
     SFill svg_fill;
     SStroke svg_stroke;
 
@@ -87,7 +87,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
             svg_stroke.stroke = "black";
             svg_stroke.stroke_width = 1;
             SCircle svg_circle(svg_fill, svg_stroke);
-            svg_doc << svg_circle.generate(CHART_SIZE / 2, CHART_SIZE / 2, cz.radius * 0.8);
+            doc << svg_circle.generate(CHART_SIZE / 2, CHART_SIZE / 2, cz.radius * 0.8);
         }
     }
 
@@ -102,7 +102,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
                 svg_stroke.stroke = "black";
                 svg_stroke.stroke_width = 1;
                 SLine svg_line(svg_stroke);
-                svg_doc << svg_line.generate(lxy3[i].lx1, lxy3[i].ly1, lxy3[i].lx2, lxy3[i].ly2);
+                doc << svg_line.generate(lxy3[i].lx1, lxy3[i].ly1, lxy3[i].lx2, lxy3[i].ly2);
             }
         } else {
             /*
@@ -124,13 +124,13 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     SLine svg_line(svg_stroke);
     LineXY lxy;
     lxy = dhl.angle_lines(house, Angles::asc);
-    svg_doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
+    doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
     lxy = dhl.angle_lines(house, Angles::fc);
-    svg_doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
+    doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
     lxy = dhl.angle_lines(house, Angles::desc);
-    svg_doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
+    doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
     lxy = dhl.angle_lines(house, Angles::mc);
-    svg_doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
+    doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
 
     // Draw house number image
     House house_number;
@@ -139,7 +139,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
         Offset offset;
         house_size = DrawHouseNumber::number_size();
         offset = DrawHouseNumber::number(i, house);
-        svg_doc << SImage::generate(house_size, house_size, offset.x, offset.y, House::read_svg(i).c_str());
+        doc << SImage::generate(house_size, house_size, offset.x, offset.y, House::read_svg(i).c_str());
     }
 
     // Draw house angle image
@@ -148,13 +148,13 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     Offset offset;
     // Asc
     offset = DrawHouseAngle::angle(house, Angles::asc);
-    svg_doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::asc).c_str());
+    doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::asc).c_str());
     offset = DrawHouseAngle::angle(house, Angles::fc);
-    svg_doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::fc).c_str());
+    doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::fc).c_str());
     offset = DrawHouseAngle::angle(house, Angles::desc);
-    svg_doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::desc).c_str());
+    doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::desc).c_str());
     offset = DrawHouseAngle::angle(house, Angles::mc);
-    svg_doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::mc).c_str());
+    doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::mc).c_str());
 
     // Draw zodiac lines
     svg_stroke.stroke = "black";
@@ -163,7 +163,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     DrawZodiacLines dzl;
     LineXY* lz = dzl.line(house[0]);
     for (int i = 0; i < (16 * 12); ++i) {
-        svg_doc << svg_line.generate(lz[i].lx1, lz[i].ly1, lz[i].lx2, lz[i].ly2);
+        doc << svg_line.generate(lz[i].lx1, lz[i].ly1, lz[i].lx2, lz[i].ly2);
     }
 
     // Draw zodiac image
@@ -173,7 +173,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
         Offset offset;
         zodiac_size = DrawZodiacSign::zodiac_size();
         offset = DrawZodiacSign::zodiac_sign(static_cast<Signs>(i), house[0]);
-        svg_doc << SImage::generate(zodiac_size, zodiac_size, offset.x, offset.y, Sign::read_svg(static_cast<Signs>(i)).c_str());
+        doc << SImage::generate(zodiac_size, zodiac_size, offset.x, offset.y, Sign::read_svg(static_cast<Signs>(i)).c_str());
     }
 
     // Draw astre image + line
@@ -191,14 +191,14 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
         CalcUt calcul_ut = Swe03::calc_ut(utc_to_jd.julian_day_ut, astres[i], OptionFlag::speed);
         offset = DrawBodieAstre::bodie_astre(house[0], calcul_ut, false);
         lxy = dbl.line(house[0], calcul_ut, false);
-        svg_doc << SImage::generate(astre_size, astre_size, offset.x, offset.y, Astre::read_svg(astres[i]).c_str());
-        svg_doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
+        doc << SImage::generate(astre_size, astre_size, offset.x, offset.y, Astre::read_svg(astres[i]).c_str());
+        doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
         // Transit
         CalcUt calcul_ut_t = Swe03::calc_ut(utc_to_jd_t.julian_day_ut, astres[i], OptionFlag::speed);
         offset = DrawBodieAstre::bodie_astre(house[0], calcul_ut_t, true);
         lxy = dbl.line(house[0], calcul_ut_t, true);
-        svg_doc << SImage::generate(astre_size, astre_size, offset.x, offset.y, Astre::read_svg(astres[i]).c_str());
-        svg_doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
+        doc << SImage::generate(astre_size, astre_size, offset.x, offset.y, Astre::read_svg(astres[i]).c_str());
+        doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
     }
 
     // Aspect
@@ -237,47 +237,47 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
                         case Aspects::conjunction:
                             svg_stroke.stroke = "red";
                             svg_line.set_stroke(svg_stroke);
-                            svg_doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
+                            doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
                             break;
                         case Aspects::opposition:
                             svg_stroke.stroke = "red";
                             svg_line.set_stroke(svg_stroke);
-                            svg_doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
+                            doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
                             break;
                         case Aspects::trine:
                             svg_stroke.stroke = "red";
                             svg_line.set_stroke(svg_stroke);
-                            svg_doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
+                            doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
                             break;
                         case Aspects::square:
                             svg_stroke.stroke = "red";
                             svg_line.set_stroke(svg_stroke);
-                            svg_doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
+                            doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
                             break;
                         case Aspects::sextile:
                             svg_stroke.stroke = "blue";
                             svg_line.set_stroke(svg_stroke);
-                            svg_doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
+                            doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
                             break;
                         case Aspects::inconjunction:
                             svg_stroke.stroke = "green";
                             svg_line.set_stroke(svg_stroke);
-                            svg_doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
+                            doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
                             break;
                         case Aspects::sequisquare:
                             svg_stroke.stroke = "purple";
                             svg_line.set_stroke(svg_stroke);
-                            svg_doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
+                            doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
                             break;
                         case Aspects::semisquare:
                             svg_stroke.stroke = "purple";
                             svg_line.set_stroke(svg_stroke);
-                            svg_doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
+                            doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
                             break;
                         case Aspects::semisextile:
                             svg_stroke.stroke = "green";
                             svg_line.set_stroke(svg_stroke);
-                            svg_doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
+                            doc << svg_line.generate(lxya.lx1, lxya.ly1, lxya.lx2, lxya.ly2);
                             break;
                     }
                     PairAspect p;
@@ -291,7 +291,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     }*/
 
     static std::string encoded;
-    if(!Base64::Encode(svg_doc.generate(), &encoded)) {
+    if(!Base64::Encode(doc.generate(), &encoded)) {
         std::cout << "Failed to encode input string" << std::endl;
         //return false;
     } else {
