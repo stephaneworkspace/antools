@@ -63,10 +63,33 @@ rm -r ./build.sim
 cd ./other_cmake/Svg
 ./make_svg_ios.sh
 cd ..
-cd ./SweInterface
+cd..
+cd ./other/SweInterface
 ./make_sweinterface_ios.sh
 cd ..
-cd ./Swe
+cd..
+cd ./other/Swe
 ./make_swe_ios.sh
 cd ..
 cd ..
+
+cp ./other_cmake/Svg/lib/generic/*.a ./lib/generic/
+cp ./other_cmake/Svg/lib/generic_debug/*.a ./lib/generic_debug/
+cp ./other_cmake/Svg/lib/ios/*.a ./lib/generic/
+cp ./other_cmake/Svg/lib/ios_debug/*.a ./lib/generic_debug/
+cp ./other_cmake/Svg/lib/sim/*.a ./lib/generic/
+cp ./other_cmake/Svg/lib/sim_debug/*.a ./lib/generic_debug/
+
+cp ./other_cmake/SweInterface/lib/generic/*.a ./lib/generic/
+cp ./other_cmake/SweInterface/lib/generic_debug/*.a ./lib/generic_debug/
+cp ./other_cmake/SweInterface/lib/ios/*.a ./lib/generic/
+cp ./other_cmake/SweInterface/lib/ios_debug/*.a ./lib/generic_debug/
+cp ./other_cmake/SweInterface/lib/sim/*.a ./lib/generic/
+cp ./other_cmake/SweInterface/lib/sim_debug/*.a ./lib/generic_debug/
+
+cp ./other_cmake/Swe/lib/generic/*.a ./lib/generic/
+cp ./other_cmake/Swe/lib/generic_debug/*.a ./lib/generic_debug/
+cp ./other_cmake/Swe/lib/ios/*.a ./lib/generic/
+cp ./other_cmake/Swe/lib/ios_debug/*.a ./lib/generic_debug/
+cp ./other_cmake/Swe/lib/sim/*.a ./lib/generic/
+cp ./other_cmake/Swe/lib/sim_debug/*.a ./lib/generic_debug/

@@ -53,6 +53,7 @@ extern "C" B64 theme_astral(int year,
 // ./rust
 
 extern "C" B64 create_png_b64(const char* p_svg_b64);
+extern "C" B64 create_png_2(const char* png_file);
 extern "C" B64 create_pdf_b64(const char* p_svg_b64);
 extern "C" const char* svg_path_data(const SvgData* data,
                                      const SvgPoint* point,

@@ -9,7 +9,7 @@ use std::ffi::{CStr, CString};
 use std::os::raw::{c_char, c_float, c_int};
 use base64::{encode, decode, DecodeError};
 use crate::pdf::create_pdf;
-use crate::png::create_png;
+use crate::png::{create_png, create_png_from_file};
 use crate::svg::{circle, document, image, line, path_data};
 
 #[repr(C)]
@@ -84,6 +84,24 @@ pub extern "C" fn create_png_b64(p_svg_b64: *const c_char) -> B64 {
         }
     };
     match create_png(svg_v_u8) {
+        Ok(ok) => {
+            B64 {
+                b_64: CString::new(encode(ok)).unwrap().into_raw(),
+                sw: true,
+                err: CString::new("").unwrap().into_raw()
+            }
+        },
+        Err(err) => {
+            err
+        }
+    }
+}
+
+#[no_mangle]
+pub extern "C" fn create_png_2(png_file: *const c_char) -> B64 {
+    let png_file_cstr: &CStr = unsafe { CStr::from_ptr(png_file) };
+    let png_file_str = png_file_cstr.to_str().unwrap();
+    match create_png_from_file(png_file_str.to_string()) {
         Ok(ok) => {
             B64 {
                 b_64: CString::new(encode(ok)).unwrap().into_raw(),
