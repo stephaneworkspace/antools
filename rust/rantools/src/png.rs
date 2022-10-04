@@ -1,13 +1,16 @@
-use std::ffi::CString;
+use std::ffi::{CStr, CString};
+use std::os::raw::c_char;
 use usvg::{FitTo, Options, Tree};
 use tiny_skia::Pixmap;
 use crate::B64;
-pub(crate) fn create_png_from_file(svg_file: String) -> Result<Vec<u8>, B64> {
+pub(crate) fn create_png_ff(svg_file: *const c_char) -> Result<Vec<u8>, B64> {
+    let svg_file_cstr: &CStr = unsafe { CStr::from_ptr(svg_file) };
+    let svg_file_str = svg_file_cstr.to_str().unwrap();
     let mut opt = usvg::Options::default();
     // Get file's absolute directory.
-    opt.resources_dir = std::fs::canonicalize(svg_file.clone()).ok().and_then(|p| p.parent().map(|p| p.to_path_buf()));
+    opt.resources_dir = std::fs::canonicalize(svg_file_str.clone()).ok().and_then(|p| p.parent().map(|p| p.to_path_buf()));
     //opt.fontdb.load_system_fonts();
-    let svg_data = std::fs::read(svg_file).unwrap();
+    let svg_data = std::fs::read(svg_file_str).unwrap();
     let rtree = match Tree::from_data(&svg_data, &opt.to_ref()) {
         Ok(ok) => {
             ok

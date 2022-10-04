@@ -21,6 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="clean up">
+      <change afterPath="$PROJECT_DIR$/cplib.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/antools.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/antools.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/make_ios.sh" beforeDir="false" afterPath="$PROJECT_DIR$/make_ios.sh" afterDir="false" />
@@ -93,7 +94,7 @@
       <recent name="$PROJECT_DIR$/other_cmake/Svg" />
     </key>
   </component>
-  <component name="RunManager" selected="Cargo.Build">
+  <component name="RunManager" selected="Shell Script.make_ios.sh">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -220,6 +221,21 @@
       </texify-makeindex>
       <method v="2" />
     </configuration>
+    <configuration name="cplib.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/cplib.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="make_ios.sh" type="ShConfigurationType" temporary="true">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -258,12 +274,14 @@
       <item itemvalue="CMake Application.Svg" />
       <item itemvalue="CMake Application.swe" />
       <item itemvalue="CMake Application.SweInterface" />
+      <item itemvalue="Shell Script.cplib.sh" />
       <item itemvalue="Shell Script.make_ios.sh" />
       <item itemvalue="Shell Script.make_macos.sh" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Shell Script.make_ios.sh" />
+        <item itemvalue="Shell Script.cplib.sh" />
         <item itemvalue="Shell Script.make_macos.sh" />
       </list>
     </recent_temporary>
@@ -286,14 +304,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="35270000" />
-    </task>
-    <task id="LOCAL-00014" summary="changement dans la structure">
-      <created>1664733276996</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1664733276996</updated>
+      <workItem from="1664867814726" duration="40696000" />
     </task>
     <task id="LOCAL-00015" summary="changement dans la structure">
       <created>1664733447947</created>
@@ -631,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664901124347</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="clean up">
+      <created>1664908859980</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1664908859980</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
