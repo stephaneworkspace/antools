@@ -3,9 +3,9 @@
 //
 #include "draw_zodiac_circle.h"
 
-CirclePosition DrawCircle::get_radius_circle(circle_position circlePosition) {
+CirclePosition DrawCircle::get_radius_circle(CirclePositions circle_position) {
     CirclePosition res;
-    switch (circlePosition) {
+    switch (circle_position) {
         case zero:
             res.pcent = Draw::get_radius_total() * CIRCLE_SIZE_0.pcent / 100;
             res.sw = CIRCLE_SIZE_0.sw;
@@ -43,18 +43,15 @@ CirclePosition DrawCircle::get_radius_circle(circle_position circlePosition) {
             res.sw = CIRCLE_SIZE_8.sw;
             break;
     }
-    res.pcent_divider = res.pcent * CHART_SIZE_DIVID;
     return res;
 }
 
-CircleZod DrawCircle::circle(circle_position circle_position) {
+CircleZod DrawCircle::circle(CirclePositions circle_position) {
     CircleZod res;
     double center = Draw::get_radius_total();
     CirclePosition radius = DrawCircle::get_radius_circle(circle_position);
     res.center = center;
     res.radius = radius.pcent;
-    res.radius_multiplier = radius.pcent * CHART_SIZE_MULTI;
-    res.radius_divider = radius.pcent * CHART_SIZE_DIVID;
     res.sw = radius.sw;
     return res;
 }

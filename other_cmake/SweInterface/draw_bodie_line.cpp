@@ -12,14 +12,9 @@ LineXY DrawBodieLines::line(H house_asc, CalcUt calcul_ut, bool sw_transit) {
     } else {
         axy = Draw::get_line_trigo(pos, (Draw::get_radius_total() * 90) / 100, (Draw::get_radius_total() * 80) / 100);
     }
-
     res.lx1 = Draw::get_fixed_center(axy[0].x);
     res.ly1 = Draw::get_fixed_center(axy[0].y);
     res.lx2 = Draw::get_fixed_center(axy[1].x);
     res.ly2 = Draw::get_fixed_center(axy[1].y);
-
-    res.ly1 = Draw::get_fixed_y(res.ly1);
-    res.ly2 = Draw::get_fixed_y(res.ly2);
-
     return res;
 }

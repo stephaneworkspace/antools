@@ -44,7 +44,7 @@ struct LineXYAspect {
     double lx2;
     double ly2;
     bool sw;
-    aspect aspect;
+    Aspects aspect;
 };
 
 struct PairAspect {
@@ -56,8 +56,6 @@ class Draw
 {
 public:
     static double get_fixed_center(double pos_value);
-    //static double get_fixed_center2(double pos_value);
-    static double get_fixed_y(double y);
     static double get_fixed_pos(double pos_value);
     static Offset get_center_item(double size, Offset offset);
     static Offset get_pos_trigo(double angular, double radius_circle);

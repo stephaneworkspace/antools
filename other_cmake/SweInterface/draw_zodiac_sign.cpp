@@ -17,7 +17,6 @@ Offset DrawZodiacSign::zodiac_sign(Signs sign, H house_asc) {
     Offset trigo = Draw::get_pos_trigo(pos, (Draw::get_radius_total() * 69) / 100);
     double zs = DrawZodiacSign::zodiac_size();
     res = Draw::get_center_item(zs, trigo);
-    res.y = Draw::get_fixed_y(res.y);
     return res;
 }
 

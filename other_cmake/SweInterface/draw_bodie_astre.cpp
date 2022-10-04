@@ -21,6 +21,5 @@ Offset DrawBodieAstre::bodie_astre(H house_asc, CalcUt calcul_ut, bool sw_transi
     }
     double as = astre_size();
     res = Draw::get_center_item(as, offset_trigo);
-    res.y = Draw::get_fixed_y(res.y);
     return res;
 }

@@ -15,9 +15,5 @@ Offset DrawHouseAngle::angle(H* house, Angles angle) {
     double pos = Draw::get_angle_longitude(house, angle);
     Offset trigo = Draw::get_pos_trigo(pos, (Draw::get_radius_total() * 95) / 100);
     res = Draw::get_center_item(as, trigo);
-    res.y = Draw::get_fixed_y(res.y);
-    if (angle == Angles::mc) {
-        res.y = CHART_SIZE;
-    }
     return res;
 }

@@ -20,10 +20,39 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="correction de warning">
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="début avec circle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/antools" beforeDir="false" afterPath="$PROJECT_DIR$/antools" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exe/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/exe/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/line.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/line.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/line.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/angle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/angle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/angle.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/angle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/aspect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/aspect.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/aspect.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/aspect.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/astre.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/astre.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/astre.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/astre.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_aspect_line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_aspect_line.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_bodie_astre.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_bodie_astre.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_bodie_line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_bodie_line.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_line.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_number.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_number.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_zodiac_circle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_zodiac_circle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_zodiac_circle.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_zodiac_circle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_zodiac_line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_zodiac_line.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_zodiac_sign.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_zodiac_sign.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/house.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/house.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/house.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/house.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/sign.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/sign.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/sign.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/sign.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/simple_svg_1.0.0.hpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +314,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="15943000" />
+      <workItem from="1664867814726" duration="21606000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -623,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664884204742</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="début avec circle">
+      <created>1664885244516</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1664885244516</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,7 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add license" />
     <MESSAGE value="travail sur svg pour éviter les problème de mémoire de la libraire que j'ai pris sur le net pour le c++ pour svg" />
     <MESSAGE value="problème de pointer i32 ou f32" />
     <MESSAGE value="work in progress" />
@@ -666,6 +701,18 @@
     <MESSAGE value="fix error" />
     <MESSAGE value="enum angle renomé en Angles" />
     <MESSAGE value="correction de warning" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction de warning" />
+    <MESSAGE value="début avec circle" />
+    <option name="LAST_COMMIT_MESSAGE" value="début avec circle" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/exe/main.cpp</url>
+          <line>56</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -5,7 +5,7 @@
 #ifndef ASTRONUMEROLOGIE_GENERATE_ASPECT_H
 #define ASTRONUMEROLOGIE_GENERATE_ASPECT_H
 
-enum aspect {
+enum Aspects {
     conjunction = 0,
     opposition = 1,
     trine = 2,
@@ -20,7 +20,7 @@ enum aspect {
 class Aspect
 {
 public:
-    static int* angle(aspect a);
+    static int* angle(Aspects a);
 };
 
 #endif //ASTRONUMEROLOGIE_GENERATE_ASPECT_H

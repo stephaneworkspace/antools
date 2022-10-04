@@ -17,6 +17,7 @@ private:
     SvgStroke stroke;
 public:
     SLine(SStroke s);
+    void set_stroke(SStroke s);
     string generate(float x1, float y1, float x2, float y2);
 };
 

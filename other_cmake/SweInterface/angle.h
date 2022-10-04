@@ -8,7 +8,6 @@
 #include <fstream>
 #include <string>
 #include "swe17.h"
-#include "simple_svg_1.0.0.hpp"
 
 using namespace std;
 
@@ -22,10 +21,8 @@ enum Angles {
 
 class Angle
 {
-private:
-    string read_svg(Angles a);
 public:
-    Image generer(Angles angle, double x, double y, double width, double height);
+    static string read_svg(Angles a);
 };
 
 #endif //ASTRONUMEROLOGIE_GENERATE_ANGLE_H

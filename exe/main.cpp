@@ -15,6 +15,7 @@
 using namespace std;
 
 int main() {
+    /*
     // Document
     SDocument doc = SDocument(50, 50);
 
@@ -45,11 +46,12 @@ int main() {
 
     // Document
     cout << doc.generate() << endl;
+    */
 
     cout << "Hello, World!" << endl;
 
     // Créer un pdf du thème astral dans /temp/mypdf.pdf
-    B64 ta = theme_astral(1984, 4, 1, 20, 30, 10, 60, 2);
+    B64 ta = theme_astral(1986, 4, 3, 4, 54, 46.12, 6.09, 2);
 
     // temp/mysvg.svg
     string input_svg;

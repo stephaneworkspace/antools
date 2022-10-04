@@ -29,7 +29,6 @@ Offset DrawHouseNumber::number(int house_number, H* house) {
     Offset trigo = Draw::get_pos_trigo(pos, (Draw::get_radius_total() * 77.8) / 100);
     double zs = DrawHouseNumber::number_size();
     res = Draw::get_center_item(zs, trigo);
-    res.y = Draw::get_fixed_y(res.y);
     return res;
 }
 

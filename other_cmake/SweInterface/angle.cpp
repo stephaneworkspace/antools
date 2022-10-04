@@ -29,7 +29,3 @@ string Angle::read_svg(Angles a) {
             return r + ang[0];
     }
 }
-
-Image Angle::generer(Angles angle, double x, double y, double width, double height) {
-    return Image(Point(x, y), width, height, Angle::read_svg(angle), Color::Black);
-}

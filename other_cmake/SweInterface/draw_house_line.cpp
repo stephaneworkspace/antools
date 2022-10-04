@@ -46,9 +46,6 @@ LineXY3 *DrawHouseLines::lines(H *house) {
         res[i].ly2 = Draw::get_fixed_center(res[i].ly2);
         res[i].lx3 = Draw::get_fixed_center(res[i].lx3);
         res[i].ly3 = Draw::get_fixed_center(res[i].ly3);
-        res[i].ly1 = Draw::get_fixed_y(res[i].ly1);
-        res[i].ly2 = Draw::get_fixed_y(res[i].ly2);
-        res[i].ly3 = Draw::get_fixed_y(res[i].ly3);
     }
     return res;
 }
@@ -86,7 +83,5 @@ LineXY DrawHouseLines::angle_lines(H *house, Angles angle) {
     res.ly1 = Draw::get_fixed_center(res.ly1);
     res.lx2 = Draw::get_fixed_center(res.lx2);
     res.ly2 = Draw::get_fixed_center(res.ly2);
-    res.ly1 = Draw::get_fixed_y(res.ly1);
-    res.ly2 = Draw::get_fixed_y(res.ly2);
     return res;
 }

@@ -42,7 +42,3 @@ H House::init(int object_id, double longitude, Angles angle) {
     h.angle = angle;
     return h;
 }
-
-Image House::generer(int house, double x, double y, double width, double height) {
-    return Image(Point(x, y), width, height, House::read_svg(house), Color::Black);
-}

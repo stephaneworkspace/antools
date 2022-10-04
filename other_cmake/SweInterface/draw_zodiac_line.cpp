@@ -31,8 +31,6 @@ LineXY* DrawZodiacLines::line(H house_asc) {
         res[j].ly1 = Draw::get_fixed_center(axy[0].y);
         res[j].lx2 = Draw::get_fixed_center(axy[1].x);
         res[j].ly2 = Draw::get_fixed_center(axy[1].y);
-        res[j].ly1 = Draw::get_fixed_y(res[j].ly1);
-        res[j].ly2 = Draw::get_fixed_y(res[j].ly2);
         j++;
         // 1° to 29°
         larger_draw_line ldl;
@@ -51,8 +49,6 @@ LineXY* DrawZodiacLines::line(H house_asc) {
             res[j].ly1 = Draw::get_fixed_center(axy[0].y);
             res[j].lx2 = Draw::get_fixed_center(axy[1].x);
             res[j].ly2 = Draw::get_fixed_center(axy[1].y);
-            res[j].ly1 = Draw::get_fixed_y(res[j].ly1);
-            res[j].ly2 = Draw::get_fixed_y(res[j].ly2);
             j++;
         }
     }

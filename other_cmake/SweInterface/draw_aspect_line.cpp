@@ -13,8 +13,8 @@ LineXYAspect DrawAspectLines::line(H house_asc, double* item_longitude) {
     }
     double separation = Draw::get_closest_distance(longitude);
     double abs_separation = abs(separation);
-    for (int i = 0; i < int(aspect::semisextile); ++i) {
-        aspect a = static_cast<aspect>(i);
+    for (int i = 0; i < int(Aspects::semisextile); ++i) {
+        Aspects a = static_cast<Aspects>(i);
         int* angle = Aspect::angle(a);
         int asp = angle[0];
         int orb = angle[1];
@@ -35,8 +35,6 @@ LineXYAspect DrawAspectLines::line(H house_asc, double* item_longitude) {
             res.lx2 = Draw::get_fixed_center(res.lx2);
             res.ly2 = Draw::get_fixed_center(res.ly2);
             */
-            res.ly1 = Draw::get_fixed_y(res.ly1);
-            res.ly2 = Draw::get_fixed_y(res.ly2);
             return res;
         }
     }

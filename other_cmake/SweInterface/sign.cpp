@@ -46,10 +46,6 @@ string Sign::read_svg(Signs sign) {
     }
 }
 
-Image Sign::generer(Signs sign, double x, double y, double width, double height) {
-    return Image(Point(x, y), width, height, this->read_svg(sign), Color::Transparent);
-}
-
 string Sign::nom(Signs sign) {
     switch (sign) {
         case belier:

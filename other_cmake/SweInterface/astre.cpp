@@ -52,10 +52,6 @@ string Astre::read_svg(Astres astre) {
     }
 }
 
-Image Astre::generer(Astres astre, double x, double y, double width, double height) {
-    return Image(Point(x, y), width , height , Astre::read_svg(astre), Color::Black);
-}
-
 string Astre::nom(Astres a) {
     switch (a) {
         case Astres::soleil:

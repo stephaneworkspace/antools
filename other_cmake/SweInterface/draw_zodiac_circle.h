@@ -7,7 +7,7 @@
 
 #include "draw.h"
 
-enum circle_position {
+enum CirclePositions {
     zero = 0,
     un = 1,
     deux = 2,
@@ -46,9 +46,9 @@ struct CircleZod {
 class DrawCircle
 {
 private:
-    CirclePosition get_radius_circle(circle_position circlePosition);
+    CirclePosition get_radius_circle(CirclePositions circle_osition);
 public:
-    CircleZod circle(circle_position circle_position);
+    CircleZod circle(CirclePositions circle_position);
 };
 
 #endif //ASTRONUMEROLOGIE_GENERATE_DRAW_ZODIAC_CIRCLE_H

@@ -17,42 +17,42 @@
     return aspect[i];
 }
  */
-int* Aspect::angle(aspect a) {
+int* Aspect::angle(Aspects a) {
     int* res = new int[2];
     switch (a) {
-        case aspect::conjunction:
+        case Aspects::conjunction:
             res[0] = 0;
             res[1] = 10;
             break;
-        case aspect::opposition:
+        case Aspects::opposition:
             res[0] = 180;
             res[1] = 8;
             break;
-        case aspect::trine:
+        case Aspects::trine:
             res[0] = 120;
             res[1] = 7;
             break;
-        case aspect::square:
+        case Aspects::square:
             res[0] = 90;
             res[1] = 6;
             break;
-        case aspect::sextile:
+        case Aspects::sextile:
             res[0] = 60;
             res[1] = 5;
             break;
-        case aspect::inconjunction:
+        case Aspects::inconjunction:
             res[0] = 150;
             res[1] = 2;
             break;
-        case aspect::sequisquare:
+        case Aspects::sequisquare:
             res[0] = 135;
             res[1] = 1;
             break;
-        case aspect::semisquare:
+        case Aspects::semisquare:
             res[0] = 45;
             res[1] = 1;
             break;
-        case aspect::semisextile:
+        case Aspects::semisextile:
             res[0] = 30;
             res[1] = 1;
             break;

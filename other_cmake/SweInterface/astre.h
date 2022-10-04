@@ -11,9 +11,7 @@
 #include "house.h"
 #include "sign.h"
 #include "calcul_ut.h"
-#include "simple_svg_1.0.0.hpp"
 
-using namespace svg;
 using namespace std;
 
 enum Astres {
@@ -37,7 +35,6 @@ class Astre
 {
 public:
     static string read_svg(Astres astre);
-    Image generer(Astres astre, double x, double y, double width, double height);
     static string nom(Astres a);
     static string* sign_name_and_svg(CalcUt calcul_ut);
 };

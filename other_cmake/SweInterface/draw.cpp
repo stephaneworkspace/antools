@@ -7,22 +7,6 @@ double Draw::get_fixed_center(double pos_value) {
     return pos_value + CHART_SIZE / 2;
 }
 
-double Draw::get_fixed_y(double y) {
-    if (y < 0) {
-        y += CHART_SIZE;
-    } else {
-        if ((y > CHART_SIZE / 2) || (y < CHART_SIZE / 2)) {
-            y = CHART_SIZE - y;
-        }
-        if (y > CHART_SIZE) {
-            y -= CHART_SIZE;
-        } else if (y < 0) {
-            y += CHART_SIZE;
-        }
-    }
-    return y;
-}
-
 double Draw::get_fixed_pos(double pos_value) {
     double pos = pos_value;
     bool sw_done = false;
