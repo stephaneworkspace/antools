@@ -4,7 +4,7 @@
 
 #include "angle.h"
 
-string Angle::read_svg(angle a) {
+string Angle::read_svg(Angles a) {
     string* ang = new string[4];
     //ang[0] = "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMjguMyAyOC4zIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyOC4zIDI4LjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMUQxRDFCO30KCS5zdDF7Zm9udC1mYW1pbHk6J015cmlhZFByby1Cb2xkJzt9Cgkuc3Qye2ZvbnQtc2l6ZToxMnB4O30KPC9zdHlsZT4KPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSA3LjE4NTUgMTcuNzAyMSkiIGNsYXNzPSJzdDAgc3QxIHN0MiI+QXM8L3RleHQ+Cjwvc3ZnPg==";
     //ang[1] = "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMjguMyAyOC4zIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyOC4zIDI4LjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMUQxRDFCO30KCS5zdDF7Zm9udC1mYW1pbHk6J015cmlhZFByby1Cb2xkJzt9Cgkuc3Qye2ZvbnQtc2l6ZToxMnB4O30KPC9zdHlsZT4KPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSA4LjQ4ODQgMTcuODMzNikiIGNsYXNzPSJzdDAgc3QxIHN0MiI+RmM8L3RleHQ+Cjwvc3ZnPg==";
@@ -17,19 +17,19 @@ string Angle::read_svg(angle a) {
     ang[3] = "iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAABY0lEQVR4nO2T0VGEMBCGN+F81ncPLtfBlUAH2oHYAR2YEuhA7IASKOE6cAV8x2dJ4h+U8XDGgXMYn/hmmGR2k/2SnSDon1mFi7MKF2cVkgJE3Y5o88bMR/qBUuqA/CXyL8gzTSDwTRJF2wzDnZSbPWq2mPcopa6s7Z4xfaqqJsU4yVyhdo5iIVxRVa8ZQj0+TuQSlMkh1DSD2UIpqbTWPUK4R6gH8QwHOQhB5SAMwzAJAmqxNkZHNJ90xCPwTYLC2heMomt2Tuq6rvPPwkFpTJcPQuRT5Fufx54Mt2ccEOM3Zwm9RAj7gCJ7FM8xJmG4LQehn+N2mrkp6RfOEhKAiLGtQIsLX9hLxkKRMdcFAQUY0Al/EaJt4raum5iAl4gvoV+HNt5IeXFvjNkFgcOvNL7tpFABa981ER1RKKceE/tbKLWNjaEUr7dFTjPwUjykGLHRix6YFC7NKlycVbg4q3BxPgAWV8Qd23aNSAAAAABJRU5ErkJggg==";
     string r = "data:image/png;base64,";
     switch (a) {
-        case angle::asc:
+        case Angles::asc:
             return r + ang[0];
-        case angle::fc:
+        case Angles::fc:
             return r + ang[1];
-        case angle::desc:
+        case Angles::desc:
             return r + ang[2];
-        case angle::mc:
+        case Angles::mc:
             return r + ang[3];
-        case angle::nothing:
+        case Angles::nothing:
             return r + ang[0];
     }
 }
 
-Image Angle::generer(angle angle, double x, double y, double width, double height) {
+Image Angle::generer(Angles angle, double x, double y, double width, double height) {
     return Image(Point(x, y), width, height, Angle::read_svg(angle), Color::Black);
 }

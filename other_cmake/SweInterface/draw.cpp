@@ -106,20 +106,22 @@ double Draw::get_sign_longitude(H house_asc, CalcUt calcul_ut) {
     return pos;
 }
 
-double Draw::get_angle_longitude(H* house, angle angle) {
+double Draw::get_angle_longitude(H* house, Angles angle) {
     double pos = 0;
     switch (angle) {
-        case angle::asc:
+        case Angles::asc:
             pos = 360 - house[0].longitude + house[0].longitude;
             break;
-        case angle::fc:
+        case Angles::fc:
             pos = 360 - house[0].longitude + house[3].longitude;
             break;
-        case angle::desc:
+        case Angles::desc:
             pos = 360 - house[0].longitude + house[6].longitude;
             break;
-        case angle::mc:
+        case Angles::mc:
             pos = 360 - house[0].longitude + house[9].longitude;
+            break;
+        case Angles::nothing:
             break;
     }
     pos = Draw::get_fixed_pos(pos);

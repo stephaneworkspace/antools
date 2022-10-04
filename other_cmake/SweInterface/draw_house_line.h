@@ -11,7 +11,7 @@ class DrawHouseLines
 {
 public:
     LineXY3* lines(H* house);
-    LineXY angle_lines(H* house, angle angle);
+    LineXY angle_lines(H* house, Angles angle);
 };
 
 #endif //ASTRONUMEROLOGIE_GENERATE_DRAW_HOUSE_LINE_H

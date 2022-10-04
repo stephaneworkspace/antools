@@ -12,7 +12,7 @@
 
 using namespace std;
 
-enum angle {
+enum Angles {
     nothing = 0,
     asc = 1,
     fc = 2,
@@ -23,9 +23,9 @@ enum angle {
 class Angle
 {
 private:
-    string read_svg(angle a);
+    string read_svg(Angles a);
 public:
-    Image generer(angle angle, double x, double y, double width, double height);
+    Image generer(Angles angle, double x, double y, double width, double height);
 };
 
 #endif //ASTRONUMEROLOGIE_GENERATE_ANGLE_H

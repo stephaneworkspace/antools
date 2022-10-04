@@ -71,7 +71,7 @@ public:
                                       double radius_circle_begin,
                                       double radius_circle_end);
     static double get_sign_longitude(H house_asc, CalcUt calcul_ut);
-    static double get_angle_longitude(H* house, angle angle);
+    static double get_angle_longitude(H* house, Angles angle);
     static double get_z_norm(double angle);
     static double get_closest_distance(double* angle);
 };

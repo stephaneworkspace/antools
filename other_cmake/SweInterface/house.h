@@ -16,7 +16,7 @@ struct H {
     int object_id;
     double longitude;
     SplitDeg split;
-    angle angle;
+    Angles angle;
 };
 
 class House
@@ -24,7 +24,7 @@ class House
 private:
     string read_svg(int house);
 public:
-    static H init(int object_id, double longitude, angle angle);
+    static H init(int object_id, double longitude, Angles angle);
     Image generer(int house, double x, double y, double width, double height);
 };
 

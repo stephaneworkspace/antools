@@ -16,7 +16,7 @@ LineXY3 *DrawHouseLines::lines(H *house) {
         double pos = Draw::get_fixed_pos(off_house + house[i].longitude);
         Offset* axy_triangle;
         double angular_pointer = ANGULAR_POINTER;
-        if (house[i].angle != angle::asc) {
+        if (house[i].angle != Angles::asc) {
             Offset* axy_line = Draw::get_line_trigo(pos,
                                                     (Draw::get_radius_total() * LINE_TOP) / 100,
                                                     (Draw::get_radius_total() * LINE_BOTTOM) / 100);
@@ -53,23 +53,23 @@ LineXY3 *DrawHouseLines::lines(H *house) {
     return res;
 }
 
-LineXY DrawHouseLines::angle_lines(H *house, angle angle) {
+LineXY DrawHouseLines::angle_lines(H *house, Angles angle) {
     const double LINE_TOP = 90;
     const double LINE_BOTTOM = 76;
     LineXY res;
     double off_house = 360 - house[0].longitude;
     double pos;
     switch (angle) {
-        case angle::asc:
+        case Angles::asc:
             pos = Draw::get_fixed_pos(off_house + house[0].longitude);
             break;
-        case angle::fc:
+        case Angles::fc:
             pos = Draw::get_fixed_pos(off_house + house[3].longitude);
             break;
-        case angle::desc:
+        case Angles::desc:
             pos = Draw::get_fixed_pos(off_house + house[6].longitude);
             break;
-        case angle::mc:
+        case Angles::mc:
             pos = Draw::get_fixed_pos(off_house + house[9].longitude);
             break;
     }

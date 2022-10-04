@@ -33,7 +33,7 @@ string House::read_svg(int house) {
     return "data:image/png;base64," + h[house - 1];
 }
 
-H House::init(int object_id, double longitude, angle angle) {
+H House::init(int object_id, double longitude, Angles angle) {
     SplitDeg splig_deg = Swe17::split_deg(longitude, 0);
     H h;
     h.object_id = object_id;

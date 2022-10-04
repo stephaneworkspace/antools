@@ -106,13 +106,13 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
 
     // Angle line
     LineXY lxy;
-    lxy = dhl.angle_lines(house, angle::asc);
+    lxy = dhl.angle_lines(house, Angles::asc);
     doc << Line(Point(lxy.lx1, lxy.ly1), Point(lxy.lx2, lxy.ly2), Stroke(STROKE_BOLD, Color::Black));
-    lxy = dhl.angle_lines(house, angle::fc);
+    lxy = dhl.angle_lines(house, Angles::fc);
     doc << Line(Point(lxy.lx1, lxy.ly1), Point(lxy.lx2, lxy.ly2), Stroke(STROKE_BOLD, Color::Black));
-    lxy = dhl.angle_lines(house, angle::desc);
+    lxy = dhl.angle_lines(house, Angles::desc);
     doc << Line(Point(lxy.lx1, lxy.ly1), Point(lxy.lx2, lxy.ly2), Stroke(STROKE_BOLD, Color::Black));
-    lxy = dhl.angle_lines(house, angle::mc);
+    lxy = dhl.angle_lines(house, Angles::mc);
     doc << Line(Point(lxy.lx1, lxy.ly1), Point(lxy.lx2, lxy.ly2), Stroke(STROKE_BOLD, Color::Black));
 
     // Draw house number image
@@ -130,14 +130,14 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     double angle_size = DrawHouseAngle::angle_size();
     Offset offset;
     // Asc
-    offset = DrawHouseAngle::angle(house, angle::asc);
-    doc << house_angle.generer(angle::asc, offset.x, offset.y, angle_size, angle_size);
-    offset = DrawHouseAngle::angle(house, angle::fc);
-    doc << house_angle.generer(angle::fc, offset.x, offset.y, angle_size, angle_size);
-    offset = DrawHouseAngle::angle(house, angle::desc);
-    doc << house_angle.generer(angle::desc, offset.x, offset.y, angle_size, angle_size);
-    offset = DrawHouseAngle::angle(house, angle::mc);
-    doc << house_angle.generer(angle::mc, offset.x, offset.y, angle_size, angle_size);
+    offset = DrawHouseAngle::angle(house, Angles::asc);
+    doc << house_angle.generer(Angles::asc, offset.x, offset.y, angle_size, angle_size);
+    offset = DrawHouseAngle::angle(house, Angles::fc);
+    doc << house_angle.generer(Angles::fc, offset.x, offset.y, angle_size, angle_size);
+    offset = DrawHouseAngle::angle(house, Angles::desc);
+    doc << house_angle.generer(Angles::desc, offset.x, offset.y, angle_size, angle_size);
+    offset = DrawHouseAngle::angle(house, Angles::mc);
+    doc << house_angle.generer(Angles::mc, offset.x, offset.y, angle_size, angle_size);
 
     // Draw zodiac lines
     DrawZodiacLines dzl;
