@@ -14,6 +14,19 @@
 
 using namespace std;
 
+const int SOLEIL = 0;
+const int LUNE = 1;
+const int MERCURE = 2;
+const int VENUS = 3;
+const int MARS = 4;
+const int JUPITER = 5;
+const int SATURN = 6;
+const int URANUS = 7;
+const int NEPTUNE = 8;
+const int PLUTON = 9;
+const int NOEUD_LUNAIRE = 10;
+
+// les nombres de cet enum sont pour la libraiaire Swe
 enum Astres {
     soleil = 0,
     lune = 1,

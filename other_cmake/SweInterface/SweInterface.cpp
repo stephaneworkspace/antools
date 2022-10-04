@@ -62,17 +62,17 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     }
 
     Astres* astres = new Astres[11];
-    astres[0] = Astres::soleil;
-    astres[1] = Astres::lune;
-    astres[2] = Astres::mercure;
-    astres[3] = Astres::venus;
-    astres[4] = Astres::mars;
-    astres[5] = Astres::jupiter;
-    astres[6] = Astres::saturn;
-    astres[7] = Astres::uranus;
-    astres[8] = Astres::neptune;
-    astres[9] = Astres::pluto;
-    astres[10] = Astres::noeud_lunaire;
+    astres[SOLEIL] = Astres::soleil;
+    astres[LUNE] = Astres::lune;
+    astres[MERCURE] = Astres::mercure;
+    astres[VENUS] = Astres::venus;
+    astres[MARS] = Astres::mars;
+    astres[JUPITER] = Astres::jupiter;
+    astres[SATURN] = Astres::saturn;
+    astres[URANUS] = Astres::uranus;
+    astres[NEPTUNE] = Astres::neptune;
+    astres[PLUTON] = Astres::pluto;
+    astres[NOEUD_LUNAIRE] = Astres::noeud_lunaire;
 
     Document doc(CHART_SIZE, CHART_SIZE);
     Fill svg_fill;
@@ -171,7 +171,6 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     }
 
     // Draw astre image + line
-    Astre astre;
     double astre_size;
     astre_size = DrawBodieAstre::astre_size();
     svg_stroke.stroke = "black";
