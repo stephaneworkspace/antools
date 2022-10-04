@@ -1,3 +1,4 @@
+mod png;
 mod svg;
 mod tests;
 
@@ -9,6 +10,7 @@ use base64::{encode, decode, DecodeError};
 use image::{ColorType, GenericImageView, ImageFormat};
 use miniz_oxide::deflate::{compress_to_vec_zlib, CompressionLevel};
 use pdf_writer::{Content, Filter, Finish, Name, PdfWriter, Rect, Ref};
+use crate::png::create_png;
 use crate::svg::{circle, document, image, line, path_data};
 
 #[repr(C)]
@@ -113,39 +115,6 @@ pub extern "C" fn create_pdf_b64(p_svg_b64: *const c_char) -> B64 {
     }
 }
 
-fn create_png(svg_v_u8: Vec<u8>) -> Result<Vec<u8>, B64> {
-    let mut opt = usvg::Options::default();
-    opt.fontdb.load_system_fonts();
-    let rtree = match usvg::Tree::from_data(&svg_v_u8, &opt.to_ref()) {
-        Ok(ok) => {
-            ok
-        },
-        Err(err) => {
-            return Err(B64 {
-                b_64: CString::new("").unwrap().into_raw(),
-                sw: false,
-                err: CString::new(format!("Impossible de lire le svg. {}", err)).unwrap().into_raw()
-            });
-        }
-    };
-
-    let pixmap_size = rtree.svg_node().size.to_screen_size();
-    let mut pixmap = tiny_skia::Pixmap::new(pixmap_size.width(), pixmap_size.height()).unwrap();
-    resvg::render(&rtree, usvg::FitTo::Original, tiny_skia::Transform::default(), pixmap.as_mut());
-    let png_res = match pixmap.encode_png() {
-        Ok(ok) => {
-            ok
-        },
-        Err(err) => {
-            return Err(B64 {
-                b_64: CString::new("").unwrap().into_raw(),
-                sw: false,
-                err: CString::new(format!("Impossible d'encoder le png en base64. {}", err)).unwrap().into_raw()
-            });
-        }
-    };
-    Ok(png_res)
-}
 
 fn create_pdf(data: Vec<u8>) -> Result<String, B64> {
     // Start writing.
