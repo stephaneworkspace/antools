@@ -4,13 +4,13 @@
 
 #include "document.h"
 
-SDocument::SDocument(float w, float h) {
+Document::Document(float w, float h) {
     width = w;
     height = h;
     content = "";
 }
 
-string SDocument::generate() {
+string Document::generate() {
     const char* res = svg_document(width, height, content.c_str());
     string s;
     s.assign(res);

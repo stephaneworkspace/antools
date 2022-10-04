@@ -11,15 +11,15 @@
 
 using namespace std;
 
-class SDocument
+class Document
 {
 private:
     float width;
     float height;
     string content;
 public:
-    SDocument(float w, float h);
-    SDocument & operator<<(string const & s) {
+    Document(float w, float h);
+    Document & operator<<(string const & s) {
         content += s;
         return *this;
     }

@@ -7,11 +7,10 @@
 
 #include <iostream>
 #include "../../include/antools.h"
-#include "svg.h"
 
 using namespace std;
 
-class SImage
+class Image
 {
 public:
     static string generate(float height, float width, float x, float y, const char* href);

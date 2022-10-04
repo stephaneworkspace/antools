@@ -16,7 +16,7 @@ using namespace std;
 const string DELIMITER = ",";
 const char DELIMITER_CHAR = ',';
 
-class SData
+class Data
 {
 private:
     vector<SvgData> vec_data;
@@ -30,7 +30,7 @@ private:
     SvgPoint set_point(string point_string, int pos);
     void set_command(char c, string s);
 public:
-    SData(SFill fill, SStroke stroke);
+    Data(Fill fill, Stroke stroke);
     void move_to(float x, float y);
     void move_by(float x, float y);
     void line_to(float x, float y);

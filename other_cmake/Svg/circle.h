@@ -11,12 +11,12 @@
 
 using namespace std;
 
-class SCircle
+class Circle
 {
 private:
     SvgProperties properties;
 public:
-    SCircle(SFill fill, SStroke stroke);
+    Circle(Fill fill, Stroke stroke);
     string generate(float x, float y, float r);
 };
 

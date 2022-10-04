@@ -41,18 +41,12 @@ Offset Draw::get_pos_trigo(double angular, double radius_circle) {
     return res;
 }
 
-Offset Draw::get_center() {
-    Offset res;
-    res.x = Draw::get_radius_total();
-    res.y = Draw::get_radius_total();
-}
-
 Offset *Draw::get_line_trigo(double angular, double radius_circle_begin, double radius_circle_end) {
     Offset* res = new Offset[2];
-    res[0].x = Draw::get_center().x + cos(angular / 360 * 2 * M_PI) * -1 * radius_circle_begin;
-    res[0].y = Draw::get_center().y + sin(angular / 360 * 2 * M_PI) * radius_circle_begin;
-    res[1].x = Draw::get_center().x + cos(angular / 360 * 2 * M_PI) * -1 * radius_circle_end;
-    res[1].y = Draw::get_center().y + sin(angular / 360 * 2 * M_PI) * radius_circle_end;
+    res[0].x = cos(angular / 360 * 2 * M_PI) * -1 * radius_circle_begin;
+    res[0].y = sin(angular / 360 * 2 * M_PI) * radius_circle_begin;
+    res[1].x = cos(angular / 360 * 2 * M_PI) * -1 * radius_circle_end;
+    res[1].y = sin(angular / 360 * 2 * M_PI) * radius_circle_end;
     return res;
 }
 
@@ -75,12 +69,12 @@ Offset *Draw::get_triangle_trigo(double angular,
     Offset* res = new Offset[3];
     double angular1 = Draw::get_fixed_pos(angular - angular_pointer);
     double angular2 = Draw::get_fixed_pos(angular + angular_pointer);
-    res[0].x = Draw::get_center().x + cos(angular1 / 360 * 2 * M_PI) * -1 * radius_circle_begin;
-    res[0].y = Draw::get_center().y + sin(angular1 / 360 * 2 * M_PI) * radius_circle_begin;
-    res[1].x = Draw::get_center().x + cos(angular2 / 360 * 2 * M_PI) * -1 * radius_circle_begin;
-    res[1].y = Draw::get_center().y + sin(angular2 / 360 * 2 * M_PI) * radius_circle_begin;
-    res[2].x = Draw::get_center().x + cos(angular / 360 * 2 * M_PI) * -1 * radius_circle_end;
-    res[2].y = Draw::get_center().y + sin(angular / 360 * 2 * M_PI) * radius_circle_end;
+    res[0].x = cos(angular1 / 360 * 2 * M_PI) * -1 * radius_circle_begin;
+    res[0].y = sin(angular1 / 360 * 2 * M_PI) * radius_circle_begin;
+    res[1].x = cos(angular2 / 360 * 2 * M_PI) * -1 * radius_circle_begin;
+    res[1].y = sin(angular2 / 360 * 2 * M_PI) * radius_circle_begin;
+    res[2].x = cos(angular / 360 * 2 * M_PI) * -1 * radius_circle_end;
+    res[2].y = sin(angular / 360 * 2 * M_PI) * radius_circle_end;
     return res;
 }
 

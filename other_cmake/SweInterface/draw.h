@@ -60,7 +60,6 @@ public:
     static Offset get_center_item(double size, Offset offset);
     static Offset get_pos_trigo(double angular, double radius_circle);
     static double get_radius_total();
-    static Offset get_center();
     static Offset* get_line_trigo(double angular, double radius_circle_begin, double radius_circle_end);
     static double get_astre_longitude(H house, CalcUt calcul_ut);
     static double get_item_longitude(H house, double longitude);

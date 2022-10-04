@@ -74,9 +74,9 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     astres[9] = Astres::pluto;
     astres[10] = Astres::noeud_lunaire;
 
-    SDocument doc(CHART_SIZE, CHART_SIZE);
-    SFill svg_fill;
-    SStroke svg_stroke;
+    Document doc(CHART_SIZE, CHART_SIZE);
+    Fill svg_fill;
+    Stroke svg_stroke;
 
     // Draw circles natal
     DrawCircle dz;
@@ -86,7 +86,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
             svg_fill.fill = "transparent";
             svg_stroke.stroke = "black";
             svg_stroke.stroke_width = 1;
-            SCircle svg_circle(svg_fill, svg_stroke);
+            Circle svg_circle(svg_fill, svg_stroke);
             doc << svg_circle.generate(CHART_SIZE / 2, CHART_SIZE / 2, cz.radius * 0.8);
         }
     }
@@ -101,7 +101,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
             } else {
                 svg_stroke.stroke = "black";
                 svg_stroke.stroke_width = 1;
-                SLine svg_line(svg_stroke);
+                Line svg_line(svg_stroke);
                 doc << svg_line.generate(lxy3[i].lx1, lxy3[i].ly1, lxy3[i].lx2, lxy3[i].ly2);
             }
         } else {
@@ -121,7 +121,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     // Angle line
     svg_stroke.stroke = "black";
     svg_stroke.stroke_width = STROKE_BOLD;
-    SLine svg_line(svg_stroke);
+    Line svg_line(svg_stroke);
     LineXY lxy;
     lxy = dhl.angle_lines(house, Angles::asc);
     doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
@@ -139,7 +139,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
         Offset offset;
         house_size = DrawHouseNumber::number_size();
         offset = DrawHouseNumber::number(i, house);
-        doc << SImage::generate(house_size, house_size, offset.x, offset.y, House::read_svg(i).c_str());
+        doc << Image::generate(house_size, house_size, offset.x, offset.y, House::read_svg(i).c_str());
     }
 
     // Draw house angle image
@@ -148,13 +148,13 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     Offset offset;
     // Asc
     offset = DrawHouseAngle::angle(house, Angles::asc);
-    doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::asc).c_str());
+    doc << Image::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::asc).c_str());
     offset = DrawHouseAngle::angle(house, Angles::fc);
-    doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::fc).c_str());
+    doc << Image::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::fc).c_str());
     offset = DrawHouseAngle::angle(house, Angles::desc);
-    doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::desc).c_str());
+    doc << Image::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::desc).c_str());
     offset = DrawHouseAngle::angle(house, Angles::mc);
-    doc << SImage::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::mc).c_str());
+    doc << Image::generate(angle_size, angle_size, offset.x, offset.y, Angle::read_svg(Angles::mc).c_str());
 
     // Draw zodiac lines
     svg_stroke.stroke = "black";
@@ -173,7 +173,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
         Offset offset;
         zodiac_size = DrawZodiacSign::zodiac_size();
         offset = DrawZodiacSign::zodiac_sign(static_cast<Signs>(i), house[0]);
-        doc << SImage::generate(zodiac_size, zodiac_size, offset.x, offset.y, Sign::read_svg(static_cast<Signs>(i)).c_str());
+        doc << Image::generate(zodiac_size, zodiac_size, offset.x, offset.y, Sign::read_svg(static_cast<Signs>(i)).c_str());
     }
 
     // Draw astre image + line
@@ -191,13 +191,13 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
         CalcUt calcul_ut = Swe03::calc_ut(utc_to_jd.julian_day_ut, astres[i], OptionFlag::speed);
         offset = DrawBodieAstre::bodie_astre(house[0], calcul_ut, false);
         lxy = dbl.line(house[0], calcul_ut, false);
-        doc << SImage::generate(astre_size, astre_size, offset.x, offset.y, Astre::read_svg(astres[i]).c_str());
+        doc << Image::generate(astre_size, astre_size, offset.x, offset.y, Astre::read_svg(astres[i]).c_str());
         doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
         // Transit
         CalcUt calcul_ut_t = Swe03::calc_ut(utc_to_jd_t.julian_day_ut, astres[i], OptionFlag::speed);
         offset = DrawBodieAstre::bodie_astre(house[0], calcul_ut_t, true);
         lxy = dbl.line(house[0], calcul_ut_t, true);
-        doc << SImage::generate(astre_size, astre_size, offset.x, offset.y, Astre::read_svg(astres[i]).c_str());
+        doc << Image::generate(astre_size, astre_size, offset.x, offset.y, Astre::read_svg(astres[i]).c_str());
         doc << svg_line.generate(lxy.lx1, lxy.ly1, lxy.lx2, lxy.ly2);
     }
 
