@@ -5,7 +5,7 @@ use crate::B64;
 
 pub(crate) fn create_png(svg_v_u8: Vec<u8>) -> Result<Vec<u8>, B64> {
     let mut opt = Options::default();
-    opt.fontdb.load_system_fonts();
+    //opt.fontdb.load_system_fonts();
     let rtree = match Tree::from_data(&svg_v_u8, &opt.to_ref()) {
         Ok(ok) => {
             ok
