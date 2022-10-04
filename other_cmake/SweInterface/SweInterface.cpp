@@ -205,6 +205,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     item_longitude[(11 * 2) + 1] = house[0].longitude;
     item_longitude[(11 * 2) + 2] = house[9].longitude;
 
+    /*
     CalcUt* c_ut = new CalcUt[2];
     const int MAX_PAIR = MAX_ITEM * (11 * 2);
     PairAspect* pair = new PairAspect[MAX_PAIR];
@@ -279,7 +280,7 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
                 }
             }
         }
-    }
+    }*/
 
     static std::string encoded;
     if(!Base64::Encode(doc.generate(), &encoded)) {
