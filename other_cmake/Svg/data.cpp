@@ -3,7 +3,7 @@
 //
 #include "data.h"
 
-int SData::get_size(string s) {
+long SData::get_size(string s) {
     return std::count(s.begin(), s.end(), DELIMITER_CHAR) + 1;
 }
 
@@ -50,7 +50,7 @@ SvgPoint SData::set_point(string point_string, int pos) {
 }
 
 void SData::set_command(char c, string s) {
-    int size = get_size(s);
+    long size = get_size(s);
     vec_data.push_back(SData::set_data(c, size));
     for (int k = 0; k < size; ++k) {
         vec_point.push_back(SData::set_point(s, k));

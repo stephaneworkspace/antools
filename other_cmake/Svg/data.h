@@ -24,7 +24,7 @@ private:
     int idx_data;
     int idx_point;
     SvgProperties properties;
-    static int get_size(string s);
+    static long get_size(string s);
     static float get_value(string s, int pos);
     SvgData set_data(char c, int point_size);
     SvgPoint set_point(string point_string, int pos);
