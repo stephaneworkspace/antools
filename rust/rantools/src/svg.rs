@@ -4,7 +4,7 @@ use std::ffi::CStr;
 use std::os::raw::{c_char, c_float};
 use svg::Document;
 use crate::{SvgData, SvgPoint, SvgProperties, SvgStroke};
-use svg::node::element::{Circle, Line, Path};
+use svg::node::element::{Circle, Image, Line, Path};
 use svg::node::element::path::Data;
 
 pub(crate) fn path_data(data: *const SvgData,
@@ -101,7 +101,13 @@ pub(crate) fn image(width: c_float,
                     y: c_float,
                     href: *const c_char) -> String {
     let href_str = unsafe { CStr::from_ptr(href).to_str().unwrap() };
-    format!("<image width=\"{}\" height=\"{}\" x=\"{}\" y=\"{}\" href=\"{}\"/>", width, height, x, y, href_str)
+    let image = Image::new()
+        .set("width", width)
+        .set("height", height)
+        .set("x", x)
+        .set("y", y)
+        .set("href", href_str);
+    image.to_string()
 }
 
 

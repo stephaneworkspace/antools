@@ -230,7 +230,7 @@ mod tests {
         let res_cstr = unsafe { CStr::from_ptr(res) };
         let res_str = res_cstr.to_str().unwrap();
 
-        let assert = r#"<image width="40" height="30" x="10" y="5" href="data:image/svg+xml;base64,"/>"#;
+        let assert = r#"<image height="30" href="data:image/svg+xml;base64," width="40" x="10" y="5"/>"#;
         assert_eq!(assert, res_str);
     }
 
