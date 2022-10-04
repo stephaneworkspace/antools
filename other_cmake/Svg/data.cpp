@@ -3,11 +3,11 @@
 //
 #include "data.h"
 
-int Data::get_size(string s) {
+int SData::get_size(string s) {
     return std::count(s.begin(), s.end(), DELIMITER_CHAR) + 1;
 }
 
-float Data::get_value(string s, int pos) {
+float SData::get_value(string s, int pos) {
     string c = DELIMITER;
     string res = "";
     auto start = 0U;
@@ -34,7 +34,7 @@ float Data::get_value(string s, int pos) {
     return 0;
 }
 
-SvgData Data::set_data(char c, int point_size) {
+SvgData SData::set_data(char c, int point_size) {
     SvgData data;
     data.point_idx = idx_data;
     data.point_size = point_size;
@@ -42,24 +42,24 @@ SvgData Data::set_data(char c, int point_size) {
     return data;
 }
 
-SvgPoint Data::set_point(string point_string, int pos) {
+SvgPoint SData::set_point(string point_string, int pos) {
     SvgPoint point;
     point.point_idx = idx_data;
     point.point = get_value(point_string, pos);
     return point;
 }
 
-void Data::set_command(char c, string s) {
+void SData::set_command(char c, string s) {
     int size = get_size(s);
-    vec_data.push_back(Data::set_data(c, size));
+    vec_data.push_back(SData::set_data(c, size));
     for (int k = 0; k < size; ++k) {
-        vec_point.push_back(Data::set_point(s, k));
+        vec_point.push_back(SData::set_point(s, k));
     }
     idx_data++;
     idx_point += size;
 }
 
-Data::Data(Fill fill, Stroke stroke) {
+SData::SData(SFill fill, SStroke stroke) {
     idx_data = 0;
     idx_point = 0;
     properties.fill.fill = fill.fill.c_str();
@@ -67,39 +67,39 @@ Data::Data(Fill fill, Stroke stroke) {
     properties.stroke.stroke_width = stroke.stroke_width;
 }
 
-void Data::move_to(float x, float y) {
+void SData::move_to(float x, float y) {
     char c = 'M';
-    Data::set_command(c, to_string(x) + "," + to_string(y));
+    SData::set_command(c, to_string(x) + "," + to_string(y));
 }
 
-void Data::move_by(float x, float y) {
+void SData::move_by(float x, float y) {
     char c = 'm';
-    Data::set_command(c, to_string(x) + "," + to_string(y));
+    SData::set_command(c, to_string(x) + "," + to_string(y));
 }
 
-void Data::line_to(float x, float y) {
+void SData::line_to(float x, float y) {
     char c = 'L';
-    Data::set_command(c, to_string(x) + "," + to_string(y));
+    SData::set_command(c, to_string(x) + "," + to_string(y));
 }
 
-void Data::line_by(float x, float y) {
+void SData::line_by(float x, float y) {
     char c = 'l';
-    Data::set_command(c, to_string(x) + "," + to_string(y));
+    SData::set_command(c, to_string(x) + "," + to_string(y));
 }
 
-void Data::close_to() {
+void SData::close_to() {
     char c = 'Z';
-    vec_data.push_back(Data::set_data(c, 0));
+    vec_data.push_back(SData::set_data(c, 0));
     idx_data++;
 }
 
-void Data::close_by() {
+void SData::close_by() {
     char c = 'z';
-    vec_data.push_back(Data::set_data(c, 0));
+    vec_data.push_back(SData::set_data(c, 0));
     idx_data++;
 }
 
-string Data::generate() {
+string SData::generate() {
     SvgData* data = vec_data.data();
     SvgPoint* point = vec_point.data();
     const char* res = svg_path_data(data, point, idx_data, idx_point, properties);

@@ -14,12 +14,12 @@ using namespace std;
 
 int main() {
     // Data
-    Fill fill;
+    SFill fill;
     fill.fill = "none";
-    Stroke stroke;
+    SStroke stroke;
     stroke.stroke = "black";
     stroke.stroke_width = 3;
-    Data data = Data(fill, stroke);
+    SData data = SData(fill, stroke);
     data.move_to(10.0,10.0);
     data.line_by(0.50,50.0);
     data.line_by(50,0);
@@ -28,11 +28,11 @@ int main() {
     cout << data.generate() << endl;
 
     // Circle
-    Circle circle = Circle(fill, stroke);
+    SCircle circle = SCircle(fill, stroke);
     cout << circle.generate(10,20,30) << endl;
 
     // Circle
-    Line line = Line(stroke);
+    SLine line = SLine(stroke);
     cout << line.generate(10,20,30,40) << endl;
 
     cout << "Hello, World!" << endl;

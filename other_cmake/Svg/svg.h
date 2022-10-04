@@ -9,11 +9,11 @@
 
 using namespace std;
 
-struct Fill {
+struct SFill {
     string fill;
 };
 
-struct Stroke {
+struct SStroke {
     string stroke;
     float stroke_width;
 };

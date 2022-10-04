@@ -9,7 +9,7 @@
 /* Begin PBXAggregateTarget section */
 		6480D792E2EF434288B439EA /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 3708BFD09C894EB29711807A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = D01F1E6473D34316BADBF3C2 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				3F0B3F44FA677362FDD22817 /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -20,13 +20,13 @@
 		};
 		DC73121302AB44CCB3EC9F48 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = C6AECF2D462D4693946FA0EA /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 304336E0C2BE41A0ADA9D83F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
 				67DDA3365FB69F7C8027C8C6 /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
-				FFC2D844EE2C486C96007A46 /* PBXTargetDependency */,
-				9769E05925B9415EAC6F57C2 /* PBXTargetDependency */,
+				F36E513E05FB44BA96DE2136 /* PBXTargetDependency */,
+				DC808AB0F3EE42FFB9F45520 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -34,54 +34,54 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		09FEA4F2700448C78065E14A /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */ = {isa = PBXBuildFile; fileRef = AA0E82C0CB214971A4C3BC05 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */; };
-		136D261273A74AAB898C95BD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */ = {isa = PBXBuildFile; fileRef = D2E0D8D48CED4CD7B412689B /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */; };
-		25F3508CDA164427A875D29A /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */ = {isa = PBXBuildFile; fileRef = 015DC118D1FC4B6B949547C3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */; };
-		338A237642AB4C43A3CB6F57 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */ = {isa = PBXBuildFile; fileRef = 3AF99DAC6B93469A8F6F3B50 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */; };
-		42B477E123F24A26B62DCCBA /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */ = {isa = PBXBuildFile; fileRef = 7B49BADFE7F64021847E218F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */; };
-		45E5BE9DE18447F7BF89A1E4 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */ = {isa = PBXBuildFile; fileRef = 10AF3318FC34480E892E9880 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */; };
-		5292A5F8500C44DE953FBC28 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */ = {isa = PBXBuildFile; fileRef = 96D310C5F3924378B3C830E7 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */; };
-		53F8FD21EAF04DD38F982D73 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */ = {isa = PBXBuildFile; fileRef = 89CB0B6536D848F0896A7F90 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */; };
-		57AEAF05559945E19BD583D9 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */ = {isa = PBXBuildFile; fileRef = 2257EFD5DA9443D9AD90C387 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */; };
-		5A9A97115E9A4439891F5FA6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */ = {isa = PBXBuildFile; fileRef = C08D6B58BF174F8BBB76C3E8 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */; };
-		5B699EA0287B4CD6A80CDB1A /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */ = {isa = PBXBuildFile; fileRef = 1FF55DD1597F4965A99E8815 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */; };
-		6B26061104CA48CE8519C1A8 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */ = {isa = PBXBuildFile; fileRef = 6764C13DE7FE4ABAB9B892F6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */; };
-		7F33D8D512D64E74BCCB3D06 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */ = {isa = PBXBuildFile; fileRef = AE01AF6FB7594DD2ADE3A24C /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */; };
-		8E795F00690E4F7CA2CFFCF2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */ = {isa = PBXBuildFile; fileRef = 7785250F23FB4D9A983C4313 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */; };
-		9FD5A7B5B55E4A7EB7C202B0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D51ED2E46F5C4D35BE2669D4 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */; };
-		A04F897A85824A7998F9305E /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */ = {isa = PBXBuildFile; fileRef = 62D3B6BBAD07422E9E41A9C1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */; };
-		A20A0E7F89BD4A1085DB1FC0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */ = {isa = PBXBuildFile; fileRef = 10D2A53AE75847C3ACD222AD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */; };
-		A73700A5FE26480AB9862412 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */ = {isa = PBXBuildFile; fileRef = 7F631306F27B4AB096C44A5D /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */; };
-		C2187C9F650F4313B02717FC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */ = {isa = PBXBuildFile; fileRef = DFF35D75103A4B51BFA4A4E6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */; };
-		C31D328244E24A12A1868860 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */ = {isa = PBXBuildFile; fileRef = 9A21C296E9A642219A6D5454 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */; };
-		DC291292746D47B2836005D4 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */ = {isa = PBXBuildFile; fileRef = 03DFA0405CC448CAA435327A /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */; };
-		E4C14CB4DB1345ABBA7AD8C1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */ = {isa = PBXBuildFile; fileRef = 29CDA1C6513B475D8B681DBD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */; };
-		FECA89DF3CFC43AF96A07AD6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */ = {isa = PBXBuildFile; fileRef = 3FC972514C1149CFB99E5D4F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */; };
+		074E7B2739AA4BD9ADF40FCC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */ = {isa = PBXBuildFile; fileRef = 7475479739A349CC9AE79A56 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */; };
+		07848C0D135E4C008EECF8FD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = DAF7809537564C9BABD991BC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */; };
+		08387AD4F17D492681704E8F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */ = {isa = PBXBuildFile; fileRef = E9492E7E9F88400C9A1E1929 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */; };
+		0D5FB1EFE07F4412BF9C9E4B /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */ = {isa = PBXBuildFile; fileRef = BFF027758FE841A6906FAF46 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */; };
+		1062BC886D5F42918E434C4F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */ = {isa = PBXBuildFile; fileRef = 49861B52342F411E8584F559 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */; };
+		1CB30238DA964D1F88FEEF68 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */ = {isa = PBXBuildFile; fileRef = 877332D9E1ED4CD5BD00C123 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */; };
+		236ED466966B4E278BB1EF40 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */ = {isa = PBXBuildFile; fileRef = 033ED57910784034861EFA56 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */; };
+		2D9C467EE36944CEAC5ADC12 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */ = {isa = PBXBuildFile; fileRef = 99ADF8F9444C47B6B805F821 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */; };
+		332BBAE8E7814E3898244261 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */ = {isa = PBXBuildFile; fileRef = 532AEB5C507F473C8739BF07 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */; };
+		599BE6DE26EB4619AE68E9C3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */ = {isa = PBXBuildFile; fileRef = 9D0D6E5E897444FEA95C27BC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */; };
+		692590D4B56F41BB9B8CB8FA /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */ = {isa = PBXBuildFile; fileRef = 7AEF0875375A43CC8DCD0B69 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */; };
+		6AB36F563F0D48D9BF62E550 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */ = {isa = PBXBuildFile; fileRef = 579CE1F4EE404E268611E8D2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */; };
+		719E7DF6BB5740B0BFE56DA6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */ = {isa = PBXBuildFile; fileRef = BC470E6E72BB406E9BD7469F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */; };
+		725BF0BC69204987946B1BA3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */ = {isa = PBXBuildFile; fileRef = 18AB1B6FCA554002B89B4569 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */; };
+		A31A6CCA0B294D278B59E35D /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */ = {isa = PBXBuildFile; fileRef = 6B8BF42A25E6425DAC9BFBD0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */; };
+		C2C64122EF9741089B1E2A83 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */ = {isa = PBXBuildFile; fileRef = 882A7A352D4B4D84AF7D3026 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */; };
+		CC3EAAA3062E40599E2B841C /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */ = {isa = PBXBuildFile; fileRef = 2FA6EFB776214BE7A259EDC9 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */; };
+		CE357D00DA484B54871FFFCB /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */ = {isa = PBXBuildFile; fileRef = 0E2303B6B6BD4F0F81E00978 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */; };
+		D0D8FD3648C849708F1004C3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */ = {isa = PBXBuildFile; fileRef = E10D7F027E204CCB9A937CF2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */; };
+		D697CA931C50485D8E838BA0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */ = {isa = PBXBuildFile; fileRef = B7922D70234A4344A2F43347 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */; };
+		F0574141529847F9A944CB49 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */ = {isa = PBXBuildFile; fileRef = 3605AE0F00D94F1EB8872F6E /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */; };
+		F593A36F5FD44514A45209FA /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */ = {isa = PBXBuildFile; fileRef = 8029F377FE134CAEBFBBD454 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */; };
+		F7379DA1E74D47A6A0DB0A75 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */ = {isa = PBXBuildFile; fileRef = 1E76AD50A9284D4A803846F0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		02738019F05B40D39333E0C6 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		7CB94769B057457598A4D5C4 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		B259BD96629F4DE880E5A57D /* MinSizeRel */ = {
+		4A34820D12B342CEA6D7DA95 /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
-		CEA7FFA8BA2843F8A5636234 /* Release */ = {
+		7341A80C2CB4498EB9E48B26 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		7512C24D32D7471297407C0B /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		C0D09C8849C64F96838327C4 /* Release */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -91,59 +91,59 @@
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		1823D5D0376D482795C1943D /* PBXContainerItemProxy */ = {
+		9562070B84944DBA8DA0CE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03DBBDA66A964AE4A477FD52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6480D792E2EF434288B439EA;
+			remoteInfo = ZERO_CHECK;
+		};
+		9AA756C313FE428BB8BDEEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03DBBDA66A964AE4A477FD52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6480D792E2EF434288B439EA;
+			remoteInfo = ZERO_CHECK;
+		};
+		DC0AE33AAF4649DEB5B7F795 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03DBBDA66A964AE4A477FD52 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FDB84931A6D1486393D42636;
 			remoteInfo = SweInterface;
 		};
-		AB359D0F14784E8BAB2CB9B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03DBBDA66A964AE4A477FD52 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6480D792E2EF434288B439EA;
-			remoteInfo = ZERO_CHECK;
-		};
-		C5940512D6A149829AAD83FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03DBBDA66A964AE4A477FD52 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6480D792E2EF434288B439EA;
-			remoteInfo = ZERO_CHECK;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		015DC118D1FC4B6B949547C3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SweInterface.cpp; path = SweInterface.cpp; sourceTree = SOURCE_ROOT; };
-		03DFA0405CC448CAA435327A /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe08.cpp; path = swe08.cpp; sourceTree = SOURCE_ROOT; };
-		10AF3318FC34480E892E9880 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_zodiac_sign.cpp; path = draw_zodiac_sign.cpp; sourceTree = SOURCE_ROOT; };
-		10D2A53AE75847C3ACD222AD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_house_angle.cpp; path = draw_house_angle.cpp; sourceTree = SOURCE_ROOT; };
-		1FF55DD1597F4965A99E8815 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timezone.cpp; path = timezone.cpp; sourceTree = SOURCE_ROOT; };
-		2257EFD5DA9443D9AD90C387 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_bodie_astre.cpp; path = draw_bodie_astre.cpp; sourceTree = SOURCE_ROOT; };
-		29CDA1C6513B475D8B681DBD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe03.cpp; path = swe03.cpp; sourceTree = SOURCE_ROOT; };
-		3AF99DAC6B93469A8F6F3B50 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_house_line.cpp; path = draw_house_line.cpp; sourceTree = SOURCE_ROOT; };
-		3FC972514C1149CFB99E5D4F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe14.cpp; path = swe14.cpp; sourceTree = SOURCE_ROOT; };
-		62D3B6BBAD07422E9E41A9C1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = astre.cpp; path = astre.cpp; sourceTree = SOURCE_ROOT; };
-		6764C13DE7FE4ABAB9B892F6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_bodie_line.cpp; path = draw_bodie_line.cpp; sourceTree = SOURCE_ROOT; };
-		7785250F23FB4D9A983C4313 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe17.cpp; path = swe17.cpp; sourceTree = SOURCE_ROOT; };
-		7B49BADFE7F64021847E218F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = house.cpp; path = house.cpp; sourceTree = SOURCE_ROOT; };
-		7F631306F27B4AB096C44A5D /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sign.cpp; path = sign.cpp; sourceTree = SOURCE_ROOT; };
-		89CB0B6536D848F0896A7F90 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe02.cpp; path = swe02.cpp; sourceTree = SOURCE_ROOT; };
-		8A1DDC8AC25C40CE81DB5ED1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		96D310C5F3924378B3C830E7 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_house_number.cpp; path = draw_house_number.cpp; sourceTree = SOURCE_ROOT; };
-		9A21C296E9A642219A6D5454 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_zodiac_circle.cpp; path = draw_zodiac_circle.cpp; sourceTree = SOURCE_ROOT; };
-		AA0E82C0CB214971A4C3BC05 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = angle.cpp; path = angle.cpp; sourceTree = SOURCE_ROOT; };
-		AE01AF6FB7594DD2ADE3A24C /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aspect.cpp; path = aspect.cpp; sourceTree = SOURCE_ROOT; };
-		C08D6B58BF174F8BBB76C3E8 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_aspect_line.cpp; path = draw_aspect_line.cpp; sourceTree = SOURCE_ROOT; };
-		C84B0F3F7AB94C26AF2C4420 /* SweInterface */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSweInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2E0D8D48CED4CD7B412689B /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_zodiac_line.cpp; path = draw_zodiac_line.cpp; sourceTree = SOURCE_ROOT; };
-		D51ED2E46F5C4D35BE2669D4 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		DFF35D75103A4B51BFA4A4E6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw.cpp; path = draw.cpp; sourceTree = SOURCE_ROOT; };
+		033ED57910784034861EFA56 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe08.cpp; path = swe08.cpp; sourceTree = SOURCE_ROOT; };
+		0E2303B6B6BD4F0F81E00978 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_house_line.cpp; path = draw_house_line.cpp; sourceTree = SOURCE_ROOT; };
+		18AB1B6FCA554002B89B4569 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SweInterface.cpp; path = SweInterface.cpp; sourceTree = SOURCE_ROOT; };
+		197E578229594E0DBC482EAD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		1E76AD50A9284D4A803846F0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_aspect_line.cpp; path = draw_aspect_line.cpp; sourceTree = SOURCE_ROOT; };
+		2FA6EFB776214BE7A259EDC9 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sign.cpp; path = sign.cpp; sourceTree = SOURCE_ROOT; };
+		3605AE0F00D94F1EB8872F6E /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe02.cpp; path = swe02.cpp; sourceTree = SOURCE_ROOT; };
+		49861B52342F411E8584F559 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = angle.cpp; path = angle.cpp; sourceTree = SOURCE_ROOT; };
+		532AEB5C507F473C8739BF07 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw.cpp; path = draw.cpp; sourceTree = SOURCE_ROOT; };
+		579CE1F4EE404E268611E8D2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_bodie_line.cpp; path = draw_bodie_line.cpp; sourceTree = SOURCE_ROOT; };
+		6B8BF42A25E6425DAC9BFBD0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = house.cpp; path = house.cpp; sourceTree = SOURCE_ROOT; };
+		7475479739A349CC9AE79A56 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_zodiac_circle.cpp; path = draw_zodiac_circle.cpp; sourceTree = SOURCE_ROOT; };
+		7AEF0875375A43CC8DCD0B69 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_zodiac_sign.cpp; path = draw_zodiac_sign.cpp; sourceTree = SOURCE_ROOT; };
+		8029F377FE134CAEBFBBD454 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe03.cpp; path = swe03.cpp; sourceTree = SOURCE_ROOT; };
+		877332D9E1ED4CD5BD00C123 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_zodiac_line.cpp; path = draw_zodiac_line.cpp; sourceTree = SOURCE_ROOT; };
+		882A7A352D4B4D84AF7D3026 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe17.cpp; path = swe17.cpp; sourceTree = SOURCE_ROOT; };
+		99ADF8F9444C47B6B805F821 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = swe14.cpp; path = swe14.cpp; sourceTree = SOURCE_ROOT; };
+		9D0D6E5E897444FEA95C27BC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timezone.cpp; path = timezone.cpp; sourceTree = SOURCE_ROOT; };
+		B128F860B58C4A868B5F8A80 /* SweInterface */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSweInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7922D70234A4344A2F43347 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_house_angle.cpp; path = draw_house_angle.cpp; sourceTree = SOURCE_ROOT; };
+		BC470E6E72BB406E9BD7469F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = astre.cpp; path = astre.cpp; sourceTree = SOURCE_ROOT; };
+		BFF027758FE841A6906FAF46 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_house_number.cpp; path = draw_house_number.cpp; sourceTree = SOURCE_ROOT; };
+		DAF7809537564C9BABD991BC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E10D7F027E204CCB9A937CF2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aspect.cpp; path = aspect.cpp; sourceTree = SOURCE_ROOT; };
+		E9492E7E9F88400C9A1E1929 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = draw_bodie_astre.cpp; path = draw_bodie_astre.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		642D4648192E4384A805B42D /* Frameworks */ = {
+		4391329BF72F4E90A89E07DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -153,83 +153,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		150C74043D3D4EE1A8349254 = {
-			isa = PBXGroup;
-			children = (
-				F09A6D19D59E4FEDA739F434 /* SweInterface */,
-				BDA958A4505E431AA51426A9 /* ALL_BUILD */,
-				79EAAA90E94E4CDCAC398B55 /* Products */,
-				24983F417EEE4D3EB05B068B /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		24983F417EEE4D3EB05B068B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		50C2F8C688694FADA67D4727 /* CMake Rules */ = {
+		29797F673D58417B8D4BA0E1 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		5726DCA68BBB4E2EAF502882 /* Source Files */ = {
+		7041F8334B1D40E4A282DEC2 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				015DC118D1FC4B6B949547C3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */,
-				AA0E82C0CB214971A4C3BC05 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */,
-				AE01AF6FB7594DD2ADE3A24C /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */,
-				62D3B6BBAD07422E9E41A9C1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */,
-				DFF35D75103A4B51BFA4A4E6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */,
-				C08D6B58BF174F8BBB76C3E8 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */,
-				2257EFD5DA9443D9AD90C387 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */,
-				6764C13DE7FE4ABAB9B892F6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */,
-				10D2A53AE75847C3ACD222AD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */,
-				3AF99DAC6B93469A8F6F3B50 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */,
-				96D310C5F3924378B3C830E7 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */,
-				9A21C296E9A642219A6D5454 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */,
-				D2E0D8D48CED4CD7B412689B /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */,
-				10AF3318FC34480E892E9880 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */,
-				7B49BADFE7F64021847E218F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */,
-				7F631306F27B4AB096C44A5D /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */,
-				89CB0B6536D848F0896A7F90 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */,
-				29CDA1C6513B475D8B681DBD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */,
-				03DFA0405CC448CAA435327A /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */,
-				3FC972514C1149CFB99E5D4F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */,
-				7785250F23FB4D9A983C4313 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */,
-				1FF55DD1597F4965A99E8815 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */,
+				18AB1B6FCA554002B89B4569 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */,
+				49861B52342F411E8584F559 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */,
+				E10D7F027E204CCB9A937CF2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */,
+				BC470E6E72BB406E9BD7469F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */,
+				532AEB5C507F473C8739BF07 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */,
+				1E76AD50A9284D4A803846F0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */,
+				E9492E7E9F88400C9A1E1929 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */,
+				579CE1F4EE404E268611E8D2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */,
+				B7922D70234A4344A2F43347 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */,
+				0E2303B6B6BD4F0F81E00978 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */,
+				BFF027758FE841A6906FAF46 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */,
+				7475479739A349CC9AE79A56 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */,
+				877332D9E1ED4CD5BD00C123 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */,
+				7AEF0875375A43CC8DCD0B69 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */,
+				6B8BF42A25E6425DAC9BFBD0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */,
+				2FA6EFB776214BE7A259EDC9 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */,
+				3605AE0F00D94F1EB8872F6E /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */,
+				8029F377FE134CAEBFBBD454 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */,
+				033ED57910784034861EFA56 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */,
+				99ADF8F9444C47B6B805F821 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */,
+				882A7A352D4B4D84AF7D3026 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */,
+				9D0D6E5E897444FEA95C27BC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		79EAAA90E94E4CDCAC398B55 /* Products */ = {
+		73353AA890264EFEB0E52936 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C84B0F3F7AB94C26AF2C4420 /* SweInterface */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BDA958A4505E431AA51426A9 /* ALL_BUILD */ = {
+		8080A10D326041BFB56DBC57 = {
 			isa = PBXGroup;
 			children = (
-				50C2F8C688694FADA67D4727 /* CMake Rules */,
-				8A1DDC8AC25C40CE81DB5ED1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */,
+				C68CDC95C3D342C09BC04761 /* SweInterface */,
+				8BE5AC06D04F4FC1A85C1CB0 /* ALL_BUILD */,
+				D4E6EB9030EA49CF8F8819BA /* Products */,
+				73353AA890264EFEB0E52936 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8BE5AC06D04F4FC1A85C1CB0 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				29797F673D58417B8D4BA0E1 /* CMake Rules */,
+				197E578229594E0DBC482EAD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		F09A6D19D59E4FEDA739F434 /* SweInterface */ = {
+		C68CDC95C3D342C09BC04761 /* SweInterface */ = {
 			isa = PBXGroup;
 			children = (
-				5726DCA68BBB4E2EAF502882 /* Source Files */,
-				D51ED2E46F5C4D35BE2669D4 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */,
+				7041F8334B1D40E4A282DEC2 /* Source Files */,
+				DAF7809537564C9BABD991BC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/CMakeLists.txt */,
 			);
 			name = SweInterface;
+			sourceTree = "<group>";
+		};
+		D4E6EB9030EA49CF8F8819BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B128F860B58C4A868B5F8A80 /* SweInterface */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,19 +237,19 @@
 /* Begin PBXNativeTarget section */
 		FDB84931A6D1486393D42636 /* SweInterface */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 511BDF30A6D64507A346A560 /* Build configuration list for PBXNativeTarget "SweInterface" */;
+			buildConfigurationList = CC513411954B4983811F2630 /* Build configuration list for PBXNativeTarget "SweInterface" */;
 			buildPhases = (
-				16C5FDA4C68C43229CEF2A6D /* Sources */,
-				642D4648192E4384A805B42D /* Frameworks */,
+				F42C6E39CCB14DF4A9187766 /* Sources */,
+				4391329BF72F4E90A89E07DF /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5F37B5613A2945ADB0CAEF32 /* PBXTargetDependency */,
+				22082B404C114095A722220C /* PBXTargetDependency */,
 			);
 			name = SweInterface;
 			productName = SweInterface;
-			productReference = C84B0F3F7AB94C26AF2C4420 /* SweInterface */;
+			productReference = B128F860B58C4A868B5F8A80 /* SweInterface */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -261,18 +261,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1400;
 			};
-			buildConfigurationList = D6C606FB1C384308BDA2DB9F /* Build configuration list for PBXProject "SweInterface" */;
+			buildConfigurationList = 4D051F2D41314368AAB1EB7E /* Build configuration list for PBXProject "SweInterface" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				7CB94769B057457598A4D5C4 /* Debug */,
-				CEA7FFA8BA2843F8A5636234 /* Release */,
-				B259BD96629F4DE880E5A57D /* MinSizeRel */,
-				02738019F05B40D39333E0C6 /* RelWithDebInfo */,
+				7512C24D32D7471297407C0B /* Debug */,
+				C0D09C8849C64F96838327C4 /* Release */,
+				4A34820D12B342CEA6D7DA95 /* MinSizeRel */,
+				7341A80C2CB4498EB9E48B26 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 150C74043D3D4EE1A8349254;
+			mainGroup = 8080A10D326041BFB56DBC57;
 			projectDirPath = .;
 			projectRoot = "";
 			targets = (
@@ -383,57 +383,57 @@ exit 0";
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		16C5FDA4C68C43229CEF2A6D /* Sources */ = {
+		F42C6E39CCB14DF4A9187766 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25F3508CDA164427A875D29A /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */,
-				09FEA4F2700448C78065E14A /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */,
-				7F33D8D512D64E74BCCB3D06 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */,
-				A04F897A85824A7998F9305E /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */,
-				C2187C9F650F4313B02717FC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */,
-				5A9A97115E9A4439891F5FA6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */,
-				57AEAF05559945E19BD583D9 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */,
-				6B26061104CA48CE8519C1A8 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */,
-				A20A0E7F89BD4A1085DB1FC0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */,
-				338A237642AB4C43A3CB6F57 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */,
-				5292A5F8500C44DE953FBC28 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */,
-				C31D328244E24A12A1868860 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */,
-				136D261273A74AAB898C95BD /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */,
-				45E5BE9DE18447F7BF89A1E4 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */,
-				42B477E123F24A26B62DCCBA /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */,
-				A73700A5FE26480AB9862412 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */,
-				53F8FD21EAF04DD38F982D73 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */,
-				E4C14CB4DB1345ABBA7AD8C1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */,
-				DC291292746D47B2836005D4 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */,
-				FECA89DF3CFC43AF96A07AD6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */,
-				8E795F00690E4F7CA2CFFCF2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */,
-				5B699EA0287B4CD6A80CDB1A /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */,
+				725BF0BC69204987946B1BA3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/SweInterface.cpp */,
+				1062BC886D5F42918E434C4F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/angle.cpp */,
+				D0D8FD3648C849708F1004C3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/aspect.cpp */,
+				719E7DF6BB5740B0BFE56DA6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/astre.cpp */,
+				332BBAE8E7814E3898244261 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw.cpp */,
+				F7379DA1E74D47A6A0DB0A75 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_aspect_line.cpp */,
+				08387AD4F17D492681704E8F /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_astre.cpp */,
+				6AB36F563F0D48D9BF62E550 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_bodie_line.cpp */,
+				D697CA931C50485D8E838BA0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_angle.cpp */,
+				CE357D00DA484B54871FFFCB /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_line.cpp */,
+				0D5FB1EFE07F4412BF9C9E4B /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_house_number.cpp */,
+				074E7B2739AA4BD9ADF40FCC /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_circle.cpp */,
+				1CB30238DA964D1F88FEEF68 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_line.cpp */,
+				692590D4B56F41BB9B8CB8FA /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/draw_zodiac_sign.cpp */,
+				A31A6CCA0B294D278B59E35D /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/house.cpp */,
+				CC3EAAA3062E40599E2B841C /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/sign.cpp */,
+				F0574141529847F9A944CB49 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe02.cpp */,
+				F593A36F5FD44514A45209FA /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe03.cpp */,
+				236ED466966B4E278BB1EF40 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe08.cpp */,
+				2D9C467EE36944CEAC5ADC12 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe14.cpp */,
+				C2C64122EF9741089B1E2A83 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/swe17.cpp */,
+				599BE6DE26EB4619AE68E9C3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/timezone.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5F37B5613A2945ADB0CAEF32 /* PBXTargetDependency */ = {
+		22082B404C114095A722220C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6480D792E2EF434288B439EA /* ZERO_CHECK */;
-			targetProxy = AB359D0F14784E8BAB2CB9B3 /* PBXContainerItemProxy */;
+			targetProxy = 9562070B84944DBA8DA0CE47 /* PBXContainerItemProxy */;
 		};
-		9769E05925B9415EAC6F57C2 /* PBXTargetDependency */ = {
+		DC808AB0F3EE42FFB9F45520 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6480D792E2EF434288B439EA /* ZERO_CHECK */;
-			targetProxy = C5940512D6A149829AAD83FF /* PBXContainerItemProxy */;
+			targetProxy = 9AA756C313FE428BB8BDEEC9 /* PBXContainerItemProxy */;
 		};
-		FFC2D844EE2C486C96007A46 /* PBXTargetDependency */ = {
+		F36E513E05FB44BA96DE2136 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDB84931A6D1486393D42636 /* SweInterface */;
-			targetProxy = 1823D5D0376D482795C1943D /* PBXContainerItemProxy */;
+			targetProxy = DC0AE33AAF4649DEB5B7F795 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0601D4ECDC794131AFC95081 /* MinSizeRel */ = {
+		00B827CAD73140A6A05261A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -451,20 +451,9 @@ exit 0";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = MinSizeRel;
-		};
-		325B5DE581F34E998314141F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/build";
-			};
 			name = Debug;
 		};
-		41A53D293454417696AC3A22 /* Release */ = {
+		0894F9B5606B4ED784A0DD8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -484,78 +473,7 @@ exit 0";
 			};
 			name = Release;
 		};
-		4F5D1E4F717C4DF59292104D /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/build";
-			};
-			name = MinSizeRel;
-		};
-		52D5DADB6C8143CF855856A2 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		5A868AC5C3994D1AB633400A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		5B6E01F636BF4D0F93C8E20A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		5DA51CD135494F29BCFF1CC8 /* MinSizeRel */ = {
+		0A7F9F1411C84A3AAEC0C7E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -573,84 +491,9 @@ exit 0";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = MinSizeRel;
-		};
-		7D8069E5F51245C0949A8D6D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/.","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++2a' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = SweInterface;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
 			name = Debug;
 		};
-		80F764E01B9E4A148295DE76 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/.","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++2a' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = SweInterface;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		81E532226FE548A38B9A16AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/.","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++2a' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = SweInterface;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		9FB70592909A4A35A185190F /* RelWithDebInfo */ = {
+		15269B0A08C64FC49729A8C4 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -675,7 +518,27 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		A5F24EB11B4142AEBDB4499F /* RelWithDebInfo */ = {
+		18B82EABADD0475BBF57CB52 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1949AD9CFD6149C082658C6D /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -686,47 +549,79 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		B0BEA28DED714EAA97AA92CB /* RelWithDebInfo */ = {
+		3697F8E3AC91483184B187F7 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/.","$(inherited)");
 				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++2a' ";
+				OTHER_LIBTOOLFLAGS = ("");
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
+				PRODUCT_NAME = SweInterface;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = RelWithDebInfo;
+			name = MinSizeRel;
 		};
-		D3B4BB04EAC34CE99F44EF19 /* Debug */ = {
+		76324788E8D64A16B9078DE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/.","$(inherited)");
 				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++2a' ";
+				OTHER_LIBTOOLFLAGS = ("");
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
+				PRODUCT_NAME = SweInterface;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		7CB3D2F793354CC6892A44C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/build";
 			};
 			name = Debug;
 		};
-		E2B0FC6180E04E88BB32A018 /* Release */ = {
+		9CD355F6E916496A8C97F10F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/build";
+			};
+			name = MinSizeRel;
+		};
+		B57A75A90361441C84E8FB6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -737,49 +632,154 @@ exit 0";
 			};
 			name = Release;
 		};
+		C1A4093CC24B43789FDD9628 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C3CDBB520B3346568538CFA8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		CC1D54E14E944AEABD592FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		E85DD5425A304585B993A8E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface/.","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++2a' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SweInterface;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		EDB8DC962F464D3EBD27E3BA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/SweInterface";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3708BFD09C894EB29711807A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		304336E0C2BE41A0ADA9D83F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3B4BB04EAC34CE99F44EF19 /* Debug */,
-				41A53D293454417696AC3A22 /* Release */,
-				5DA51CD135494F29BCFF1CC8 /* MinSizeRel */,
-				B0BEA28DED714EAA97AA92CB /* RelWithDebInfo */,
+				00B827CAD73140A6A05261A9 /* Debug */,
+				CC1D54E14E944AEABD592FDE /* Release */,
+				C3CDBB520B3346568538CFA8 /* MinSizeRel */,
+				18B82EABADD0475BBF57CB52 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		511BDF30A6D64507A346A560 /* Build configuration list for PBXNativeTarget "SweInterface" */ = {
+		4D051F2D41314368AAB1EB7E /* Build configuration list for PBXProject "SweInterface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D8069E5F51245C0949A8D6D /* Debug */,
-				81E532226FE548A38B9A16AE /* Release */,
-				80F764E01B9E4A148295DE76 /* MinSizeRel */,
-				9FB70592909A4A35A185190F /* RelWithDebInfo */,
+				7CB3D2F793354CC6892A44C9 /* Debug */,
+				B57A75A90361441C84E8FB6A /* Release */,
+				9CD355F6E916496A8C97F10F /* MinSizeRel */,
+				1949AD9CFD6149C082658C6D /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C6AECF2D462D4693946FA0EA /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		CC513411954B4983811F2630 /* Build configuration list for PBXNativeTarget "SweInterface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B6E01F636BF4D0F93C8E20A /* Debug */,
-				5A868AC5C3994D1AB633400A /* Release */,
-				0601D4ECDC794131AFC95081 /* MinSizeRel */,
-				52D5DADB6C8143CF855856A2 /* RelWithDebInfo */,
+				E85DD5425A304585B993A8E8 /* Debug */,
+				76324788E8D64A16B9078DE1 /* Release */,
+				3697F8E3AC91483184B187F7 /* MinSizeRel */,
+				15269B0A08C64FC49729A8C4 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D6C606FB1C384308BDA2DB9F /* Build configuration list for PBXProject "SweInterface" */ = {
+		D01F1E6473D34316BADBF3C2 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				325B5DE581F34E998314141F /* Debug */,
-				E2B0FC6180E04E88BB32A018 /* Release */,
-				4F5D1E4F717C4DF59292104D /* MinSizeRel */,
-				A5F24EB11B4142AEBDB4499F /* RelWithDebInfo */,
+				0A7F9F1411C84A3AAEC0C7E8 /* Debug */,
+				0894F9B5606B4ED784A0DD8E /* Release */,
+				C1A4093CC24B43789FDD9628 /* MinSizeRel */,
+				EDB8DC962F464D3EBD27E3BA /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

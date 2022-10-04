@@ -11,12 +11,12 @@
 
 using namespace std;
 
-class Line
+class SLine
 {
 private:
     SvgStroke stroke;
 public:
-    Line(Stroke s);
+    SLine(SStroke s);
     string generate(float x1, float y1, float x2, float y2);
 };
 
