@@ -20,29 +20,9 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="retourne le path uniquement">
-      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/make_svg_ios.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antools" beforeDir="false" afterPath="$PROJECT_DIR$/antools" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exe/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exe/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/exe/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe/svg_data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/svg_data.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe/svg_data.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/svg_data.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/antools.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/antools.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/make_ios.sh" beforeDir="false" afterPath="$PROJECT_DIR$/make_ios.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Swe/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Swe/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Swe/make_swe_ios.sh" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Swe/make_swe_ios.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/make_sweinterface_ios.sh" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/make_sweinterface_ios.sh" afterDir="false" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="créer un cmake pour Svg">
+      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/svg_data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/svg_data.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/svg_data.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/svg_data.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +90,7 @@
       <recent name="$PROJECT_DIR$/other_cmake/Svg" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.antools_exe">
+  <component name="RunManager" selected="Shell Script.make_macos.sh">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -303,7 +283,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="2005000" />
+      <workItem from="1664867814726" duration="2402000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -536,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664829636225</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="créer un cmake pour Svg">
+      <created>1664870062825</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664870062825</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,6 +560,7 @@
     <MESSAGE value="avec des classes c'est plus facile à lire" />
     <MESSAGE value="retourne le résultat en const char*" />
     <MESSAGE value="retourne le path uniquement" />
-    <option name="LAST_COMMIT_MESSAGE" value="retourne le path uniquement" />
+    <MESSAGE value="créer un cmake pour Svg" />
+    <option name="LAST_COMMIT_MESSAGE" value="créer un cmake pour Svg" />
   </component>
 </project>

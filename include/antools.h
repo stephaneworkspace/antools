@@ -27,7 +27,6 @@ struct SvgPoint {
 // ./src
 
 extern "C" B64 theme_astral(int year, int month, int day, int hour, int min, double lat, double lng, int tz);
-//extern "C" void log_app(const char* output, const char* error);
 
 // ./rust
 

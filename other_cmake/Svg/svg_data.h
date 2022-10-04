@@ -29,10 +29,10 @@ private:
     void set_command(char c, string s);
 public:
     Data();
-    void move_to(string s);
-    void move_by(string s);
-    void line_to(string s);
-    void line_by(string s);
+    void move_to(float x, float y);
+    void move_by(float x, float y);
+    void line_to(float x, float y);
+    void line_by(float x, float y);
     void close_to();
     void close_by();
     void create_svg();

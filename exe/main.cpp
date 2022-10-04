@@ -11,21 +11,12 @@
 using namespace std;
 
 int main() {
-    /*
-    string path_string_log = filesystem::current_path().parent_path().parent_path();
-    string log_output = path_string_log + "/output.txt";
-    string log_error = path_string_log + "/error.txt";
-    const char* log_output_p = log_output.data();
-    const char* log_error_p = log_error.data();
-    log_app(log_output_p, log_error_p);
-    */
-
     // Svg
     Data data = Data();
-    data.move_to("10.0,10.0");
-    data.line_by("0.50,50.0");
-    data.line_by("50,0");
-    data.line_by("0,-50");
+    data.move_to(10.0, 10.0);
+    data.line_by(0.50,50.0);
+    data.line_by(50,0);
+    data.line_by(0,-50);
     data.close_by();
     data.create_svg();
 
@@ -89,16 +80,5 @@ int main() {
         o.close();
     }
 
-    //const char* res = theme_astral_svg(1984, 1, 1, 0, 0, 0, 0, 2, "");
-    //string s;
-    //s.assign(res);
-    //cout << s << endl;
-    //string ss = "";
-    //PdfB64 s = create_pdf_b64(ss.c_str());
-    //cout << s.pdf_b_64 << endl;
-    //cout << s.err << endl;
-    //PdfB64 ta = theme_astral(1984,1,1,0,0,0,0,2);
-    //cout << ta.pdf_b_64 << endl;
-    //cout << ta.err << endl;
     return 0;
 }

@@ -64,24 +64,24 @@ Data::Data() {
     idx_point = 0;
 }
 
-void Data::move_to(string s) {
+void Data::move_to(float x, float y) {
     char c = 'M';
-    Data::set_command(c, s);
+    Data::set_command(c, to_string(x) + "," + to_string(y));
 }
 
-void Data::move_by(string s) {
+void Data::move_by(float x, float y) {
     char c = 'm';
-    Data::set_command(c, s);
+    Data::set_command(c, to_string(x) + "," + to_string(y));
 }
 
-void Data::line_to(string s) {
+void Data::line_to(float x, float y) {
     char c = 'L';
-    Data::set_command(c, s);
+    Data::set_command(c, to_string(x) + "," + to_string(y));
 }
 
-void Data::line_by(string s) {
+void Data::line_by(float x, float y) {
     char c = 'l';
-    Data::set_command(c, s);
+    Data::set_command(c, to_string(x) + "," + to_string(y));
 }
 
 void Data::close_to() {
