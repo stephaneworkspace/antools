@@ -5,7 +5,6 @@
 #ifndef ANTOOLS_EXE_CIRCLE_H
 #define ANTOOLS_EXE_CIRCLE_H
 
-#include <fstream>
 #include <iostream>
 #include "../../include/antools.h"
 #include "svg.h"
@@ -20,6 +19,5 @@ public:
     Circle(Fill fill, Stroke stroke);
     string generate(float x, float y, float r);
 };
-
 
 #endif //ANTOOLS_EXE_CIRCLE_H

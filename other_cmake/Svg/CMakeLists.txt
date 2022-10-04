@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 set( SOURCES
         circle.cpp
-        data.cpp)
+        data.cpp
+        line.cpp)
 
 include_directories( BEFORE . )
 

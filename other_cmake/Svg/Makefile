@@ -10,7 +10,7 @@ CC=clang++ $(ARGUMENTS)
 .c.o:
 	$(CC) -c $(OP) $<
 
-SWEOBJ = circle.o data.o
+SWEOBJ = circle.o data.o line.o
 
 # create an archive
 
@@ -25,3 +25,5 @@ circle.o:
 	c++ $(FLAGO) -c circle.cpp
 data.o:
 	c++ $(FLAGO) -c data.cpp
+line.o:
+	c++ $(FLAGO) -c line.cpp
