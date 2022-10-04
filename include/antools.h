@@ -53,4 +53,6 @@ extern "C" const char* svg_path_data(const SvgData* data,
                                      SvgProperties properties);
 extern "C" const char* svg_circle(float x, float y, float r, SvgProperties properties);
 extern "C" const char* svg_line(float x1, float x2, float y1, float y2, SvgStroke stroke);
+extern "C" const char* svg_image(float width, float height, float x, float y, const char* href);
+extern "C" const char* svg_document(float width, float height, const char* content);
 #endif //ANTOOLS_LIBRARY_H

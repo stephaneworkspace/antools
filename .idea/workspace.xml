@@ -20,13 +20,11 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="ajout de line dans rust avec test unitaire">
-      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/line.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/line.h" afterDir="false" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="renomage pour eviter des conflits">
+      <change afterPath="$PROJECT_DIR$/rust/rantools/src/tests.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/circle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/circle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/circle.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/circle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/rantools/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/rantools/src/svg.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/svg.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +34,11 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Rust File" />
         <option value="CMakeLists.txt" />
+        <option value="Rust File" />
       </list>
     </option>
   </component>
@@ -80,7 +77,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true"
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "structure.view.defaults.are.configured": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -94,7 +92,7 @@
       <recent name="$PROJECT_DIR$/other_cmake/Svg" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.antools_exe">
+  <component name="RunManager" selected="Cargo.Build">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -287,7 +285,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="7966000" />
+      <workItem from="1664867814726" duration="10788000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -562,7 +560,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664875550218</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="ajout de line dans c++">
+      <created>1664876143842</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1664876143842</updated>
+    </task>
+    <task id="LOCAL-00041" summary="renomage pour eviter des conflits">
+      <created>1664876648910</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1664876648910</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,6 +615,8 @@
     <MESSAGE value="test unitaire circle en rust" />
     <MESSAGE value="ajout de circle dans Svg c++" />
     <MESSAGE value="ajout de line dans rust avec test unitaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de line dans rust avec test unitaire" />
+    <MESSAGE value="ajout de line dans c++" />
+    <MESSAGE value="renomage pour eviter des conflits" />
+    <option name="LAST_COMMIT_MESSAGE" value="renomage pour eviter des conflits" />
   </component>
 </project>

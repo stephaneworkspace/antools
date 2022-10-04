@@ -1,7 +1,8 @@
 extern crate core;
 
 use std::ffi::CStr;
-use std::os::raw::c_float;
+use std::os::raw::{c_char, c_float};
+use svg::Document;
 use crate::{SvgData, SvgPoint, SvgProperties, SvgStroke};
 use svg::node::element::{Circle, Line, Path};
 use svg::node::element::path::Data;
@@ -92,4 +93,24 @@ pub(crate) fn line(x1: c_float,
         .set("stroke", stroke_str)
         .set("stroke-width", stroke.stroke_width);
     line.to_string()
+}
+
+pub(crate) fn image(width: c_float,
+                    height: c_float,
+                    x: c_float,
+                    y: c_float,
+                    href: *const c_char) -> String {
+    let href_str = unsafe { CStr::from_ptr(href).to_str().unwrap() };
+    format!("<image width=\"{}\" height=\"{}\" x=\"{}\" y=\"{}\" href=\"{}\"/>", width, height, x, y, href_str)
+}
+
+
+pub(crate) fn document(width: c_float,
+                       height: c_float,
+                       content: *const c_char) -> String {
+    let content_str = unsafe { CStr::from_ptr(content).to_str().unwrap() };
+    let document = Document::new()
+        .set("viewBox", (0, 0, width, height));
+    let res = document.to_string().replace("/>", ">");
+    format!("{}{}</svg>", res, content_str)
 }
