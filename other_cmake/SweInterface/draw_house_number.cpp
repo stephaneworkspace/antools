@@ -3,10 +3,21 @@
 //
 #include "draw_house_number.h"
 
-double DrawHouseNumber::number_size() {
+Size DrawHouseNumber::number_size(int house_number) {
+    Size size;
     const double HOUSE_SIZE = 20;
     const double HOUSE_RATIO = 8.7;
-    return (((HOUSE_SIZE * HOUSE_RATIO) / 100.0) * CHART_SIZE) / 100.0;
+    double width = 0;
+    double height = 0;
+    switch (house_number) {
+        default:
+            width = HOUSE_SIZE * HOUSE_RATIO;
+            height = HOUSE_SIZE * HOUSE_RATIO;
+            break;
+    }
+    size.width = ((width / 100.0) * CHART_SIZE) / 100.0;
+    size.height = ((height / 100.0) * CHART_SIZE) / 100.0;
+    return size;
 }
 
 Offset DrawHouseNumber::number(int house_number, H* house) {
@@ -27,8 +38,8 @@ Offset DrawHouseNumber::number(int house_number, H* house) {
     }
     pos = Draw::get_fixed_pos(pos);
     Offset trigo = Draw::get_pos_trigo(pos, (Draw::get_radius_total() * 77.8) / 100);
-    double zs = DrawHouseNumber::number_size();
-    res = Draw::get_center_item(zs, trigo);
+    Size zs = DrawHouseNumber::number_size(house_number);
+    res = Draw::get_center_item(zs.width, zs.height, trigo);
     return res;
 }
 

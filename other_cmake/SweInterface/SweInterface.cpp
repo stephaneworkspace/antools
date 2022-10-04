@@ -129,13 +129,12 @@ const char* theme_astral_svg(int year, int month, int day, int hour, int min, do
     }
 
     // Draw house number image
-    House house_number;
-    double house_size;
+    Size house_size;
     for (int i = 1; i < 13; ++i) {
         Offset offset;
-        house_size = DrawHouseNumber::number_size();
+        house_size = DrawHouseNumber::number_size(i);
         offset = DrawHouseNumber::number(i, house);
-        doc << Image::generate(house_size, house_size, offset.x, offset.y, House::read_svg(i).c_str());
+        doc << Image::generate(house_size.width, house_size.height, offset.x, offset.y, House::read_svg(i).c_str());
     }
 
     // Draw house angle image

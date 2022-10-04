@@ -11,7 +11,7 @@
 class DrawHouseNumber
 {
 public:
-    static double number_size();
+    static Size number_size(int house_number);
     static Offset number(int house_number, H* house);
 };
 
