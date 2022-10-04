@@ -8,6 +8,7 @@
 #include "../other_cmake/SweInterface/base64.h"
 #include "../other_cmake/Svg/circle.h"
 #include "../other_cmake/Svg/data.h"
+#include "../other_cmake/Svg/image.h"
 #include "../other_cmake/Svg/line.h"
 
 using namespace std;
@@ -34,6 +35,9 @@ int main() {
     // Circle
     SLine line = SLine(stroke);
     cout << line.generate(10,20,30,40) << endl;
+
+    // Image
+    cout << SImage::generate(10,20,30,40,"data:image/svg+xml;base64,") << endl;
 
     cout << "Hello, World!" << endl;
 
