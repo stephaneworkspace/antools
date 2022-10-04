@@ -8,12 +8,16 @@
 #include "../other_cmake/SweInterface/base64.h"
 #include "../other_cmake/Svg/circle.h"
 #include "../other_cmake/Svg/data.h"
+#include "../other_cmake/Svg/document.h"
 #include "../other_cmake/Svg/image.h"
 #include "../other_cmake/Svg/line.h"
 
 using namespace std;
 
 int main() {
+    // Document
+    SDocument doc = SDocument(50, 50);
+
     // Data
     SFill fill;
     fill.fill = "none";
@@ -26,18 +30,21 @@ int main() {
     data.line_by(50,0);
     data.line_by(0,-50);
     data.close_by();
-    cout << data.generate() << endl;
+    doc << data.generate();
 
     // Circle
     SCircle circle = SCircle(fill, stroke);
-    cout << circle.generate(10,20,30) << endl;
+    doc << circle.generate(10,20,30);
 
     // Circle
     SLine line = SLine(stroke);
-    cout << line.generate(10,20,30,40) << endl;
+    doc << line.generate(10,20,30,40);
 
     // Image
-    cout << SImage::generate(10,20,30,40,"data:image/svg+xml;base64,") << endl;
+    doc << SImage::generate(10,20,30,40,"data:image/svg+xml;base64,");
+
+    // Document
+    cout << doc.generate() << endl;
 
     cout << "Hello, World!" << endl;
 

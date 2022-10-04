@@ -20,9 +20,9 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="image + document avec test unitaire (petites corrections)">
-      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/image.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/image.h" afterDir="false" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="ajout classe pour les images">
+      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/document.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/document.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/other_cmake/Svg/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/CMakeLists.txt" afterDir="false" />
     </list>
@@ -34,6 +34,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -92,7 +93,7 @@
       <recent name="$PROJECT_DIR$/other_cmake/Svg" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.make_macos.sh">
+  <component name="RunManager" selected="CMake Application.antools_exe">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -285,7 +286,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="12212000" />
+      <workItem from="1664867814726" duration="12968000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -588,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664881306721</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="ajout classe pour les images">
+      <created>1664882019294</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1664882019294</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fichiers unversioned" />
     <MESSAGE value="avancée" />
     <MESSAGE value="changement dans la structure" />
     <MESSAGE value="fonction pour logger dans ios&#10;file:///private/var/mobile/Containers/Shared/AppGroup/357F0235-E689-4894-8F7C-5FF91826021E/&#10;&#10;let groupPath = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: &quot;stephane.bressani.dev.astronumerologie&quot;)&#10;print(groupPath?.absoluteURL)" />
@@ -631,6 +638,7 @@
     <MESSAGE value="renomage pour eviter des conflits" />
     <MESSAGE value="image + document avec test unitaire" />
     <MESSAGE value="image + document avec test unitaire (petites corrections)" />
-    <option name="LAST_COMMIT_MESSAGE" value="image + document avec test unitaire (petites corrections)" />
+    <MESSAGE value="ajout classe pour les images" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout classe pour les images" />
   </component>
 </project>
