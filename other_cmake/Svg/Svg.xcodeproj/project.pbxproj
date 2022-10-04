@@ -9,7 +9,7 @@
 /* Begin PBXAggregateTarget section */
 		6480D792E2EF434288B439EA /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = B4FD4329E3C44937A9FFB1CE /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = C7D9ABD1098746A6AC866AE5 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				09998FB81C5361E14A993F10 /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -20,13 +20,13 @@
 		};
 		DC73121302AB44CCB3EC9F48 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 93210755EB70445AA9883F4E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = F833003C42AB4CCA808627AC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
 				0B57E0A3D507499497E982F9 /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
-				354D820A029049DE9B83E84F /* PBXTargetDependency */,
-				55C4EF8281A2458D9135AF20 /* PBXTargetDependency */,
+				D33A3FD1A7FF481E88001F71 /* PBXTargetDependency */,
+				06014830A0E04F40904F4999 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -34,57 +34,57 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		05066BE9A8644DC88BE98FD4 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */ = {isa = PBXBuildFile; fileRef = FC6EF2411DF04D01A4328964 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */; };
-		E43263DF02B741B3A2598605 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 96EAC9AEE47C41018AAEBFFC /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */; };
+		1CE8755DB2A744829FFA04AB /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */ = {isa = PBXBuildFile; fileRef = B9AFAABF8DB24FC7922F6881 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */; };
+		89D88B44A0274C59A79F02AE /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A84D26CF986F4F90BB0120FB /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		07803785E7384783BC3F1EB2 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		181F3FDE8928450FB6FF6EB4 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		30883CC90BAF498F801B6F82 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		E7DB474A4ADA4F6E96AC0419 /* MinSizeRel */ = {
+		13B208EA275F475BB7EC86B4 /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
+		756A8FD1684045E2A7EEE128 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		8B273B3054DD43C1B6EE51DE /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		B6BF0563A03C4AF7ABF81112 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		80E60F9ED14B4FF8954165E5 /* PBXContainerItemProxy */ = {
+		5ECB712D00DE4DDDACF116D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CD88BB3ABBD4957B2BED2D7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6480D792E2EF434288B439EA;
 			remoteInfo = ZERO_CHECK;
 		};
-		B7477B1AC77347E286128DCE /* PBXContainerItemProxy */ = {
+		6B9E9442BDB640BB8AD37905 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CD88BB3ABBD4957B2BED2D7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 86D20A45FEAA40D69B513CC0;
 			remoteInfo = Svg;
 		};
-		EFEFB59875864F63A891B39E /* PBXContainerItemProxy */ = {
+		C6F5DF28124148AAABAC0B6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CD88BB3ABBD4957B2BED2D7 /* Project object */;
 			proxyType = 1;
@@ -94,14 +94,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24ADF8CCD0074AA8839945B2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		2C3D0CF5BABB4E8A961CC661 /* Svg */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSvg.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		96EAC9AEE47C41018AAEBFFC /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		FC6EF2411DF04D01A4328964 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = svg_data.cpp; path = svg_data.cpp; sourceTree = SOURCE_ROOT; };
+		A125A1DFA28E437FA34EB9CC /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A84D26CF986F4F90BB0120FB /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B9AFAABF8DB24FC7922F6881 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = svg_data.cpp; path = svg_data.cpp; sourceTree = SOURCE_ROOT; };
+		D5DD4FA01DC0426EB24191A7 /* Svg */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSvg.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1BF674B8814F409599A3EE5C /* Frameworks */ = {
+		147A4CD9D59943A6B9C9C3F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -111,62 +111,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C6ABFA74230487FA4259B72 /* ALL_BUILD */ = {
+		1394FF2E8035413CB1430B35 /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				F2CBA51D2EA74AF18F0E8432 /* CMake Rules */,
-				24ADF8CCD0074AA8839945B2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */,
+				E50F92239938405499B02DC7 /* CMake Rules */,
+				A125A1DFA28E437FA34EB9CC /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		5DF629D92C92482BB1C757DC = {
+		271AE8DBCF924403B6E2CA2D /* Svg */ = {
 			isa = PBXGroup;
 			children = (
-				DB1DFC7BD0734D539BA53908 /* Svg */,
-				0C6ABFA74230487FA4259B72 /* ALL_BUILD */,
-				BC993263B9DA4877A0818A04 /* Products */,
-				B4A54ACEB1B343F8A599AABB /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		B4A54ACEB1B343F8A599AABB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BC993263B9DA4877A0818A04 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2C3D0CF5BABB4E8A961CC661 /* Svg */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DB1DFC7BD0734D539BA53908 /* Svg */ = {
-			isa = PBXGroup;
-			children = (
-				F304DDF98AA743D397CB5B9F /* Source Files */,
-				96EAC9AEE47C41018AAEBFFC /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */,
+				C77666DBBCAD4F3AA0FEE8CA /* Source Files */,
+				A84D26CF986F4F90BB0120FB /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/CMakeLists.txt */,
 			);
 			name = Svg;
 			sourceTree = "<group>";
 		};
-		F2CBA51D2EA74AF18F0E8432 /* CMake Rules */ = {
+		562E703D44BF49D5A7E6A073 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5DD4FA01DC0426EB24191A7 /* Svg */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		935DF84731894F7FB1C16308 = {
+			isa = PBXGroup;
+			children = (
+				271AE8DBCF924403B6E2CA2D /* Svg */,
+				1394FF2E8035413CB1430B35 /* ALL_BUILD */,
+				562E703D44BF49D5A7E6A073 /* Products */,
+				EC16F2CEF95546AC83E33563 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C77666DBBCAD4F3AA0FEE8CA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9AFAABF8DB24FC7922F6881 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		E50F92239938405499B02DC7 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		F304DDF98AA743D397CB5B9F /* Source Files */ = {
+		EC16F2CEF95546AC83E33563 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FC6EF2411DF04D01A4328964 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */,
 			);
-			name = "Source Files";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,19 +174,19 @@
 /* Begin PBXNativeTarget section */
 		86D20A45FEAA40D69B513CC0 /* Svg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C7CCD7366A94029BD40C58A /* Build configuration list for PBXNativeTarget "Svg" */;
+			buildConfigurationList = 6AFAAD48BFF5442FACBA9CD2 /* Build configuration list for PBXNativeTarget "Svg" */;
 			buildPhases = (
-				888386E6C369408B87D35E9E /* Sources */,
-				1BF674B8814F409599A3EE5C /* Frameworks */,
+				45BD892EE085478A9FBD5B15 /* Sources */,
+				147A4CD9D59943A6B9C9C3F2 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				05D70CE79D4E47E88F6B8192 /* PBXTargetDependency */,
+				734BE84CD793487CB143597C /* PBXTargetDependency */,
 			);
 			name = Svg;
 			productName = Svg;
-			productReference = 2C3D0CF5BABB4E8A961CC661 /* Svg */;
+			productReference = D5DD4FA01DC0426EB24191A7 /* Svg */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -198,18 +198,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1400;
 			};
-			buildConfigurationList = 43C879C696B14E6E81100F6A /* Build configuration list for PBXProject "Svg" */;
+			buildConfigurationList = 7548A52D56794D7081383C13 /* Build configuration list for PBXProject "Svg" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				181F3FDE8928450FB6FF6EB4 /* Debug */,
-				07803785E7384783BC3F1EB2 /* Release */,
-				E7DB474A4ADA4F6E96AC0419 /* MinSizeRel */,
-				30883CC90BAF498F801B6F82 /* RelWithDebInfo */,
+				8B273B3054DD43C1B6EE51DE /* Debug */,
+				756A8FD1684045E2A7EEE128 /* Release */,
+				13B208EA275F475BB7EC86B4 /* MinSizeRel */,
+				B6BF0563A03C4AF7ABF81112 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 5DF629D92C92482BB1C757DC;
+			mainGroup = 935DF84731894F7FB1C16308;
 			projectDirPath = .;
 			projectRoot = "";
 			targets = (
@@ -320,188 +320,36 @@ exit 0";
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		888386E6C369408B87D35E9E /* Sources */ = {
+		45BD892EE085478A9FBD5B15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05066BE9A8644DC88BE98FD4 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */,
+				1CE8755DB2A744829FFA04AB /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/svg_data.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		05D70CE79D4E47E88F6B8192 /* PBXTargetDependency */ = {
+		06014830A0E04F40904F4999 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6480D792E2EF434288B439EA /* ZERO_CHECK */;
-			targetProxy = 80E60F9ED14B4FF8954165E5 /* PBXContainerItemProxy */;
+			targetProxy = C6F5DF28124148AAABAC0B6B /* PBXContainerItemProxy */;
 		};
-		354D820A029049DE9B83E84F /* PBXTargetDependency */ = {
+		734BE84CD793487CB143597C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6480D792E2EF434288B439EA /* ZERO_CHECK */;
-			targetProxy = EFEFB59875864F63A891B39E /* PBXContainerItemProxy */;
+			targetProxy = 5ECB712D00DE4DDDACF116D1 /* PBXContainerItemProxy */;
 		};
-		55C4EF8281A2458D9135AF20 /* PBXTargetDependency */ = {
+		D33A3FD1A7FF481E88001F71 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 86D20A45FEAA40D69B513CC0 /* Svg */;
-			targetProxy = B7477B1AC77347E286128DCE /* PBXContainerItemProxy */;
+			targetProxy = 6B9E9442BDB640BB8AD37905 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		04BFDA4EF16743719F2FE9C0 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/build";
-			};
-			name = RelWithDebInfo;
-		};
-		068F251778DA41D39F99FD4F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		1453F162FE734300AE7D843E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/.","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++2a' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Svg;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		25090F2C558A42A19B6D2718 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		2BACB5CA8BFD47D88C7DD921 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/.","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++2a' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Svg;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		34475631CA3B4444B9160C13 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		61D766BF7B784AD58FBD4B9A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/build";
-			};
-			name = Debug;
-		};
-		83A6728F1E3F413A8DB32362 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		8918291254074A29B2D1B151 /* RelWithDebInfo */ = {
+		0D38241F8F8249AFB6676B95 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -521,18 +369,47 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		984F7917F58745E5AFCC8EAD /* Release */ = {
+		237B49C27F3B49BE9BA532F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/build";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Release;
 		};
-		A8D59C45099E40299F5B401F /* RelWithDebInfo */ = {
+		354C855D50C94D6EB88F376E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		378E3A20E4394B3F8BAD1CB8 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -557,7 +434,7 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		CA6C6BAF46964006B17631BF /* Debug */ = {
+		394F286045174E308FC0FFCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -577,7 +454,27 @@ exit 0";
 			};
 			name = Debug;
 		};
-		D229E1A8BDA04465A44544BD /* RelWithDebInfo */ = {
+		5F6F741A449D4003870F7884 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		71B5CC52FE714958AEFAE794 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -597,7 +494,57 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		D246963411B3434F8A4A0886 /* MinSizeRel */ = {
+		8EAD667D8CB746D68302F708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/.","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++2a' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Svg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		9CAE2BB98B9545E6A8220E05 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/.","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++2a' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Svg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9D379BE81D784244851BAF56 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -608,7 +555,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		DE39A696B9D74B18AA87C25E /* Release */ = {
+		A12854CE8F7B41739180B619 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -628,7 +575,27 @@ exit 0";
 			};
 			name = Release;
 		};
-		F7B6953F1CFF4F3FA5FAACB4 /* Release */ = {
+		A7CB1448BFD34D5580E87F72 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BEBFA4157FB942D7A705E2F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -653,49 +620,82 @@ exit 0";
 			};
 			name = Release;
 		};
+		E0733401522B4AE1958001B5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/build";
+			};
+			name = RelWithDebInfo;
+		};
+		E864EAF9DD6449EC91E52A8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/build";
+			};
+			name = Release;
+		};
+		F40B5CD94D34441BAD2C2977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg/build";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43C879C696B14E6E81100F6A /* Build configuration list for PBXProject "Svg" */ = {
+		6AFAAD48BFF5442FACBA9CD2 /* Build configuration list for PBXNativeTarget "Svg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				61D766BF7B784AD58FBD4B9A /* Debug */,
-				984F7917F58745E5AFCC8EAD /* Release */,
-				D246963411B3434F8A4A0886 /* MinSizeRel */,
-				04BFDA4EF16743719F2FE9C0 /* RelWithDebInfo */,
+				8EAD667D8CB746D68302F708 /* Debug */,
+				BEBFA4157FB942D7A705E2F7 /* Release */,
+				9CAE2BB98B9545E6A8220E05 /* MinSizeRel */,
+				378E3A20E4394B3F8BAD1CB8 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		93210755EB70445AA9883F4E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		7548A52D56794D7081383C13 /* Build configuration list for PBXProject "Svg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				83A6728F1E3F413A8DB32362 /* Debug */,
-				068F251778DA41D39F99FD4F /* Release */,
-				34475631CA3B4444B9160C13 /* MinSizeRel */,
-				D229E1A8BDA04465A44544BD /* RelWithDebInfo */,
+				F40B5CD94D34441BAD2C2977 /* Debug */,
+				E864EAF9DD6449EC91E52A8E /* Release */,
+				9D379BE81D784244851BAF56 /* MinSizeRel */,
+				E0733401522B4AE1958001B5 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9C7CCD7366A94029BD40C58A /* Build configuration list for PBXNativeTarget "Svg" */ = {
+		C7D9ABD1098746A6AC866AE5 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1453F162FE734300AE7D843E /* Debug */,
-				F7B6953F1CFF4F3FA5FAACB4 /* Release */,
-				2BACB5CA8BFD47D88C7DD921 /* MinSizeRel */,
-				A8D59C45099E40299F5B401F /* RelWithDebInfo */,
+				394F286045174E308FC0FFCF /* Debug */,
+				A12854CE8F7B41739180B619 /* Release */,
+				5F6F741A449D4003870F7884 /* MinSizeRel */,
+				0D38241F8F8249AFB6676B95 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		B4FD4329E3C44937A9FFB1CE /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		F833003C42AB4CCA808627AC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CA6C6BAF46964006B17631BF /* Debug */,
-				DE39A696B9D74B18AA87C25E /* Release */,
-				25090F2C558A42A19B6D2718 /* MinSizeRel */,
-				8918291254074A29B2D1B151 /* RelWithDebInfo */,
+				354C855D50C94D6EB88F376E /* Debug */,
+				237B49C27F3B49BE9BA532F2 /* Release */,
+				A7CB1448BFD34D5580E87F72 /* MinSizeRel */,
+				71B5CC52FE714958AEFAE794 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

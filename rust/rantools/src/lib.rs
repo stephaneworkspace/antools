@@ -301,9 +301,17 @@ pub struct SvgPoint {
     pub point: c_float,
 }
 
+#[repr(C)]
+#[derive(Debug)]
+pub struct SvgProperties {
+    pub fill: *const c_char,
+    pub stroke: *const c_char,
+    pub stroke_width: c_float,
+}
+
 #[no_mangle]
-pub extern "C" fn svg_rust(data: *const SvgData, point: *const SvgPoint, data_size: c_int, point_size: c_int, path: *const c_char) -> *const c_char {
-    let res= svg::svg_rust_path(data, point, data_size as isize, point_size as isize, path);
+pub extern "C" fn svg_path_data(data: *const SvgData, point: *const SvgPoint, data_size: c_int, point_size: c_int, properties: SvgProperties) -> *const c_char {
+    let res= svg::svg_rust_path_data(data, point, data_size as isize, point_size as isize, properties);
     let res_c_str = CString::new(res).unwrap();
     let res_ptr = res_c_str.into_raw();
     return res_ptr;
@@ -315,7 +323,7 @@ mod tests {
     use std::ffi::{CStr, CString};
     use std::os::raw::{c_char, c_float, c_int};
     use svg::node::element::path::{Command, Data, Parameters, Position};
-    use crate::{svg_rust, SvgData, SvgPoint};
+    use crate::{svg_path_data, SvgData, SvgPoint, SvgProperties};
 
     #[test]
     fn it_works() {
@@ -466,10 +474,19 @@ mod tests {
         let point = vec_point.as_ptr();
         let data_size = vec_data.len();
         let point_size = vec_point.len();
-        let path_cstring = CString::new("svg_rust.svg").unwrap();
-        let path = path_cstring.as_ptr();
 
-        let res = svg_rust(data, point, data_size as c_int, point_size as c_int, path);
+        let fill_cstring = CString::new("none").unwrap();
+        let fill = fill_cstring.as_ptr();
+        let stroke_cstring = CString::new("black").unwrap();
+        let stroke = stroke_cstring.as_ptr();
+
+        let properties = SvgProperties {
+            fill,
+            stroke,
+            stroke_width: 3.0
+        };
+
+        let res = svg_path_data(data, point, data_size as c_int, point_size as c_int, properties);
 
         let res_cstr = unsafe { CStr::from_ptr(res) };
         let res_str = res_cstr.to_str().unwrap();

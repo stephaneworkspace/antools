@@ -12,8 +12,13 @@ using namespace std;
 
 int main() {
     // Svg
-    Data data = Data();
-    data.move_to(10.0, 10.0);
+    SvgFill fill;
+    fill.fill = "none";
+    SvgStroke stroke;
+    stroke.stroke = "black";
+    stroke.stroke_width = 3;
+    Data data = Data(fill, stroke);
+    data.move_to(10.0,10.0);
     data.line_by(0.50,50.0);
     data.line_by(50,0);
     data.line_by(0,-50);

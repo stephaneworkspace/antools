@@ -7,7 +7,7 @@ int Data::get_size(string s) {
     return std::count(s.begin(), s.end(), DELIMITER_CHAR) + 1;
 }
 
-float Data::get_value(std::string s, int pos) {
+float Data::get_value(string s, int pos) {
     string c = DELIMITER;
     string res = "";
     auto start = 0U;
@@ -42,7 +42,7 @@ SvgData Data::set_data(char c, int point_size) {
     return data;
 }
 
-SvgPoint Data::set_point(std::string point_string, int pos) {
+SvgPoint Data::set_point(string point_string, int pos) {
     SvgPoint point;
     point.point_idx = idx_data;
     point.point = get_value(point_string, pos);
@@ -59,9 +59,12 @@ void Data::set_command(char c, string s) {
     idx_point += size;
 }
 
-Data::Data() {
+Data::Data(SvgFill fill, SvgStroke stroke) {
     idx_data = 0;
     idx_point = 0;
+    properties.fill = fill.fill.c_str();
+    properties.stroke = stroke.stroke.c_str();
+    properties.stroke_width = stroke.stroke_width;
 }
 
 void Data::move_to(float x, float y) {
@@ -99,10 +102,7 @@ void Data::close_by() {
 void Data::create_svg() {
     SvgData* data = vec_data.data();
     SvgPoint* point = vec_point.data();
-    string p = filesystem::current_path().parent_path().parent_path();
-    p += "/temp/svg_rust.svg";
-    const char* path = p.c_str();
-    const char* res = svg_rust(data, point, idx_data, idx_point, path);
+    const char* res = svg_path_data(data, point, idx_data, idx_point, properties);
     string s;
     s.assign(res);
     cout << s << endl;

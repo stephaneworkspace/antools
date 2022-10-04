@@ -24,6 +24,12 @@ struct SvgPoint {
     float point;
 };
 
+struct SvgProperties {
+    const char* fill;
+    const char* stroke;
+    float stroke_width;
+};
+
 // ./src
 
 extern "C" B64 theme_astral(int year, int month, int day, int hour, int min, double lat, double lng, int tz);
@@ -32,10 +38,10 @@ extern "C" B64 theme_astral(int year, int month, int day, int hour, int min, dou
 
 extern "C" B64 create_png_b64(const char* p_svg_b64);
 extern "C" B64 create_pdf_b64(const char* p_svg_b64);
-extern "C" const char* svg_rust(const SvgData* data,
-                                const SvgPoint* point,
-                                int data_size,
-                                int point_size,
-                                const char* path);
+extern "C" const char* svg_path_data(const SvgData* data,
+                                     const SvgPoint* point,
+                                     int data_size,
+                                     int point_size,
+                                     SvgProperties properties);
 
 #endif //ANTOOLS_LIBRARY_H

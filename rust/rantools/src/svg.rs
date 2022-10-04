@@ -1,14 +1,15 @@
 extern crate core;
 
 use std::ffi::CStr;
-use std::os::raw::c_char;
-use crate::{SvgData, SvgPoint};
-use svg::Document;
+use crate::{SvgData, SvgPoint, SvgProperties};
 use svg::node::element::Path;
 use svg::node::element::path::Data;
 
-pub(crate) fn svg_rust_path(data: *const SvgData, point: *const SvgPoint, data_size: isize, point_size: isize, path: *const c_char) -> String {
-    let path_string = unsafe { CStr::from_ptr(path).to_str().unwrap() };
+pub(crate) fn svg_rust_path_data(data: *const SvgData,
+                                 point: *const SvgPoint,
+                                 data_size: isize,
+                                 point_size: isize,
+                                 properties: SvgProperties) -> String {
     // SvgData
     let mut vec_data: Vec<SvgData> = Vec::new();
     for i in 0..data_size {
@@ -47,19 +48,16 @@ pub(crate) fn svg_rust_path(data: *const SvgData, point: *const SvgPoint, data_s
 
     let data = Data::parse(data_str.as_str()).unwrap();
 
+    let fill = unsafe { CStr::from_ptr(properties.fill).to_str().unwrap() };
+    let stroke = unsafe { CStr::from_ptr(properties.stroke).to_str().unwrap() };
+
     let path = Path::new()
-        .set("fill", "none")
-        .set("stroke", "black")
-        .set("stroke-width", 3)
+        .set("fill", fill)
+        .set("stroke", stroke)
+        .set("stroke-width", properties.stroke_width)
         .set("d", data);
 
     let res = path.clone().to_string();
-
-    let document = Document::new()
-        .set("viewBox", (0, 0, 70, 70))
-        .add(path);
-
-    svg::save(path_string, &document).unwrap();
     res
 }
 
