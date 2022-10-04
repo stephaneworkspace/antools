@@ -40,7 +40,15 @@ struct SvgProperties {
 
 // ./src
 
-extern "C" B64 theme_astral(int year, int month, int day, int hour, int min, double lat, double lng, int tz);
+extern "C" B64 theme_astral(int year,
+                            int month,
+                            int day,
+                            int hour,
+                            int min,
+                            double lat,
+                            double lng,
+                            int tz,
+                            const char* ephem_path);
 
 // ./rust
 
