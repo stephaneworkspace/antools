@@ -21,17 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="clean up">
-      <change afterPath="$PROJECT_DIR$/other_cmake/Svg/svg.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antools" beforeDir="false" afterPath="$PROJECT_DIR$/antools" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/exe/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/antools.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/antools.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/svg_data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/svg_data.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/svg_data.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/svg_data.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rust/rantools/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rust/rantools/src/svg.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/svg.rs" afterDir="false" />
     </list>
@@ -43,7 +33,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -101,7 +90,7 @@
       <recent name="$PROJECT_DIR$/other_cmake/Svg" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.antools_exe">
+  <component name="RunManager" selected="Cargo.Build">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -294,7 +283,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="4112000" />
+      <workItem from="1664867814726" duration="5097000" />
     </task>
     <task id="LOCAL-00001" summary="asset intégré en base64">
       <created>1664715797593</created>
@@ -541,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664870472713</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="clean up">
+      <created>1664872279360</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1664872279360</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

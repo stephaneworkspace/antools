@@ -1,15 +1,32 @@
 extern crate core;
 
 use std::ffi::CStr;
+use std::os::raw::c_float;
 use crate::{SvgData, SvgPoint, SvgProperties};
-use svg::node::element::Path;
+use svg::node::element::{Circle, Path};
 use svg::node::element::path::Data;
 
-pub(crate) fn svg_rust_path_data(data: *const SvgData,
-                                 point: *const SvgPoint,
-                                 data_size: isize,
-                                 point_size: isize,
-                                 properties: SvgProperties) -> String {
+pub(crate) fn circle(x: c_float,
+                         y: c_float,
+                         r: c_float,
+                         properties: SvgProperties) -> String {
+    let fill = unsafe { CStr::from_ptr(properties.fill).to_str().unwrap() };
+    let stroke = unsafe { CStr::from_ptr(properties.stroke).to_str().unwrap() };
+    let circle = Circle::new()
+        .set("fill", fill)
+        .set("cx", x)
+        .set("cy", y)
+        .set("r", r)
+        .set("stroke", stroke)
+        .set("stroke-width", properties.stroke_width);
+    circle.to_string()
+}
+
+pub(crate) fn path_data(data: *const SvgData,
+                            point: *const SvgPoint,
+                            data_size: isize,
+                            point_size: isize,
+                            properties: SvgProperties) -> String {
     // SvgData
     let mut vec_data: Vec<SvgData> = Vec::new();
     for i in 0..data_size {

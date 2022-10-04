@@ -8,6 +8,7 @@ use base64::{encode, decode, DecodeError};
 use image::{ColorType, GenericImageView, ImageFormat};
 use miniz_oxide::deflate::{compress_to_vec_zlib, CompressionLevel};
 use pdf_writer::{Content, Filter, Finish, Name, PdfWriter, Rect, Ref};
+use crate::svg::{circle, path_data};
 
 #[repr(C)]
 #[derive(Debug)]
@@ -311,27 +312,35 @@ pub struct SvgProperties {
 
 #[no_mangle]
 pub extern "C" fn svg_path_data(data: *const SvgData, point: *const SvgPoint, data_size: c_int, point_size: c_int, properties: SvgProperties) -> *const c_char {
-    let res= svg::svg_rust_path_data(data, point, data_size as isize, point_size as isize, properties);
+    let res= path_data(data, point, data_size as isize, point_size as isize, properties);
     let res_c_str = CString::new(res).unwrap();
     let res_ptr = res_c_str.into_raw();
-    return res_ptr;
+    res_ptr
 }
 
+#[no_mangle]
+pub extern "C" fn svg_circle(x: c_float, y: c_float, r: c_float, properties: SvgProperties) -> *const c_char {
+    let res = circle(x, y, r, properties);
+    let res_c_str = CString::new(res).unwrap();
+    let res_ptr = res_c_str.into_raw();
+    res_ptr
+}
 
 #[cfg(test)]
 mod tests {
     use std::ffi::{CStr, CString};
     use std::os::raw::{c_char, c_float, c_int};
     use svg::node::element::path::{Command, Data, Parameters, Position};
-    use crate::{svg_path_data, SvgData, SvgPoint, SvgProperties};
+    use crate::{svg_path_data, svg_circle, SvgData, SvgPoint, SvgProperties};
 
     #[test]
     fn it_works() {
         let result = 2 + 2;
         assert_eq!(result, 4);
     }
+
     #[test]
-    fn svg_rust_works() {
+    fn svg_path_data_works() {
         let data = Data::new()
             .move_to((10, 10))
             .line_by((0, 50))
@@ -479,7 +488,6 @@ mod tests {
         let fill = fill_cstring.as_ptr();
         let stroke_cstring = CString::new("black").unwrap();
         let stroke = stroke_cstring.as_ptr();
-
         let properties = SvgProperties {
             fill,
             stroke,
@@ -492,6 +500,25 @@ mod tests {
         let res_str = res_cstr.to_str().unwrap();
 
         let assert = r#"<path d="M10,10 l0,50 l50,0 l0,-50 z" fill="none" stroke="black" stroke-width="3"/>"#;
+        assert_eq!(assert, res_str);
+    }
+    #[test]
+    fn svg_circle_works() {
+        let fill_cstring = CString::new("none").unwrap();
+        let fill = fill_cstring.as_ptr();
+        let stroke_cstring = CString::new("black").unwrap();
+        let stroke = stroke_cstring.as_ptr();
+        let properties = SvgProperties {
+            fill,
+            stroke,
+            stroke_width: 3.0
+        };
+        let res = svg_circle(10.0, 50.0, 100.0, properties);
+
+        let res_cstr = unsafe { CStr::from_ptr(res) };
+        let res_str = res_cstr.to_str().unwrap();
+
+        let assert = r#"<circle cx="10" cy="50" fill="none" r="100" stroke="black" stroke-width="3"/>"#;
         assert_eq!(assert, res_str);
     }
 }
