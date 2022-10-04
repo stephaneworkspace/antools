@@ -20,19 +20,8 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="refactor and fix bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antools" beforeDir="false" afterPath="$PROJECT_DIR$/antools" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" afterDir="false" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="angle en svg à l'aide de https://fontsvg.com">
       <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/angle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/angle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_angle.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/draw_house_line.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,14 +283,7 @@
       <workItem from="1664738606501" duration="8612000" />
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
-      <workItem from="1664867814726" duration="24889000" />
-    </task>
-    <task id="LOCAL-00004" summary="gitignore à jour">
-      <created>1664716028725</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1664716028725</updated>
+      <workItem from="1664867814726" duration="25206000" />
     </task>
     <task id="LOCAL-00005" summary="gitignore à jour">
       <created>1664716062200</created>
@@ -639,7 +621,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664891771990</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="angle en svg à l'aide de https://fontsvg.com">
+      <created>1664894261430</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1664894261430</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +646,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ça fonctionne reste plus qu'a tester depuis le c++" />
     <MESSAGE value="fin de la fonction src/svg.rs svg_rust_path" />
     <MESSAGE value="ajout dans antools.h" />
     <MESSAGE value="fonction c++ fonctionne avec alignement de structure rust" />
@@ -682,6 +670,7 @@
     <MESSAGE value="grosse modif, intégration avec ma nouvelle libraire Svg" />
     <MESSAGE value="refactor svg_doc -&gt; doc" />
     <MESSAGE value="refactor and fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor and fix bug" />
+    <MESSAGE value="angle en svg à l'aide de https://fontsvg.com" />
+    <option name="LAST_COMMIT_MESSAGE" value="angle en svg à l'aide de https://fontsvg.com" />
   </component>
 </project>
