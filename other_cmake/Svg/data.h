@@ -30,7 +30,7 @@ private:
     SvgPoint set_point(string point_string, int pos);
     void set_command(char c, string s);
 public:
-    Data(SvgFill fill, SvgStroke stroke);
+    Data(Fill fill, Stroke stroke);
     void move_to(float x, float y);
     void move_by(float x, float y);
     void line_to(float x, float y);

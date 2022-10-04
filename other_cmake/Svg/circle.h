@@ -17,7 +17,7 @@ class Circle
 private:
     SvgProperties properties;
 public:
-    Circle(SvgFill fill, SvgStroke stroke);
+    Circle(Fill fill, Stroke stroke);
     string generate(float x, float y, float r);
 };
 

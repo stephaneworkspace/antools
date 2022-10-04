@@ -13,9 +13,9 @@ using namespace std;
 
 int main() {
     // Data
-    SvgFill fill;
+    Fill fill;
     fill.fill = "none";
-    SvgStroke stroke;
+    Stroke stroke;
     stroke.stroke = "black";
     stroke.stroke_width = 3;
     Data data = Data(fill, stroke);

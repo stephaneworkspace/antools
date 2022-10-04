@@ -24,10 +24,18 @@ struct SvgPoint {
     float point;
 };
 
-struct SvgProperties {
+struct SvgFill {
     const char* fill;
+};
+
+struct SvgStroke {
     const char* stroke;
     float stroke_width;
+};
+
+struct SvgProperties {
+    SvgFill fill;
+    SvgStroke stroke;
 };
 
 // ./src
@@ -43,5 +51,6 @@ extern "C" const char* svg_path_data(const SvgData* data,
                                      int data_size,
                                      int point_size,
                                      SvgProperties properties);
-extern "C" const char * svg_circle(float x, float y, float r, SvgProperties properties);
+extern "C" const char* svg_circle(float x, float y, float r, SvgProperties properties);
+extern "C" const char* svg_line(float x1, float x2, float y1, float y2, SvgStroke stroke);
 #endif //ANTOOLS_LIBRARY_H

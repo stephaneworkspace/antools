@@ -59,12 +59,12 @@ void Data::set_command(char c, string s) {
     idx_point += size;
 }
 
-Data::Data(SvgFill fill, SvgStroke stroke) {
+Data::Data(Fill fill, Stroke stroke) {
     idx_data = 0;
     idx_point = 0;
-    properties.fill = fill.fill.c_str();
-    properties.stroke = stroke.stroke.c_str();
-    properties.stroke_width = stroke.stroke_width;
+    properties.fill.fill = fill.fill.c_str();
+    properties.stroke.stroke = stroke.stroke.c_str();
+    properties.stroke.stroke_width = stroke.stroke_width;
 }
 
 void Data::move_to(float x, float y) {

@@ -3,10 +3,10 @@
 //
 #include "circle.h"
 
-Circle::Circle(SvgFill fill, SvgStroke stroke) {
-    properties.fill = fill.fill.c_str();
-    properties.stroke = stroke.stroke.c_str();
-    properties.stroke_width = stroke.stroke_width;
+Circle::Circle(Fill fill, Stroke stroke) {
+    properties.fill.fill = fill.fill.c_str();
+    properties.stroke.stroke = stroke.stroke.c_str();
+    properties.stroke.stroke_width = stroke.stroke_width;
 }
 
 string Circle::generate(float x, float y, float r) {

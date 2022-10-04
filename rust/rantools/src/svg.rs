@@ -2,25 +2,9 @@ extern crate core;
 
 use std::ffi::CStr;
 use std::os::raw::c_float;
-use crate::{SvgData, SvgPoint, SvgProperties};
-use svg::node::element::{Circle, Path};
+use crate::{SvgData, SvgPoint, SvgProperties, SvgStroke};
+use svg::node::element::{Circle, Line, Path};
 use svg::node::element::path::Data;
-
-pub(crate) fn circle(x: c_float,
-                         y: c_float,
-                         r: c_float,
-                         properties: SvgProperties) -> String {
-    let fill = unsafe { CStr::from_ptr(properties.fill).to_str().unwrap() };
-    let stroke = unsafe { CStr::from_ptr(properties.stroke).to_str().unwrap() };
-    let circle = Circle::new()
-        .set("fill", fill)
-        .set("cx", x)
-        .set("cy", y)
-        .set("r", r)
-        .set("stroke", stroke)
-        .set("stroke-width", properties.stroke_width);
-    circle.to_string()
-}
 
 pub(crate) fn path_data(data: *const SvgData,
                             point: *const SvgPoint,
@@ -65,16 +49,47 @@ pub(crate) fn path_data(data: *const SvgData,
 
     let data = Data::parse(data_str.as_str()).unwrap();
 
-    let fill = unsafe { CStr::from_ptr(properties.fill).to_str().unwrap() };
-    let stroke = unsafe { CStr::from_ptr(properties.stroke).to_str().unwrap() };
+    let fill = unsafe { CStr::from_ptr(properties.fill.fill).to_str().unwrap() };
+    let stroke = unsafe { CStr::from_ptr(properties.stroke.stroke).to_str().unwrap() };
 
     let path = Path::new()
         .set("fill", fill)
         .set("stroke", stroke)
-        .set("stroke-width", properties.stroke_width)
+        .set("stroke-width", properties.stroke.stroke_width)
         .set("d", data);
 
     let res = path.clone().to_string();
     res
 }
 
+pub(crate) fn circle(x: c_float,
+                     y: c_float,
+                     r: c_float,
+                     properties: SvgProperties) -> String {
+    let fill = unsafe { CStr::from_ptr(properties.fill.fill).to_str().unwrap() };
+    let stroke = unsafe { CStr::from_ptr(properties.stroke.stroke).to_str().unwrap() };
+    let circle = Circle::new()
+        .set("fill", fill)
+        .set("cx", x)
+        .set("cy", y)
+        .set("r", r)
+        .set("stroke", stroke)
+        .set("stroke-width", properties.stroke.stroke_width);
+    circle.to_string()
+}
+
+pub(crate) fn line(x1: c_float,
+                       y1: c_float,
+                       x2: c_float,
+                       y2: c_float,
+                       stroke: SvgStroke) -> String {
+    let stroke_str = unsafe { CStr::from_ptr(stroke.stroke).to_str().unwrap() };
+    let line = Line::new()
+        .set("x1", x1)
+        .set("y1", y1)
+        .set("x2", x2)
+        .set("y2", y2)
+        .set("stroke", stroke_str)
+        .set("stroke-width", stroke.stroke_width);
+    line.to_string()
+}
