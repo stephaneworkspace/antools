@@ -51,7 +51,9 @@ int main() {
     cout << "Hello, World!" << endl;
 
     // Créer un pdf du thème astral dans /temp/mypdf.pdf
-    B64 ta = theme_astral(1986, 4, 3, 4, 54, 46.12, 6.09, 2);
+    string ephem_path_string = filesystem::current_path().parent_path().parent_path();
+    ephem_path_string += "/ephem";
+    B64 ta = theme_astral(1986, 4, 3, 4, 54, 46.12, 6.09, 2, ephem_path_string.c_str());
 
     // temp/mysvg.svg
     string input_svg;
