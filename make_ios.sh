@@ -63,7 +63,7 @@ rm -r ./build.sim
 cd ./other_cmake/Svg
 ./make_svg_ios.sh
 cd ..
-cd ./other_cmake/SweInterface
+cd ./SweInterface
 ./make_sweinterface_ios.sh
 cd ..
 cd ./Swe
