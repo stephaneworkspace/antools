@@ -5,7 +5,8 @@ project(Svg)
 set(CMAKE_CXX_STANDARD 20)
 
 set( SOURCES
-        svg_data.cpp svg.h)
+        circle.cpp
+        data.cpp)
 
 include_directories( BEFORE . )
 

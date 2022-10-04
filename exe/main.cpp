@@ -6,12 +6,13 @@
 #include <vector>
 #include "../include/antools.h"
 #include "../other_cmake/SweInterface/base64.h"
-#include "../other_cmake/Svg/svg_data.h"
+#include "../other_cmake/Svg/circle.h"
+#include "../other_cmake/Svg/data.h"
 
 using namespace std;
 
 int main() {
-    // Svg
+    // Data
     SvgFill fill;
     fill.fill = "none";
     SvgStroke stroke;
@@ -23,7 +24,11 @@ int main() {
     data.line_by(50,0);
     data.line_by(0,-50);
     data.close_by();
-    data.create_svg();
+    cout << data.generate() << endl;
+
+    // Circle
+    Circle circle = Circle(fill, stroke);
+    cout << circle.generate(10,20,30) << endl;
 
     cout << "Hello, World!" << endl;
 

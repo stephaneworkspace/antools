@@ -13,8 +13,10 @@ add_executable(antools_exe
         main.cpp
         ../include/antools.h
         ../src/antools.cpp
-        ../other_cmake/Svg/svg_data.h
-        ../other_cmake/Svg/svg_data.cpp
+        ../other_cmake/Svg/circle.h
+        ../other_cmake/Svg/circle.cpp
+        ../other_cmake/Svg/data.h
+        ../other_cmake/Svg/data.cpp
         ../other_cmake/SweInterface/SweInterface.h
         ../other_cmake/SweInterface/SweInterface.cpp)
 target_link_libraries(antools_exe ${CMAKE_SOURCE_DIR}/../rust/lib/librantools.a)

@@ -14,7 +14,7 @@ set( SOURCES
     swepcalc.c
     sweph.c
     swephlib.c
-        ../Svg/svg_data.h ../Svg/svg_data.cpp)
+        ../Svg/data.h ../Svg/data.cpp)
 include_directories( BEFORE . )
 #add_definitions(-g -O9 -Wall)
 add_library( swe STATIC ${SOURCES} )

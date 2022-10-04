@@ -10,7 +10,7 @@ CC=clang++ $(ARGUMENTS)
 .c.o:
 	$(CC) -c $(OP) $<
 
-SWEOBJ = svg_data.o
+SWEOBJ = circle.o data.o
 
 # create an archive
 
@@ -21,5 +21,7 @@ clean:
 	rm -f *.o libSvg *.a
 
 ###
-svg_data.o:
-	c++ $(FLAGO) -c svg_data.cpp
+circle.o:
+	c++ $(FLAGO) -c circle.cpp
+data.o:
+	c++ $(FLAGO) -c data.cpp
