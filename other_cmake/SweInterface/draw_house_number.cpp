@@ -7,9 +7,58 @@ Size DrawHouseNumber::number_size(int house_number) {
     Size size;
     const double HOUSE_SIZE = 20;
     const double HOUSE_RATIO = 8.7;
+    const double ANTONIO_RATIO = 3;
     double width = 0;
     double height = 0;
     switch (house_number) {
+        case 1:
+            width = 12 * ANTONIO_RATIO;
+            height = 43 * ANTONIO_RATIO;
+            break;
+        case 2:
+            width = 18 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 3:
+            width = 19 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 4:
+            width = 20 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 5:
+            width = 18 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 6:
+            width = 20 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 7:
+            width = 19 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 8:
+            width = 19 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 9:
+            width = 19 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 10:
+            width = 38 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 11:
+            width = 29 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
+        case 12:
+            width = 37 * ANTONIO_RATIO;
+            height = 44 * ANTONIO_RATIO;
+            break;
         default:
             width = HOUSE_SIZE * HOUSE_RATIO;
             height = HOUSE_SIZE * HOUSE_RATIO;
@@ -37,7 +86,7 @@ Offset DrawHouseNumber::number(int house_number, H* house) {
         pos = pos_now + ((pos_next - pos_now) / 2);
     }
     pos = Draw::get_fixed_pos(pos);
-    Offset trigo = Draw::get_pos_trigo(pos, (Draw::get_radius_total() * 77.8) / 100);
+    Offset trigo = Draw::get_pos_trigo(pos, (Draw::get_radius_total() * 78) / 100);
     Size zs = DrawHouseNumber::number_size(house_number);
     res = Draw::get_center_item(zs.width, zs.height, trigo);
     return res;
