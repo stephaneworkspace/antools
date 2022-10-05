@@ -165,6 +165,50 @@ pub extern "C" fn create_pdf_b64(p_svg_b64: *const c_char) -> B64 {
     }
 }
 
+#[no_mangle]
+pub extern "C" fn create_pdf_b64_from_png_b64(p_png_b64: *const c_char) -> B64 {
+    let cstr_png_b64: &CStr = unsafe { CStr::from_ptr(p_png_b64) };
+    let base64_png = match cstr_png_b64.to_str() {
+        Ok(ok) => {
+            ok
+        },
+        Err(err) => {
+            return B64 {
+                b_64: CString::new("").unwrap().into_raw(),
+                sw: false,
+                err: CString::new(format!("Paramètre d'entrée \"p_png_b64\" invalide {}", err)).unwrap().into_raw()
+            };
+        }
+    };
+
+    let png_res: Result<Vec<u8>, DecodeError> = decode(base64_png);
+    let png_v_u8 = match png_res {
+        Ok(ok) => {
+            ok
+        },
+        Err(err) => {
+            return B64 {
+                b_64: CString::new("").unwrap().into_raw(),
+                sw: false,
+                err: CString::new(format!("Impossible de décoder le png. {}", err)).unwrap().into_raw()
+            };
+        }
+    };
+    match create_pdf(png_v_u8) {
+        Ok(ok) => {
+            B64 {
+                b_64: CString::new(ok).unwrap().into_raw(),
+                sw: true,
+                err: CString::new("").unwrap().into_raw()
+            }
+        },
+        Err(err) => {
+            err
+        }
+    }
+}
+
+
 
 #[no_mangle]
 pub extern "C" fn svg_path_data(data: *const SvgData,

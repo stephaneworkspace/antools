@@ -55,6 +55,7 @@ extern "C" B64 theme_astral(int year,
 extern "C" B64 create_png_b64(const char* p_svg_b64);
 extern "C" B64 create_png_from_file(const char* svg_file);
 extern "C" B64 create_pdf_b64(const char* p_svg_b64);
+extern "C" B64 create_pdf_b64_from_png_b64(const char* p_png_b64);
 extern "C" const char* svg_path_data(const SvgData* data,
                                      const SvgPoint* point,
                                      int data_size,
