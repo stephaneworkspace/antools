@@ -20,9 +20,8 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="clean up">
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="ajout d'une nouvelle fonction + fix error dans cplib.sh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/antools.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/antools.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rust/rantools/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -297,14 +296,7 @@
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
       <workItem from="1664867814726" duration="40929000" />
-      <workItem from="1664963287351" duration="478000" />
-    </task>
-    <task id="LOCAL-00016" summary="fonction pour logger dans ios&#10;file:///private/var/mobile/Containers/Shared/AppGroup/357F0235-E689-4894-8F7C-5FF91826021E/&#10;&#10;let groupPath = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: &quot;stephane.bressani.dev.astronumerologie&quot;)&#10;print(groupPath?.absoluteURL)">
-      <created>1664741333149</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1664741333149</updated>
+      <workItem from="1664963287351" duration="1943000" />
     </task>
     <task id="LOCAL-00017" summary="ajout debug">
       <created>1664748216341</created>
@@ -642,7 +634,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664916780748</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="ajout d'une nouvelle fonction + fix error dans cplib.sh">
+      <created>1664964122878</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1664964122878</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,7 +659,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fonction c++ fonctionne avec alignement de structure rust" />
     <MESSAGE value="avec des classes c'est plus facile à lire" />
     <MESSAGE value="retourne le résultat en const char*" />
     <MESSAGE value="retourne le path uniquement" />
@@ -685,6 +683,7 @@
     <MESSAGE value="clean up, ajout de CONST" />
     <MESSAGE value="house en svg" />
     <MESSAGE value="clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
+    <MESSAGE value="ajout d'une nouvelle fonction + fix error dans cplib.sh" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout d'une nouvelle fonction + fix error dans cplib.sh" />
   </component>
 </project>

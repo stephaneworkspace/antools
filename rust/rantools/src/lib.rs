@@ -6,6 +6,8 @@ mod tests;
 extern crate base64;
 
 use std::ffi::{CStr, CString};
+use std::fs::File;
+use std::io::Read;
 use std::os::raw::{c_char, c_float, c_int};
 use base64::{encode, decode, DecodeError};
 use crate::pdf::create_pdf;
@@ -181,8 +183,7 @@ pub extern "C" fn create_pdf_b64_from_png_b64(p_png_b64: *const c_char) -> B64 {
         }
     };
 
-    let png_res: Result<Vec<u8>, DecodeError> = decode(base64_png);
-    let png_v_u8 = match png_res {
+    let mut f = match File::open(base64_png.clone()) {
         Ok(ok) => {
             ok
         },
@@ -190,11 +191,23 @@ pub extern "C" fn create_pdf_b64_from_png_b64(p_png_b64: *const c_char) -> B64 {
             return B64 {
                 b_64: CString::new("").unwrap().into_raw(),
                 sw: false,
-                err: CString::new(format!("Impossible de décoder le png. {}", err)).unwrap().into_raw()
+                err: CString::new(format!("Impossible de lire le png. {}", err)).unwrap().into_raw()
             };
         }
     };
-    match create_pdf(png_v_u8) {
+    let mut buffer = Vec::new();
+    match f.read_to_end(&mut buffer) {
+        Ok(_) => {
+        },
+        Err(err) => {
+            return B64 {
+                b_64: CString::new("").unwrap().into_raw(),
+                sw: false,
+                err: CString::new(format!("Impossible de lire le buffer du png. {}", err)).unwrap().into_raw()
+            };
+        }
+    }
+    match create_pdf(buffer) {
         Ok(ok) => {
             B64 {
                 b_64: CString::new(ok).unwrap().into_raw(),
