@@ -1,0 +1,13 @@
+<table width="50" border="1">
+    <tr>
+        <td>
+            <div align="center" text="123" />
+        </td>
+        <td>
+            <div align="center" text="456" />
+        </td>
+        <td>
+            <div align="center" text="789" />
+        </td>
+    </tr>
+</table>

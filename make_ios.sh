@@ -1,14 +1,16 @@
 #!/bin/sh
 
 # Build rust
+# cargo +ios-arm64-1.60.0 build --target aarch64-apple-ios --release --lib
 
 cd rust
 cd rantools
 cargo update
+cargo test
 cargo build --target aarch64-apple-ios
 cargo build --target x86_64-apple-ios
-cargo build --target aarch64-apple-ios --release
-cargo build --target x86_64-apple-ios --release
+cargo build --target aarch64-apple-ios --release --lib
+cargo build --target x86_64-apple-ios --release --lib
 cp ./target/aarch64-apple-ios/release/librantools.a ../lib/ios/librantools.a
 cp ./target/x86_64-apple-ios/release/librantools.a ../lib/sim/librantools.a
 lipo -create ../lib/ios/librantools.a ../lib/sim/librantools.a -output ../lib/generic/librantools.a

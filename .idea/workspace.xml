@@ -20,9 +20,12 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="ajout d'une nouvelle fonction + fix error dans cplib.sh">
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="correction">
+      <change afterPath="$PROJECT_DIR$/rust/rantools/examples/node.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rust/rantools/examples/template.an" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rust/rantools/src/node.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_ios.sh" beforeDir="false" afterPath="$PROJECT_DIR$/make_ios.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +40,7 @@
       <list>
         <option value="CMakeLists.txt" />
         <option value="Rust File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -49,6 +53,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2022" />
@@ -60,25 +67,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cmake.loaded.for.project&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/stephane/Code/CL/C++/antools/other_cmake/Svg&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "cmake.loaded.for.project": "true",
+    "last_opened_file_path": "/Users/stephane/Code/CL/C++/antools/other_cmake/Svg",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "structure.view.defaults.are.configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/other_cmake/Svg" />
@@ -90,7 +98,7 @@
       <recent name="$PROJECT_DIR$/other_cmake/Svg" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.make_ios.sh">
+  <component name="RunManager" selected="Cargo.Run example node">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -101,6 +109,11 @@
         <aux-dir>/</aux-dir>
       </texify-bibtex>
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Svg" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="antools_exe" TARGET_NAME="Svg" CONFIG_NAME="Default">
       <method v="2">
@@ -138,6 +151,24 @@
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
         <option name="RunConfigurationTask" enabled="true" run_configuration_name="Test" run_configuration_type="CargoCommandRunConfiguration" />
+      </method>
+    </configuration>
+    <configuration name="Run example node" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="run --example node" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/rust/rantools" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Test" run_configuration_type="CargoCommandRunConfiguration" />
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
     <configuration name="Run example svg" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
@@ -259,6 +290,7 @@
     </configuration>
     <list>
       <item itemvalue="Cargo.Build" />
+      <item itemvalue="Cargo.Run example node" />
       <item itemvalue="Cargo.Test" />
       <item itemvalue="Cargo.Run example svg" />
       <item itemvalue="CMake Application.antools_exe" />
@@ -296,14 +328,10 @@
       <workItem from="1664793321538" duration="25376000" />
       <workItem from="1664821181797" duration="8550000" />
       <workItem from="1664867814726" duration="40929000" />
-      <workItem from="1664963287351" duration="1943000" />
-    </task>
-    <task id="LOCAL-00017" summary="ajout debug">
-      <created>1664748216341</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1664748216341</updated>
+      <workItem from="1664963287351" duration="4472000" />
+      <workItem from="1664973361491" duration="206000" />
+      <workItem from="1664975462320" duration="17000" />
+      <workItem from="1665043067722" duration="5751000" />
     </task>
     <task id="LOCAL-00018" summary="add license">
       <created>1664748809951</created>
@@ -641,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664964122878</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="correction">
+      <created>1664967093918</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1664967093918</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -659,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="avec des classes c'est plus facile à lire" />
     <MESSAGE value="retourne le résultat en const char*" />
     <MESSAGE value="retourne le path uniquement" />
     <MESSAGE value="créer un cmake pour Svg" />
@@ -684,6 +718,7 @@
     <MESSAGE value="house en svg" />
     <MESSAGE value="clean up" />
     <MESSAGE value="ajout d'une nouvelle fonction + fix error dans cplib.sh" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout d'une nouvelle fonction + fix error dans cplib.sh" />
+    <MESSAGE value="correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction" />
   </component>
 </project>
