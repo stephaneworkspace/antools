@@ -78,6 +78,19 @@ impl fmt::Debug for NodeEnum {
     }
 }
 
+impl FromStr for NodeEnum {
+    type Err = ParseError;
+    fn from_str(attr: &str) -> Result<Self, Self::Err> {
+        match attr {
+            "table" => Ok(Self::Table(vec![])),
+            "tr" => Ok(Self::Tr(vec![])),
+            "td" => Ok(Self::Td(vec![])),
+            "div" => Ok(Self::Div(vec![])),
+            _ => Err("Could not parse a node"),
+        }
+    }
+}
+
 pub enum AttrEnum {
     Width(i32),
     Height(i32),
@@ -259,9 +272,34 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
                         }
                     }
                 }
-                node_element.node = NodeEnum::Table(vec_attr);
-                //vec_node.push(NodeEnum::Table(vec_attr));
-                vec_node_element.push(node_element);
+                match NodeEnum::from_str("table") {
+                    Ok(ok) => {
+                        match ok {
+                            NodeEnum::Table(_) => {
+                                node_element.node = NodeEnum::Table(vec_attr);
+                                vec_node_element.push(node_element);
+                            }
+                            NodeEnum::Tr(_) => {
+                                node_element.node = NodeEnum::Tr(vec_attr);
+                                vec_node_element.push(node_element);
+                            }
+                            NodeEnum::Td(_) => {
+                                node_element.node = NodeEnum::Td(vec_attr);
+                                vec_node_element.push(node_element);
+                            }
+                            NodeEnum::Div(_) => {
+                                node_element.node = NodeEnum::Div(vec_attr);
+                                vec_node_element.push(node_element);
+                            }
+                            NodeEnum::Unknow => {
+                                unreachable!()
+                            }
+                        }
+                    },
+                    Err(err) => {
+                        eprintln!("{:?}", err)
+                    }
+                }
                 /*
                 let node_element = NodeElement {
                     node: vec_node.into_iter().map(|x| {
