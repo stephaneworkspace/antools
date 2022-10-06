@@ -2,6 +2,7 @@ use std::{env, fmt};
 use std::fs;
 use std::path::PathBuf;
 use std::str::FromStr;
+use roxmltree::Node;
 
 // any error type implementing Display is acceptable.
 type ParseError = &'static str;
@@ -253,71 +254,57 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
     let mut vec_node_element: Vec<NodeElement> = Vec::new();
     for a in doc.root().children().filter(|n| n.is_element()) {
         //let mut vec_node: Vec<NodeEnum> = Vec::new();
-        let mut node_element = NodeElement {
-            node: NodeEnum::Unknow,
-            child: vec![]
-        };
         print!("{:?} {:?} {:?} {:?}\n", a, a.has_children(), a.text(), a.tag_name());
-        match a.tag_name().name() {
-            "table" => {
-                let mut vec_attr: Vec<AttrEnum> = Vec::new();
-                for a_attr in a.attributes() {
-                    let attr_result = AttrEnum::from_str(a_attr.name());
-                    match attr_result {
-                        Ok(ok) => {
-                            match ok {
-                                AttrEnum::Width(default) => {
-                                    let value:i32 = a_attr.value().parse().unwrap_or(default);
-                                    vec_attr.push(AttrEnum::Width(value))
-                                }
-                                AttrEnum::Height(default) => {
-                                    let value:i32 = a_attr.value().parse().unwrap_or(default);
-                                    vec_attr.push(AttrEnum::Height(value))
-                                }
-                                AttrEnum::Border(default) => {
-                                    let value:i32 = a_attr.value().parse().unwrap_or(default);
-                                    vec_attr.push(AttrEnum::Border(value))
-                                }
-                                AttrEnum::Align(default) => {
-                                    let value = match a_attr.value() {
-                                        "left" => AlignEnum::Left,
-                                        "center" => AlignEnum::Center,
-                                        "right" => AlignEnum::Right,
-                                        _ => default
-                                    };
-                                    vec_attr.push(AttrEnum::Align(value))
-                                }
-                                AttrEnum::Text(default) => {
-                                    vec_attr.push(AttrEnum::Text(a_attr.value().parse().unwrap_or(default)))
-                                }
-                            }
-                        },
-                        Err(err) => {
-                            eprintln!("{:?}", err)
-                        }
-                    }
-                }
-                match NodeEnum::from_str("table") {
+        match read_element(a) {
+            Some(node_element) => {
+                vec_node_element.push(node_element);            },
+            None => {
+
+            }
+        }
+    }
+
+    println!("{:?}", vec_node_element);
+
+    Ok(())
+}
+
+fn read_element(a: Node) -> Option<NodeElement> {
+    let mut node_element = NodeElement {
+        node: NodeEnum::Unknow,
+        child: vec![]
+    };
+    match a.tag_name().name() {
+        "table" => {
+            let mut vec_attr: Vec<AttrEnum> = Vec::new();
+            for a_attr in a.attributes() {
+                let attr_result = AttrEnum::from_str(a_attr.name());
+                match attr_result {
                     Ok(ok) => {
                         match ok {
-                            NodeEnum::Table(_) => {
-                                node_element.node = NodeEnum::Table(vec_attr);
-                                vec_node_element.push(node_element);
+                            AttrEnum::Width(default) => {
+                                let value:i32 = a_attr.value().parse().unwrap_or(default);
+                                vec_attr.push(AttrEnum::Width(value))
                             }
-                            NodeEnum::Tr(_) => {
-                                node_element.node = NodeEnum::Tr(vec_attr);
-                                vec_node_element.push(node_element);
+                            AttrEnum::Height(default) => {
+                                let value:i32 = a_attr.value().parse().unwrap_or(default);
+                                vec_attr.push(AttrEnum::Height(value))
                             }
-                            NodeEnum::Td(_) => {
-                                node_element.node = NodeEnum::Td(vec_attr);
-                                vec_node_element.push(node_element);
+                            AttrEnum::Border(default) => {
+                                let value:i32 = a_attr.value().parse().unwrap_or(default);
+                                vec_attr.push(AttrEnum::Border(value))
                             }
-                            NodeEnum::Div(_) => {
-                                node_element.node = NodeEnum::Div(vec_attr);
-                                vec_node_element.push(node_element);
+                            AttrEnum::Align(default) => {
+                                let value = match a_attr.value() {
+                                    "left" => AlignEnum::Left,
+                                    "center" => AlignEnum::Center,
+                                    "right" => AlignEnum::Right,
+                                    _ => default
+                                };
+                                vec_attr.push(AttrEnum::Align(value))
                             }
-                            NodeEnum::Unknow => {
-                                unreachable!()
+                            AttrEnum::Text(default) => {
+                                vec_attr.push(AttrEnum::Text(a_attr.value().parse().unwrap_or(default)))
                             }
                         }
                     },
@@ -325,37 +312,63 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
                         eprintln!("{:?}", err)
                     }
                 }
-                /*
-                let node_element = NodeElement {
-                    node: vec_node.into_iter().map(|x| {
-                        match x {
-                            NodeEnum::Table(content) => {
-                                NodeEnum::Table(content.into_iter().collect())
-                            }
-                            NodeEnum::Tr(content) => {
-                                NodeEnum::Tr(content.into_iter().collect())
-                            }
-                            NodeEnum::Td(content) => {
-                                NodeEnum::Td(content.into_iter().collect())
-                            }
-                            NodeEnum::Div(content) => {
-                                NodeEnum::Div(content.into_iter().collect())
-                            }
-                        }
-                    }).collect(),
-                    child: vec![]
-                };*/
-            },
-            _ => {
-
             }
+            match NodeEnum::from_str("table") {
+                Ok(ok) => {
+                    match ok {
+                        NodeEnum::Table(_) => {
+                            node_element.node = NodeEnum::Table(vec_attr);
+                            Some(node_element)
+                        }
+                        NodeEnum::Tr(_) => {
+                            node_element.node = NodeEnum::Tr(vec_attr);
+                            Some(node_element)
+                        }
+                        NodeEnum::Td(_) => {
+                            node_element.node = NodeEnum::Td(vec_attr);
+                            Some(node_element)
+                        }
+                        NodeEnum::Div(_) => {
+                            node_element.node = NodeEnum::Div(vec_attr);
+                            Some(node_element)
+                        }
+                        NodeEnum::Unknow => {
+                            unreachable!()
+                        }
+                    }
+                },
+                Err(err) => {
+                    eprintln!("{:?}", err);
+                    None
+                }
+            }
+            /*
+            let node_element = NodeElement {
+                node: vec_node.into_iter().map(|x| {
+                    match x {
+                        NodeEnum::Table(content) => {
+                            NodeEnum::Table(content.into_iter().collect())
+                        }
+                        NodeEnum::Tr(content) => {
+                            NodeEnum::Tr(content.into_iter().collect())
+                        }
+                        NodeEnum::Td(content) => {
+                            NodeEnum::Td(content.into_iter().collect())
+                        }
+                        NodeEnum::Div(content) => {
+                            NodeEnum::Div(content.into_iter().collect())
+                        }
+                    }
+                }).collect(),
+                child: vec![]
+            };*/
+        },
+        _ => {
+            None
         }
-        //if a.has_children() {
-        //    closure_children(a);
-        //}
     }
+    //if a.has_children() {
+    //    closure_children(a);
+    //}
 
-    println!("{:?}", vec_node_element);
-
-    Ok(())
 }
