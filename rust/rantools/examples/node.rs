@@ -225,10 +225,12 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
         let mut vec_node_element: Vec<NodeElement> = Vec::new();
         for a in x.children().filter(|n| n.is_element()) {
             match read_element(a) {
-                Some(node_element) => {
-                    //if a.clone().has_children() {
-                    //    closure_children(a)
-                    //}
+                Some(mut node_element) => {
+                    if a.clone().has_children() {
+                        for b in closure_children(a) {
+                            node_element.child.push(b);
+                        }
+                    }
                     vec_node_element.push(node_element);
                 },
                 None => {}
