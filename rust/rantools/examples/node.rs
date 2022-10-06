@@ -10,17 +10,18 @@ fn main() {
     node_to_pdf().expect("Impossible de lire le fichier");
 }
 
-pub enum NodeEnum {
-    Table(Vec<AttrEnum>),
-    Tr(Vec<AttrEnum>),
-    Td(Vec<AttrEnum>),
-    Div(Vec<AttrEnum>,)
-}
-
 #[derive(Debug)]
 pub struct NodeElement {
     pub node: NodeEnum,
     pub child: Vec<NodeEnum>
+}
+
+pub enum NodeEnum {
+    Table(Vec<AttrEnum>),
+    Tr(Vec<AttrEnum>),
+    Td(Vec<AttrEnum>),
+    Div(Vec<AttrEnum>),
+    Unknow
 }
 
 impl NodeEnum {
@@ -37,6 +38,9 @@ impl NodeEnum {
             }
             NodeEnum::Div(_) => {
                 "div".to_string()
+            },
+            NodeEnum::Unknow => {
+                "?".to_string()
             }
         }
     }
@@ -53,6 +57,9 @@ impl NodeEnum {
             }
             NodeEnum::Div(content) => {
                 format!("{}, {:?}", self.text(), content)
+            }
+            NodeEnum::Unknow => {
+                format!("{}", self.text())
             }
         }
     }
@@ -230,9 +237,13 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
         Err(e) => return Err(format!("Error: {}.", e).to_string()),
     };
 
-
-    let mut vec_node: Vec<NodeEnum> = Vec::new();
+    let mut vec_node_element: Vec<NodeElement> = Vec::new();
     for a in doc.root().children().filter(|n| n.is_element()) {
+        //let mut vec_node: Vec<NodeEnum> = Vec::new();
+        let mut node_element = NodeElement {
+            node: NodeEnum::Unknow,
+            child: vec![]
+        };
         print!("{:?} {:?} {:?} {:?}\n", a, a.has_children(), a.text(), a.tag_name());
         match a.tag_name().name() {
             "table" => {
@@ -248,7 +259,29 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
                         }
                     }
                 }
-                vec_node.push(NodeEnum::Table(vec_attr))
+                node_element.node = NodeEnum::Table(vec_attr);
+                //vec_node.push(NodeEnum::Table(vec_attr));
+                vec_node_element.push(node_element);
+                /*
+                let node_element = NodeElement {
+                    node: vec_node.into_iter().map(|x| {
+                        match x {
+                            NodeEnum::Table(content) => {
+                                NodeEnum::Table(content.into_iter().collect())
+                            }
+                            NodeEnum::Tr(content) => {
+                                NodeEnum::Tr(content.into_iter().collect())
+                            }
+                            NodeEnum::Td(content) => {
+                                NodeEnum::Td(content.into_iter().collect())
+                            }
+                            NodeEnum::Div(content) => {
+                                NodeEnum::Div(content.into_iter().collect())
+                            }
+                        }
+                    }).collect(),
+                    child: vec![]
+                };*/
             },
             _ => {
 
@@ -259,7 +292,7 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
         //}
     }
 
-    println!("{:?}", vec_node);
+    println!("{:?}", vec_node_element);
 
     Ok(())
 }
