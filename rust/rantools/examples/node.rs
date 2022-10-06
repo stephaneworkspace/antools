@@ -1,4 +1,4 @@
-use std::env;
+use std::{env, fmt};
 use std::fs;
 use std::path::PathBuf;
 
@@ -25,6 +25,44 @@ pub enum Node {
     Tr(Vec<Attr>),
     Td(Vec<Attr>),
     Div(Vec<Attr>,)
+}
+
+#[derive(Debug)]
+pub struct NodeElement {
+    pub node: Node,
+    pub child: Vec<Node>
+}
+
+impl Node {
+    fn text(&self) -> String {
+        match self {
+            Node::Table(_) => {
+                "table".to_string()
+            }
+            Node::Tr(_) => {
+                "tr".to_string()
+            }
+            Node::Td(_) => {
+                "td".to_string()
+            }
+            Node::Div(_) => {
+                "div".to_string()
+            }
+        }
+    }
+}
+
+impl fmt::Display for Node {
+    #[inline]
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        fmt::Display::fmt(&self.text(), f)
+    }
+}
+
+impl fmt::Debug for Node {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", &self.text().to_string())
+    }
 }
 
 pub(crate) fn node_to_pdf() -> Result<(), String> {
