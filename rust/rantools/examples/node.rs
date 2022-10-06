@@ -14,7 +14,7 @@ fn main() {
 #[derive(Debug)]
 pub struct NodeElement {
     pub node: NodeEnum,
-    pub child: Vec<NodeEnum>
+    pub child: Vec<NodeElement>
 }
 
 pub enum NodeEnum {
@@ -221,6 +221,22 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
             vec_node_children.push()
         }
     }*/
+    fn closure_children<'a>(x: Node) -> Vec<NodeElement> {
+        let mut vec_node_element: Vec<NodeElement> = Vec::new();
+        for a in x.children().filter(|n| n.is_element()) {
+            match read_element(a) {
+                Some(node_element) => {
+                    //if a.clone().has_children() {
+                    //    closure_children(a)
+                    //}
+                    vec_node_element.push(node_element);
+                },
+                None => {}
+            }
+        }
+        vec_node_element
+    }
+
     let mut file_path = PathBuf::new();
     file_path.push(env::current_dir().unwrap().as_path());
     file_path.push("examples");
@@ -253,14 +269,16 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
 
     let mut vec_node_element: Vec<NodeElement> = Vec::new();
     for a in doc.root().children().filter(|n| n.is_element()) {
-        //let mut vec_node: Vec<NodeEnum> = Vec::new();
         print!("{:?} {:?} {:?} {:?}\n", a, a.has_children(), a.text(), a.tag_name());
         match read_element(a) {
-            Some(node_element) => {
+            Some(mut node_element) => {
+                if a.clone().has_children() {
+                    for b in closure_children(a) {
+                        node_element.child.push(b);
+                    }
+                }
                 vec_node_element.push(node_element);            },
-            None => {
-
-            }
+            None => {}
         }
     }
 
@@ -311,7 +329,7 @@ fn read_element(a: Node) -> Option<NodeElement> {
             }
         }
     }
-    match NodeEnum::from_str("table") {
+    match NodeEnum::from_str(a.tag_name().name()) {
         Ok(ok) => {
             match ok {
                 NodeEnum::Table(_) => {
@@ -340,27 +358,4 @@ fn read_element(a: Node) -> Option<NodeElement> {
             None
         }
     }
-    /*
-    let node_element = NodeElement {
-        node: vec_node.into_iter().map(|x| {
-            match x {
-                NodeEnum::Table(content) => {
-                    NodeEnum::Table(content.into_iter().collect())
-                }
-                NodeEnum::Tr(content) => {
-                    NodeEnum::Tr(content.into_iter().collect())
-                }
-                NodeEnum::Td(content) => {
-                    NodeEnum::Td(content.into_iter().collect())
-                }
-                NodeEnum::Div(content) => {
-                    NodeEnum::Div(content.into_iter().collect())
-                }
-            }
-        }).collect(),
-        child: vec![]
-    };*/
-    //if a.has_children() {
-    //    closure_children(a);
-    //}
 }

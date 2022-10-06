@@ -329,28 +329,7 @@
       <workItem from="1664973361491" duration="206000" />
       <workItem from="1664975462320" duration="17000" />
       <workItem from="1665043067722" duration="6137000" />
-      <workItem from="1665079541893" duration="10545000" />
-    </task>
-    <task id="LOCAL-00026" summary="ajout dans antools.h">
-      <created>1664812415575</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1664812415575</updated>
-    </task>
-    <task id="LOCAL-00027" summary="fonction c++ fonctionne avec alignement de structure rust">
-      <created>1664813994149</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1664813994149</updated>
-    </task>
-    <task id="LOCAL-00028" summary="fonction c++ fonctionne avec alignement de structure rust">
-      <created>1664814999334</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1664814999334</updated>
+      <workItem from="1665079541893" duration="11724000" />
     </task>
     <task id="LOCAL-00029" summary="fonction c++ fonctionne avec alignement de structure rust">
       <created>1664823576937</created>
@@ -674,7 +653,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665090080807</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="avancée">
+      <created>1665090437958</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1665090437958</updated>
+    </task>
+    <task id="LOCAL-00076" summary="avancée">
+      <created>1665090827642</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1665090827642</updated>
+    </task>
+    <task id="LOCAL-00077" summary="avancée">
+      <created>1665090893686</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1665090893686</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
