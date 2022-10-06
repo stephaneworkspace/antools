@@ -20,7 +20,7 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="trouvé un crate idéal au lieu de tout reécrire">
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="impl Debug pour enum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rust/rantools/examples/node.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/examples/node.rs" afterDir="false" />
     </list>
@@ -329,14 +329,7 @@
       <workItem from="1664973361491" duration="206000" />
       <workItem from="1664975462320" duration="17000" />
       <workItem from="1665043067722" duration="6137000" />
-      <workItem from="1665079541893" duration="2816000" />
-    </task>
-    <task id="LOCAL-00020" summary="problème de pointer i32 ou f32">
-      <created>1664800799598</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1664800799598</updated>
+      <workItem from="1665079541893" duration="6292000" />
     </task>
     <task id="LOCAL-00021" summary="work in progress">
       <created>1664805577218</created>
@@ -674,7 +667,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665081602302</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="impl Debug pour enum">
+      <created>1665082758189</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1665082758189</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="créer un cmake pour Svg" />
     <MESSAGE value="test unitaire circle en rust" />
     <MESSAGE value="ajout de circle dans Svg c++" />
     <MESSAGE value="ajout de line dans rust avec test unitaire" />
@@ -717,6 +716,7 @@
     <MESSAGE value="correction" />
     <MESSAGE value="début de la lecture de noeud du template .an" />
     <MESSAGE value="trouvé un crate idéal au lieu de tout reécrire" />
-    <option name="LAST_COMMIT_MESSAGE" value="trouvé un crate idéal au lieu de tout reécrire" />
+    <MESSAGE value="impl Debug pour enum" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl Debug pour enum" />
   </component>
 </project>
