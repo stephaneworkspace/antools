@@ -1,23 +1,13 @@
 use std::{env, fmt};
 use std::fs;
 use std::path::PathBuf;
+use std::str::FromStr;
+
+// any error type implementing Display is acceptable.
+type ParseError = &'static str;
 
 fn main() {
     node_to_pdf().expect("Impossible de lire le fichier");
-}
-
-pub enum AttrEnum {
-    Width(i32),
-    Height(i32),
-    Border(i32),
-    Align(AlignEnum),
-    Text(String)
-}
-
-pub enum AlignEnum {
-    Left,
-    Center,
-    Right
 }
 
 pub enum NodeEnum {
@@ -81,6 +71,15 @@ impl fmt::Debug for NodeEnum {
     }
 }
 
+pub enum AttrEnum {
+    Width(i32),
+    Height(i32),
+    Border(i32),
+    Align(AlignEnum),
+    Text(String)
+}
+
+
 impl AttrEnum {
     fn text(&self) -> String {
         match self {
@@ -101,6 +100,7 @@ impl AttrEnum {
             }
         }
     }
+
     fn debug(&self) -> String {
         match self {
             AttrEnum::Width(content) => {
@@ -133,6 +133,26 @@ impl fmt::Debug for AttrEnum {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "{}", &self.debug().to_string())
     }
+}
+
+impl FromStr for AttrEnum {
+    type Err = ParseError;
+    fn from_str(attr: &str) -> Result<Self, Self::Err> {
+        match attr {
+            "width" => Ok(Self::Width(0)),
+            "height" => Ok(Self::Height(0)),
+            "border" => Ok(Self::Border(0)),
+            "align" => Ok(Self::Align(AlignEnum::Left)),
+            "text" => Ok(Self::Text("".to_string())),
+            _ => Err("Could not parse a attribute"),
+        }
+    }
+}
+
+pub enum AlignEnum {
+    Left,
+    Center,
+    Right
 }
 
 impl AlignEnum {
@@ -216,7 +236,19 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
         print!("{:?} {:?} {:?} {:?}\n", a, a.has_children(), a.text(), a.tag_name());
         match a.tag_name().name() {
             "table" => {
-                vec_node.push(NodeEnum::Table(Vec::new()))
+                let mut vec_attr: Vec<AttrEnum> = Vec::new();
+                for a_attr in a.attributes() {
+                    let attr_result = AttrEnum::from_str(a_attr.name());
+                    match attr_result {
+                        Ok(ok) => {
+                            vec_attr.push(ok)
+                        },
+                        Err(err) => {
+                            eprintln!("{:?}", err)
+                        }
+                    }
+                }
+                vec_node.push(NodeEnum::Table(vec_attr))
             },
             _ => {
 
