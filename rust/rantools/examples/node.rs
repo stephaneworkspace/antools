@@ -265,7 +265,26 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
                     let attr_result = AttrEnum::from_str(a_attr.name());
                     match attr_result {
                         Ok(ok) => {
-                            vec_attr.push(ok)
+                            match ok {
+                                AttrEnum::Width(_) => {
+                                    let value:i32 = a_attr.value().parse().unwrap_or(0);
+                                    vec_attr.push(AttrEnum::Width(value))
+                                }
+                                AttrEnum::Height(_) => {
+                                    let value:i32 = a_attr.value().parse().unwrap_or(0);
+                                    vec_attr.push(AttrEnum::Height(value))
+                                }
+                                AttrEnum::Border(_) => {
+                                    let value:i32 = a_attr.value().parse().unwrap_or(0);
+                                    vec_attr.push(AttrEnum::Border(value))
+                                }
+                                AttrEnum::Align(_) => {
+
+                                }
+                                AttrEnum::Text(_) => {
+                                    vec_attr.push(AttrEnum::Text(a_attr.value().parse().unwrap_or("".to_string())))
+                                }
+                            }
                         },
                         Err(err) => {
                             eprintln!("{:?}", err)
