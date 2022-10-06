@@ -266,23 +266,29 @@ pub(crate) fn node_to_pdf() -> Result<(), String> {
                     match attr_result {
                         Ok(ok) => {
                             match ok {
-                                AttrEnum::Width(_) => {
-                                    let value:i32 = a_attr.value().parse().unwrap_or(0);
+                                AttrEnum::Width(default) => {
+                                    let value:i32 = a_attr.value().parse().unwrap_or(default);
                                     vec_attr.push(AttrEnum::Width(value))
                                 }
-                                AttrEnum::Height(_) => {
-                                    let value:i32 = a_attr.value().parse().unwrap_or(0);
+                                AttrEnum::Height(default) => {
+                                    let value:i32 = a_attr.value().parse().unwrap_or(default);
                                     vec_attr.push(AttrEnum::Height(value))
                                 }
-                                AttrEnum::Border(_) => {
-                                    let value:i32 = a_attr.value().parse().unwrap_or(0);
+                                AttrEnum::Border(default) => {
+                                    let value:i32 = a_attr.value().parse().unwrap_or(default);
                                     vec_attr.push(AttrEnum::Border(value))
                                 }
-                                AttrEnum::Align(_) => {
-
+                                AttrEnum::Align(default) => {
+                                    let value = match a_attr.value() {
+                                        "left" => AlignEnum::Left,
+                                        "center" => AlignEnum::Center,
+                                        "right" => AlignEnum::Right,
+                                        _ => default
+                                    };
+                                    vec_attr.push(AttrEnum::Align(value))
                                 }
-                                AttrEnum::Text(_) => {
-                                    vec_attr.push(AttrEnum::Text(a_attr.value().parse().unwrap_or("".to_string())))
+                                AttrEnum::Text(default) => {
+                                    vec_attr.push(AttrEnum::Text(a_attr.value().parse().unwrap_or(default)))
                                 }
                             }
                         },

@@ -329,21 +329,7 @@
       <workItem from="1664973361491" duration="206000" />
       <workItem from="1664975462320" duration="17000" />
       <workItem from="1665043067722" duration="6137000" />
-      <workItem from="1665079541893" duration="9951000" />
-    </task>
-    <task id="LOCAL-00024" summary="clean up">
-      <created>1664808963516</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1664808963516</updated>
-    </task>
-    <task id="LOCAL-00025" summary="fin de la fonction src/svg.rs svg_rust_path">
-      <created>1664811451637</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1664811451637</updated>
+      <workItem from="1665079541893" duration="10545000" />
     </task>
     <task id="LOCAL-00026" summary="ajout dans antools.h">
       <created>1664812415575</created>
@@ -674,7 +660,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665088609999</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="avancée">
+      <created>1665089709073</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1665089709073</updated>
+    </task>
+    <task id="LOCAL-00074" summary="avancée">
+      <created>1665090080807</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1665090080807</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
