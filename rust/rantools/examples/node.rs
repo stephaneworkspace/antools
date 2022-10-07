@@ -8,8 +8,14 @@ fn main() {
     file_path.push("examples");
     file_path.push("template.an");
 
-    println!("{:?}", read_template(file_path.to_str().unwrap().to_string()));
-    create_pdf_numerologie();
+    match read_template(file_path.to_str().unwrap().to_string()) {
+        Ok(ok) => {
+            create_pdf_numerologie(ok.as_slice());
+        },
+        Err(err) => {
+            eprintln!("{:?}", err)
+        }
+    };
 }
 
 

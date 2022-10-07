@@ -45,7 +45,7 @@ pub fn read_template(file_path: String) -> Result<Vec<NodeElement>, String> {
 
     let mut vec_node_element: Vec<NodeElement> = Vec::new();
     for a in doc.root().children().filter(|n| n.is_element()) {
-        print!("{:?} {:?} {:?} {:?}\n", a, a.has_children(), a.text(), a.tag_name());
+        //print!("{:?} {:?} {:?} {:?}\n", a, a.has_children(), a.text(), a.tag_name());
         match read_element(a) {
             Some(mut node_element) => {
                 if a.clone().has_children() {

@@ -1,101 +1,81 @@
-use pdf_writer::types::{ActionType, AnnotationType, BorderType};
-use pdf_writer::{Content, Finish, Name, PdfWriter, Rect, Ref, Str, TextStr};
+use printpdf::*;
+use std::fs::File;
+use std::io::BufWriter;
+use std::iter::FromIterator;
 
-pub fn create_pdf() -> std::io::Result<()> {
-    // Start writing.
-    let mut writer = PdfWriter::new();
+//use pdf_writer::types::{ActionType, BorderType};
+//use pdf_writer::{Content, Finish, Name, PdfWriter, Rect, Ref, Str, TextStr};
+use crate::node::NodeElement;
 
-    // Define some indirect reference ids we'll use.
-    let catalog_id = Ref::new(1);
-    let page_tree_id = Ref::new(2);
-    let page_id = Ref::new(3);
-    let font_id = Ref::new(4);
-    let content_id = Ref::new(5);
-    let font_name = Name(b"F1");
+// Set the size to A4
+const MAX_WIDTH: f64 = 595.0;
+const MAX_HEIGHT: f64 = 842.0;
+const MARGIN_WIDTH: f64 = 90.0;
+const MARGIN_HEIGHT: f64 = 90.0;
+const TR_HEIGHT:f64 = 18.0;
 
-    // Write the document catalog with a reference to the page tree.
-    writer.catalog(catalog_id).pages(page_tree_id);
+pub fn create_pdf(_template: &[NodeElement]) {
+    let (doc, page1, layer1) = PdfDocument::new("printpdf graphics test", Mm(MAX_WIDTH), Mm(MAX_HEIGHT), "Layer 1");
+    let current_layer = doc.get_page(page1).get_layer(layer1);
 
-    // Write the page tree with a single child page.
-    writer.pages(page_tree_id).kids([page_id]).count(1);
-
-    // Write a page.
-    let mut page = writer.page(page_id);
-
-    // Set the size to A4 (measured in points) using `media_box` and set the
-    // text object we'll write later as the page's contents.
-    const MAX_WIDTH: f32 = 595.0;
-    const MAX_HEIGHT: f32 = 842.0;
-    const MARGIN_WIDTH: f32 = 90.0;
-    const MARGIN_HEIGHT: f32 = 90.0;
-    const TR_HEIGHT:f32 = 18.0;
     let current_y = MAX_HEIGHT - MARGIN_HEIGHT;
-    page.media_box(Rect::new(0.0, 0.0, MAX_WIDTH, 842.0));
-    page.parent(page_tree_id);
-    page.contents(content_id);
+// Quadratic shape. The "false" determines if the next (following)
+// point is a bezier handle (for curves)
+// If you want holes, simply reorder the winding of the points to be
+// counterclockwise instead of clockwise.
+    let points1 = vec![(Point::new(Mm(MARGIN_WIDTH), Mm(current_y)), false),
+                       (Point::new(Mm(MARGIN_WIDTH), Mm(current_y + TR_HEIGHT)), false),
+                       (Point::new(Mm(MAX_WIDTH - MARGIN_WIDTH), Mm(current_y + TR_HEIGHT)), false),
+                       (Point::new(Mm(MAX_WIDTH - MARGIN_WIDTH), Mm(current_y)), false)];
 
-    // We also create the annotations list here that allows us to have things
-    // like links or comments on the page.
-    let mut annotations = page.annotations();
-    let mut annotation = annotations.push();
+// Is the shape stroked? Is the shape closed? Is the shape filled?
+    let line1 = Line {
+        points: points1,
+        is_closed: true,
+        has_fill: true,
+        has_stroke: true,
+        is_clipping_path: false,
+    };
 
-    // Write the type, area, alt-text, and color for our link annotation.
-    annotation.subtype(AnnotationType::Link);
+// Triangle shape
+// Note: Line is invisible by default, the previous method of
+// constructing a line is recommended!
+    let mut line2 = Line::from_iter(vec![
+        (Point::new(Mm(150.0), Mm(150.0)), false),
+        (Point::new(Mm(150.0), Mm(250.0)), false),
+        (Point::new(Mm(300.0), Mm(250.0)), false)]);
 
+    line2.set_stroke(true);
+    line2.set_closed(false);
+    line2.set_fill(false);
+    line2.set_as_clipping_path(false);
 
-    let rect = Rect::new(MARGIN_WIDTH, current_y - TR_HEIGHT, MAX_WIDTH - MARGIN_WIDTH, current_y);
-    annotation.rect(rect);
-    annotation.contents(TextStr("Link to the Rust project web page"));
-    annotation.color_rgb(0.0, 0.0, 1.0);
+    let fill_color = Color::Cmyk(Cmyk::new(0.0, 0.23, 0.0, 0.0, None));
+    let outline_color = Color::Rgb(Rgb::new(0.75, 1.0, 0.64, None));
+    let mut dash_pattern = LineDashPattern::default();
+    dash_pattern.dash_1 = Some(20);
 
-    // Write an action for the annotation, telling it where to link to. Actions
-    // can be associated with annotations, outline objects, and more and allow
-    // creating interactive PDFs (open links, play sounds...).
-    annotation
-        .action()
-        .action_type(ActionType::Uri)
-        .uri(Str(b"https://www.rust-lang.org/"));
+    current_layer.set_fill_color(fill_color);
+    current_layer.set_outline_color(outline_color);
+    current_layer.set_outline_thickness(10.0);
 
-    // Set border and style for the link annotation.
-    annotation.border_style().width(2.0).style(BorderType::Underline);
+// Draw first line
+    current_layer.add_shape(line1);
 
-    // We have to finish all the writers that depend on the page here because
-    // otherwise they would be mutably borrowed until the end of the block.
-    // Finishing is handled through the writer's `Drop` implementations, so that
-    // you cannot accidentally forget it. The `finish()` method from the `Finish`
-    // trait is just a postfix-style version of dropping.
-    annotation.finish();
-    annotations.finish();
+    let fill_color_2 = Color::Cmyk(Cmyk::new(0.0, 0.0, 0.0, 0.0, None));
+    let outline_color_2 = Color::Greyscale(Greyscale::new(0.45, None));
 
-    // We also need to specify which resources the page needs, which in our case
-    // is only a font that we name "F1" (the specific name doesn't matter).
-    page.resources().fonts().pair(font_name, font_id);
-    page.finish();
+// More advanced graphical options
+    current_layer.set_overprint_stroke(true);
+    current_layer.set_blend_mode(BlendMode::Seperable(SeperableBlendMode::Multiply));
+    current_layer.set_line_dash_pattern(dash_pattern);
+    current_layer.set_line_cap_style(LineCapStyle::Round);
 
-    // Specify the font we want to use. Because Helvetica is one of the 14 base
-    // fonts shipped with every PDF reader, we don't have to embed any font
-    // data.
-    writer.type1_font(font_id).base_font(Name(b"Helvetica"));
+    current_layer.set_fill_color(fill_color_2);
+    current_layer.set_outline_color(outline_color_2);
+    current_layer.set_outline_thickness(15.0);
 
-    // Write a line of text, with the font specified in the resource list
-    // before, at a font size of 14.0, starting at coordinates (108.0, 734.0)
-    // measured from the bottom left of the page.
-    //
-    // Because we haven't specified any encoding when writing the Type 1 font,
-    // the standard encoding is used which happens to work with most ASCII
-    // characters.
-    let mut content = Content::new();
-    content.begin_text();
-    content.set_font(font_name, 14.0);
-    content.next_line(108.0, 734.0);
-    content.show(Str(b"Hello World from Rust!"));
-    content.end_text();
-    writer.stream(content_id, &content.finish());
-
-    // Finish writing (this automatically creates the cross-reference table and
-    // file trailer) and retrieve the resulting byte buffer.
-    let buf: Vec<u8> = writer.finish();
-
-    // Write the thing to a file.
-    std::fs::write("target/hello.pdf", buf)
+// draw second line
+    current_layer.add_shape(line2);
+    doc.save(&mut BufWriter::new(File::create("target/hello.pdf").unwrap())).unwrap();
 }
