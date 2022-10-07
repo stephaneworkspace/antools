@@ -20,10 +20,9 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="clean up rust folder">
-      <change afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" afterDir="false" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="clean up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/pdf/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,14 +330,7 @@
       <workItem from="1664975462320" duration="17000" />
       <workItem from="1665043067722" duration="6137000" />
       <workItem from="1665079541893" duration="12100000" />
-      <workItem from="1665132754690" duration="3774000" />
-    </task>
-    <task id="LOCAL-00032" summary="retourne le résultat en const char*">
-      <created>1664829224283</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1664829224283</updated>
+      <workItem from="1665132754690" duration="4825000" />
     </task>
     <task id="LOCAL-00033" summary="retourne le path uniquement">
       <created>1664829636225</created>
@@ -676,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665135747854</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="clean up">
+      <created>1665136734082</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1665136734082</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,7 +709,6 @@
     <MESSAGE value="angle en svg à l'aide de https://fontsvg.com" />
     <MESSAGE value="clean up, ajout de CONST" />
     <MESSAGE value="house en svg" />
-    <MESSAGE value="clean up" />
     <MESSAGE value="ajout d'une nouvelle fonction + fix error dans cplib.sh" />
     <MESSAGE value="correction" />
     <MESSAGE value="début de la lecture de noeud du template .an" />
@@ -719,6 +717,7 @@
     <MESSAGE value="avancée" />
     <MESSAGE value="super ça fonctionne" />
     <MESSAGE value="clean up rust folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up rust folder" />
+    <MESSAGE value="clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
 </project>

@@ -24,7 +24,13 @@ pub fn create_pdf() -> std::io::Result<()> {
 
     // Set the size to A4 (measured in points) using `media_box` and set the
     // text object we'll write later as the page's contents.
-    page.media_box(Rect::new(0.0, 0.0, 595.0, 842.0));
+    const MAX_WIDTH: f32 = 595.0;
+    const MAX_HEIGHT: f32 = 842.0;
+    const MARGIN_WIDTH: f32 = 90.0;
+    const MARGIN_HEIGHT: f32 = 90.0;
+    const TR_HEIGHT:f32 = 18.0;
+    let current_y = MAX_HEIGHT - MARGIN_HEIGHT;
+    page.media_box(Rect::new(0.0, 0.0, MAX_WIDTH, 842.0));
     page.parent(page_tree_id);
     page.contents(content_id);
 
@@ -35,7 +41,10 @@ pub fn create_pdf() -> std::io::Result<()> {
 
     // Write the type, area, alt-text, and color for our link annotation.
     annotation.subtype(AnnotationType::Link);
-    annotation.rect(Rect::new(215.0, 730.0, 251.0, 748.0));
+
+
+    let rect = Rect::new(MARGIN_WIDTH, current_y - TR_HEIGHT, MAX_WIDTH - MARGIN_WIDTH, current_y);
+    annotation.rect(rect);
     annotation.contents(TextStr("Link to the Rust project web page"));
     annotation.color_rgb(0.0, 0.0, 1.0);
 
