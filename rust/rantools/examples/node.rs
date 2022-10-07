@@ -1,6 +1,6 @@
 use std::env;
 use std::path::PathBuf;
-use rantools::read_template;
+use rantools::{create_pdf_numerologie, read_template};
 
 fn main() {
     let mut file_path = PathBuf::new();
@@ -9,6 +9,7 @@ fn main() {
     file_path.push("template.an");
 
     println!("{:?}", read_template(file_path.to_str().unwrap().to_string()));
+    create_pdf_numerologie();
 }
 
 

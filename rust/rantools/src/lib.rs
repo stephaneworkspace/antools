@@ -16,6 +16,7 @@ use crate::pdf::create_pdf;
 use crate::png::{create_png, create_png_ff};
 use crate::svg::{circle, document, image, line, path_data};
 pub use crate::node::read_template;
+pub use crate::pdf::create_pdf_numerologie;
 
 #[repr(C)]
 #[derive(Debug)]

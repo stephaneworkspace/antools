@@ -20,23 +20,10 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="super ça fonctionne">
-      <change afterPath="$PROJECT_DIR$/rust/rantools/src/node/attr_enum.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rust/rantools/src/node/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rust/rantools/src/node/node_element.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rust/rantools/src/node/node_enum.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rust/rantools/src/node/template.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rust/rantools/src/png/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rust/rantools/src/svg/mod.rs" afterDir="false" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="clean up rust folder">
+      <change afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/exe/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/examples/node.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/examples/node.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/node.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/node/align_enum.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/pdf.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/astrologie.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/png.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/png/convert.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/svg.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/svg/cpp.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/rantools/src/pdf/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/mod.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -344,14 +331,7 @@
       <workItem from="1664975462320" duration="17000" />
       <workItem from="1665043067722" duration="6137000" />
       <workItem from="1665079541893" duration="12100000" />
-      <workItem from="1665132754690" duration="2925000" />
-    </task>
-    <task id="LOCAL-00031" summary="avec des classes c'est plus facile à lire">
-      <created>1664827094221</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1664827094221</updated>
+      <workItem from="1665132754690" duration="3774000" />
     </task>
     <task id="LOCAL-00032" summary="retourne le résultat en const char*">
       <created>1664829224283</created>
@@ -689,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665091850815</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="clean up rust folder">
+      <created>1665135747853</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1665135747854</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajout de line dans rust avec test unitaire" />
     <MESSAGE value="ajout de line dans c++" />
     <MESSAGE value="renomage pour eviter des conflits" />
     <MESSAGE value="image + document avec test unitaire" />
@@ -732,6 +718,7 @@
     <MESSAGE value="impl Debug pour enum" />
     <MESSAGE value="avancée" />
     <MESSAGE value="super ça fonctionne" />
-    <option name="LAST_COMMIT_MESSAGE" value="super ça fonctionne" />
+    <MESSAGE value="clean up rust folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up rust folder" />
   </component>
 </project>
