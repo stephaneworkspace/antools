@@ -7,7 +7,7 @@ use crate::{SvgData, SvgPoint, SvgProperties, SvgStroke};
 use svg::node::element::{Circle, Image, Line, Path};
 use svg::node::element::path::Data;
 
-pub(crate) fn path_data(data: *const SvgData,
+pub fn path_data(data: *const SvgData,
                             point: *const SvgPoint,
                             data_size: isize,
                             point_size: isize,
@@ -63,7 +63,7 @@ pub(crate) fn path_data(data: *const SvgData,
     res
 }
 
-pub(crate) fn circle(x: c_float,
+pub fn circle(x: c_float,
                      y: c_float,
                      r: c_float,
                      properties: SvgProperties) -> String {
@@ -79,7 +79,7 @@ pub(crate) fn circle(x: c_float,
     circle.to_string()
 }
 
-pub(crate) fn line(x1: c_float,
+pub fn line(x1: c_float,
                        y1: c_float,
                        x2: c_float,
                        y2: c_float,
@@ -95,7 +95,7 @@ pub(crate) fn line(x1: c_float,
     line.to_string()
 }
 
-pub(crate) fn image(width: c_float,
+pub fn image(width: c_float,
                     height: c_float,
                     x: c_float,
                     y: c_float,
@@ -111,7 +111,7 @@ pub(crate) fn image(width: c_float,
 }
 
 
-pub(crate) fn document(width: c_float,
+pub fn document(width: c_float,
                        height: c_float,
                        content: *const c_char) -> String {
     let content_str = unsafe { CStr::from_ptr(content).to_str().unwrap() };

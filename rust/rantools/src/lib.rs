@@ -1,9 +1,11 @@
+mod node;
 mod png;
 mod pdf;
 mod svg;
 mod tests;
 
 extern crate base64;
+extern crate core;
 
 use std::ffi::{CStr, CString};
 use std::fs::File;
@@ -13,6 +15,7 @@ use base64::{encode, decode, DecodeError};
 use crate::pdf::create_pdf;
 use crate::png::{create_png, create_png_ff};
 use crate::svg::{circle, document, image, line, path_data};
+pub use crate::node::read_template;
 
 #[repr(C)]
 #[derive(Debug)]

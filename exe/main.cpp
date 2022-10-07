@@ -50,7 +50,7 @@ int main() {
 
     cout << "Hello, World!" << endl;
 
-    // Créer un pdf du thème astral dans /temp/mypdf.pdf
+    // Créer un astrologie du thème astral dans /temp/mypdf.astrologie
     string ephem_path_string = filesystem::current_path().parent_path().parent_path();
     ephem_path_string += "/ephem";
     B64 ta = theme_astral(1986, 4, 3, 4, 54, 46.12, 6.09, 2, ephem_path_string.c_str());
@@ -70,7 +70,7 @@ int main() {
     o << output_svg;
     o.close();
 
-    // temp/mypdf.pdf
+    // temp/mypdf.astrologie
     B64 ta_pdf = create_pdf_b64(ta.b_64);
     string input;
     input.assign(ta_pdf.b_64);
@@ -82,7 +82,7 @@ int main() {
 
     if (ta_pdf.sw) {
         string path_string = filesystem::current_path().parent_path().parent_path();
-        path_string += "/temp/mypdf.pdf";
+        path_string += "/temp/mypdf.astrologie";
 
         ofstream o;
         o.open(path_string, ios::binary);

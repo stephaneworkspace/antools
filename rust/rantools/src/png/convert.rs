@@ -3,7 +3,8 @@ use std::os::raw::c_char;
 use usvg::{FitTo, Options, Tree};
 use tiny_skia::Pixmap;
 use crate::B64;
-pub(crate) fn create_png_ff(svg_file: *const c_char) -> Result<Vec<u8>, B64> {
+
+pub fn create_png_ff(svg_file: *const c_char) -> Result<Vec<u8>, B64> {
     let svg_file_cstr: &CStr = unsafe { CStr::from_ptr(svg_file) };
     let svg_file_str = svg_file_cstr.to_str().unwrap();
     let mut opt = usvg::Options::default();
@@ -42,7 +43,7 @@ pub(crate) fn create_png_ff(svg_file: *const c_char) -> Result<Vec<u8>, B64> {
     Ok(png_res)
 }
 
-pub(crate) fn create_png(svg_v_u8: Vec<u8>) -> Result<Vec<u8>, B64> {
+pub fn create_png(svg_v_u8: Vec<u8>) -> Result<Vec<u8>, B64> {
     let svg_slice = svg_v_u8.as_slice();
     let opt = Options::default();
     //let mut opt = Options::default();

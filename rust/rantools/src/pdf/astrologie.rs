@@ -5,7 +5,7 @@ use image::{ColorType, GenericImageView, ImageFormat};
 use miniz_oxide::deflate::{compress_to_vec_zlib, CompressionLevel};
 use crate::B64;
 
-pub(crate) fn create_pdf(data: Vec<u8>) -> Result<String, B64> {
+pub fn create_pdf(data: Vec<u8>) -> Result<String, B64> {
     // Start writing.
     let mut writer = PdfWriter::new();
 
