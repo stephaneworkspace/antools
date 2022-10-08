@@ -22,7 +22,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="avancée">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/examples/template.an" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/examples/template.an" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -333,14 +332,8 @@
       <workItem from="1665079541893" duration="12100000" />
       <workItem from="1665132754690" duration="5173000" />
       <workItem from="1665168759560" duration="3214000" />
-      <workItem from="1665190536842" duration="7451000" />
-    </task>
-    <task id="LOCAL-00038" summary="ajout de circle dans Svg c++">
-      <created>1664874102510</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1664874102510</updated>
+      <workItem from="1665190536842" duration="7552000" />
+      <workItem from="1665254269478" duration="2583000" />
     </task>
     <task id="LOCAL-00039" summary="ajout de line dans rust avec test unitaire">
       <created>1664875550218</created>
@@ -678,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665232825894</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="avancée">
+      <created>1665234277918</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1665234277918</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
