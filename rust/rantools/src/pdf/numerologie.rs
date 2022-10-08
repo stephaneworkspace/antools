@@ -49,22 +49,19 @@ impl NodeElement {
                 }
             }
         };
-        let mut td = 0;
-        for _ in self.child.iter().filter(|&x| filter(x)) {
-            td += 1; // TODO count
-        }
+        let td = self.child.iter().filter(|&x| filter(x)).count();
         let table_width_min = MARGIN_WIDTH;
         let table_width_max = MAX_WIDTH - MARGIN_WIDTH;
         let td_size: f64 = (table_width_max - table_width_min) / td as f64;
         let mut width_begin: f64 = table_width_min;
-        let mut width_end: f64 = 0.0;
+        let mut width_end: f64 = width_begin + td_size;
         // ici ça ne tient pas compte de width pour le moment, ça divise
         let vec = self.child.iter()
             .filter(|&x| filter(x))
             .enumerate()
             .map(|(i, _node_element)| { // TODO
-                width_begin += i as f64 * td_size;
-                width_end += width_begin + td_size;
+                width_begin = table_width_min + (i as f64 * td_size);
+                width_end = width_begin + td_size;
                 let points = vec![(Point::new(Mm(width_begin), Mm(current_y)), false),
                                   (Point::new(Mm(width_begin), Mm(current_y - TR_HEIGHT)), false),
                                   (Point::new(Mm(width_end), Mm(current_y - TR_HEIGHT)), false),
