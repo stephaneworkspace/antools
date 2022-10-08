@@ -20,11 +20,8 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="clean up">
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="better lib">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/examples/node.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/examples/node.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/node/template.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/node/template.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -334,14 +331,8 @@
       <workItem from="1665043067722" duration="6137000" />
       <workItem from="1665079541893" duration="12100000" />
       <workItem from="1665132754690" duration="5173000" />
-      <workItem from="1665168759560" duration="2825000" />
-    </task>
-    <task id="LOCAL-00034" summary="créer un cmake pour Svg">
-      <created>1664870062825</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1664870062825</updated>
+      <workItem from="1665168759560" duration="3214000" />
+      <workItem from="1665190536842" duration="4754000" />
     </task>
     <task id="LOCAL-00035" summary="clean up">
       <created>1664870472713</created>
@@ -679,7 +670,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665146464202</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="better lib">
+      <created>1665171611965</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1665171611965</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -697,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajout de line dans c++" />
     <MESSAGE value="renomage pour eviter des conflits" />
     <MESSAGE value="image + document avec test unitaire" />
     <MESSAGE value="image + document avec test unitaire (petites corrections)" />
@@ -722,6 +719,7 @@
     <MESSAGE value="super ça fonctionne" />
     <MESSAGE value="clean up rust folder" />
     <MESSAGE value="clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
+    <MESSAGE value="better lib" />
+    <option name="LAST_COMMIT_MESSAGE" value="better lib" />
   </component>
 </project>

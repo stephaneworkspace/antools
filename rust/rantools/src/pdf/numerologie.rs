@@ -2,10 +2,11 @@ use printpdf::*;
 use std::fs::File;
 use std::io::BufWriter;
 use std::iter::FromIterator;
+use std::thread::current;
 
 //use pdf_writer::types::{ActionType, BorderType};
 //use pdf_writer::{Content, Finish, Name, PdfWriter, Rect, Ref, Str, TextStr};
-use crate::node::NodeElement;
+use crate::node::{NodeElement, NodeEnum};
 
 // Set the size to A4
 const MAX_WIDTH: f64 = 595.0;
@@ -14,11 +15,78 @@ const MARGIN_WIDTH: f64 = 90.0;
 const MARGIN_HEIGHT: f64 = 90.0;
 const TR_HEIGHT:f64 = 18.0;
 
-pub fn create_pdf(_template: &[NodeElement]) {
+fn read_root_template_draw_rectangle(template: &[NodeElement], mut current_y: f64) -> Vec<Line> {
+    let mut vec: Vec<Line> = Vec::new();
+    for x in template.iter() {
+        match &x.node {
+            NodeEnum::Table(table) => {
+                let res = x.tr(current_y);
+                current_y = res.1;
+                for y in res.0 {
+                    vec.push(y);
+                }
+            }
+            NodeEnum::Tr(_) => {}
+            NodeEnum::Td(_) => {}
+            NodeEnum::Div(_) => {
+                // TODO Border (un peu inutile)
+            }
+            NodeEnum::Unknow => {}
+        }
+    }
+    vec.into_iter().collect()
+}
+
+impl NodeElement {
+    fn tr(&self, mut current_y: f64) -> (Vec<Line>, f64) {
+        let filter = |x: &NodeElement| {
+            match &x.node {
+                NodeEnum::Tr(tr) => {
+                    true
+                },
+                _ => {
+                    false
+                }
+            }
+        };
+        let mut tr = 0;
+        for x in self.child.iter().filter(|&x| filter(x)) {
+            tr += 1;
+        }
+        let table_width_min = MARGIN_WIDTH;
+        let table_width_max = MAX_WIDTH - MARGIN_WIDTH;
+        let tr_size: f64 = (table_width_max - table_width_min) / tr as f64;
+        let mut width_begin: f64 = table_width_min;
+        let mut width_end: f64 = 0.0;
+        // ici ça ne tient pas compte de width pour le moment, ça divise
+        let vec = self.child.iter()
+            .filter(|&x| filter(x))
+            .enumerate()
+            .map(|(i, x)| {
+                width_begin += i as f64 * tr_size;
+                width_end += width_begin + tr_size;
+                let points = vec![(Point::new(Mm(width_begin), Mm(current_y)), false),
+                                   (Point::new(Mm(width_begin), Mm(current_y - TR_HEIGHT)), false),
+                                   (Point::new(Mm(width_end), Mm(current_y - TR_HEIGHT)), false),
+                                   (Point::new(Mm(width_end), Mm(current_y)), false)];
+                current_y -= TR_HEIGHT;
+                Line {
+                    points: points,
+                    is_closed: true,
+                    has_fill: true,
+                    has_stroke: true,
+                    is_clipping_path: false,
+                }
+            }).collect();
+        (vec, current_y)
+    }
+}
+
+pub fn create_pdf(template: &[NodeElement]) {
     let (doc, page1, layer1) = PdfDocument::new("printpdf graphics test", Mm(MAX_WIDTH), Mm(MAX_HEIGHT), "Layer 1");
     let current_layer = doc.get_page(page1).get_layer(layer1);
 
-    let current_y = MAX_HEIGHT - MARGIN_HEIGHT;
+    let mut current_y = MAX_HEIGHT - MARGIN_HEIGHT;
 // Quadratic shape. The "false" determines if the next (following)
 // point is a bezier handle (for curves)
 // If you want holes, simply reorder the winding of the points to be
@@ -59,8 +127,13 @@ pub fn create_pdf(_template: &[NodeElement]) {
     current_layer.set_outline_color(outline_color);
     current_layer.set_outline_thickness(10.0);
 
-// Draw first line
-    current_layer.add_shape(line1);
+    // Draw first line
+    //current_layer.add_shape(line1);
+
+    for x in read_root_template_draw_rectangle(template, current_y) {
+        current_layer.add_shape(x);
+    }
+
 
     let fill_color_2 = Color::Cmyk(Cmyk::new(0.0, 0.0, 0.0, 0.0, None));
     let outline_color_2 = Color::Greyscale(Greyscale::new(0.45, None));
