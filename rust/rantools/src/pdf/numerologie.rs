@@ -19,7 +19,6 @@ fn read_root_template_draw_rectangle(template: &[NodeElement], mut current_y: f6
     for x in template.iter() {
         match &x.node {
             NodeEnum::Table(_table) => {
-                println!("tr");
                 let vec_res = x.tr(current_y);
                 current_y -= TR_HEIGHT;
                 for y in vec_res.into_iter() {
@@ -53,15 +52,13 @@ impl NodeElement {
         let table_width_min = MARGIN_WIDTH;
         let table_width_max = MAX_WIDTH - MARGIN_WIDTH;
         let td_size: f64 = (table_width_max - table_width_min) / td as f64;
-        let mut width_begin: f64 = table_width_min;
-        let mut width_end: f64 = width_begin + td_size;
         // ici ça ne tient pas compte de width pour le moment, ça divise
         let vec = self.child.iter()
             .filter(|&x| filter(x))
             .enumerate()
             .map(|(i, _node_element)| { // TODO
-                width_begin = table_width_min + (i as f64 * td_size);
-                width_end = width_begin + td_size;
+                let width_begin = table_width_min + (i as f64 * td_size);
+                let width_end = width_begin + td_size;
                 let points = vec![(Point::new(Mm(width_begin), Mm(current_y)), false),
                                   (Point::new(Mm(width_begin), Mm(current_y - TR_HEIGHT)), false),
                                   (Point::new(Mm(width_end), Mm(current_y - TR_HEIGHT)), false),
@@ -76,7 +73,7 @@ impl NodeElement {
             }).collect();
         vec
     }
-    fn tr(&self, current_y: f64) -> Vec<Line> {
+    fn tr(&self, mut current_y: f64) -> Vec<Line> {
         let filter = |x: &NodeElement| {
             match &x.node {
                 NodeEnum::Tr(_) => {
@@ -93,6 +90,7 @@ impl NodeElement {
             for y in res_vec.into_iter() {
                 vec.push(y);
             }
+            current_y -= TR_HEIGHT;
         }
         vec
     }
@@ -104,16 +102,16 @@ pub fn create_pdf(template: &[NodeElement]) {
 
     let current_y = MAX_HEIGHT - MARGIN_HEIGHT;
     /*
-// Quadratic shape. The "false" determines if the next (following)
-// point is a bezier handle (for curves)
-// If you want holes, simply reorder the winding of the points to be
-// counterclockwise instead of clockwise.
+    // Quadratic shape. The "false" determines if the next (following)
+    // point is a bezier handle (for curves)
+    // If you want holes, simply reorder the winding of the points to be
+    // counterclockwise instead of clockwise.
     let points1 = vec![(Point::new(Mm(MARGIN_WIDTH), Mm(current_y)), false),
                        (Point::new(Mm(MARGIN_WIDTH), Mm(current_y + TR_HEIGHT)), false),
                        (Point::new(Mm(MAX_WIDTH - MARGIN_WIDTH), Mm(current_y + TR_HEIGHT)), false),
                        (Point::new(Mm(MAX_WIDTH - MARGIN_WIDTH), Mm(current_y)), false)];
 
-// Is the shape stroked? Is the shape closed? Is the shape filled?
+    // Is the shape stroked? Is the shape closed? Is the shape filled?
     let line1 = Line {
         points: points1,
         is_closed: true,
@@ -122,9 +120,9 @@ pub fn create_pdf(template: &[NodeElement]) {
         is_clipping_path: false,
     };*/
 
-// Triangle shape
-// Note: Line is invisible by default, the previous method of
-// constructing a line is recommended!
+    // Triangle shape
+    // Note: Line is invisible by default, the previous method of
+    // constructing a line is recommended!
     let mut line2 = Line::from_iter(vec![
         (Point::new(Mm(150.0), Mm(150.0)), false),
         (Point::new(Mm(150.0), Mm(250.0)), false),
@@ -155,7 +153,7 @@ pub fn create_pdf(template: &[NodeElement]) {
     let fill_color_2 = Color::Cmyk(Cmyk::new(0.0, 0.0, 0.0, 0.0, None));
     let outline_color_2 = Color::Greyscale(Greyscale::new(0.45, None));
 
-// More advanced graphical options
+    // More advanced graphical options
     current_layer.set_overprint_stroke(true);
     current_layer.set_blend_mode(BlendMode::Seperable(SeperableBlendMode::Multiply));
     current_layer.set_line_dash_pattern(dash_pattern);
@@ -165,7 +163,7 @@ pub fn create_pdf(template: &[NodeElement]) {
     current_layer.set_outline_color(outline_color_2);
     current_layer.set_outline_thickness(15.0);
 
-// draw second line
+    // draw second line
     current_layer.add_shape(line2);
     doc.save(&mut BufWriter::new(File::create("target/hello.pdf").unwrap())).unwrap();
 }
