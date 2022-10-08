@@ -20,8 +20,7 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="better lib">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="avancée">
       <change beforePath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/pdf/numerologie.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -332,14 +331,7 @@
       <workItem from="1665079541893" duration="12100000" />
       <workItem from="1665132754690" duration="5173000" />
       <workItem from="1665168759560" duration="3214000" />
-      <workItem from="1665190536842" duration="4754000" />
-    </task>
-    <task id="LOCAL-00035" summary="clean up">
-      <created>1664870472713</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1664870472713</updated>
+      <workItem from="1665190536842" duration="6103000" />
     </task>
     <task id="LOCAL-00036" summary="clean up">
       <created>1664872279360</created>
@@ -677,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665171611965</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="avancée">
+      <created>1665230462697</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1665230462697</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,11 +714,11 @@
     <MESSAGE value="début de la lecture de noeud du template .an" />
     <MESSAGE value="trouvé un crate idéal au lieu de tout reécrire" />
     <MESSAGE value="impl Debug pour enum" />
-    <MESSAGE value="avancée" />
     <MESSAGE value="super ça fonctionne" />
     <MESSAGE value="clean up rust folder" />
     <MESSAGE value="clean up" />
     <MESSAGE value="better lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="better lib" />
+    <MESSAGE value="avancée" />
+    <option name="LAST_COMMIT_MESSAGE" value="avancée" />
   </component>
 </project>
