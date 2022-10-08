@@ -25,29 +25,26 @@ pub struct LayerAttr {
 }
 
 
-fn read_root_template_draw_rectangle(template: &[NodeElement], mut current_y: f64) -> Vec<(LayerAttr, Line)> {
-    let mut vec: Vec<(LayerAttr, Line)> = Vec::new();
-    for x in template.iter() {
-        match &x.node {
-            NodeEnum::Table(_table) => {
-                let vec_res = x.tr(current_y);
-                current_y -= TR_HEIGHT;
-                for y in vec_res.into_iter() {
-                    vec.push(y);
+impl NodeElement {
+    fn read_root_template_draw_rectangle(template: &[NodeElement], mut current_y: f64) -> Vec<(LayerAttr, Line)> {
+        let mut vec: Vec<(LayerAttr, Line)> = Vec::new();
+        for x in template.iter() {
+            match &x.node {
+                NodeEnum::Table(_table) => {
+                    let vec_res = x.tr(current_y);
+                    current_y -= TR_HEIGHT;
+                    for y in vec_res.into_iter() {
+                        vec.push(y);
+                    }
+                },
+                _=> {
+                    unreachable!();
                 }
             }
-            NodeEnum::Tr(_) => {}
-            NodeEnum::Td(_) => {}
-            NodeEnum::Div(_) => {
-                // TODO Border (un peu inutile)
-            }
-            NodeEnum::Unknow => {}
         }
+        vec.into_iter().collect()
     }
-    vec.into_iter().collect()
-}
 
-impl NodeElement {
     fn td(&self, current_y: f64) -> Vec<(LayerAttr, Line)> {
         let filter = |x: &NodeElement| {
             match &x.node {
@@ -108,6 +105,7 @@ impl NodeElement {
             }).collect();
         vec
     }
+
     fn tr(&self, mut current_y: f64) -> Vec<(LayerAttr, Line)> {
         let filter = |x: &NodeElement| {
             match &x.node {
@@ -135,7 +133,7 @@ pub fn create_pdf(template: &[NodeElement]) {
     let (doc, page1, layer1) = PdfDocument::new("printpdf graphics test", Mm(MAX_WIDTH), Mm(MAX_HEIGHT), "Layer 1");
     let current_layer = doc.get_page(page1).get_layer(layer1);
     let current_y = MAX_HEIGHT - MARGIN_HEIGHT;
-    for x in read_root_template_draw_rectangle(template, current_y) {
+    for x in NodeElement::read_root_template_draw_rectangle(template, current_y) {
         current_layer.set_fill_color(Color::Rgb(Rgb::new(x.0.fill_color.0,
                                                          x.0.fill_color.1,
                                                          x.0.fill_color.2,
@@ -147,5 +145,31 @@ pub fn create_pdf(template: &[NodeElement]) {
         current_layer.set_outline_thickness(x.0.stroke as f64);
         current_layer.add_shape(x.1);
     }
+
+    let text = "Lorem ipsum";
+    let text2 = "abcdefgh";
+
+    let font = doc.add_external_font(File::open("assets/fonts/RobotoMedium.ttf").unwrap()).unwrap();
+    current_layer.use_text(text, 48 as f64, Mm(200.0), Mm(200.0), &font);
+    current_layer.use_text(text2, 48 as f64, Mm(200.0), Mm(200.0), &font);
+
+    current_layer.begin_text_section();
+    current_layer.set_font(&font, 33 as f64);
+    current_layer.set_text_cursor(Mm(MARGIN_WIDTH + 5.0), Mm(MAX_HEIGHT - MARGIN_HEIGHT - TR_HEIGHT + 5.0));
+    current_layer.set_word_spacing(3000 as f64);
+    current_layer.set_character_spacing(10 as f64);
+    current_layer.set_text_rendering_mode(TextRenderingMode::Stroke);
+    current_layer.write_text(text.clone(), &font);
+    current_layer.end_text_section();
+
+    current_layer.begin_text_section();
+    current_layer.set_font(&font, 33 as f64);
+    current_layer.set_text_cursor(Mm(MARGIN_WIDTH + 5.0), Mm(MAX_HEIGHT - MARGIN_HEIGHT - (TR_HEIGHT * 2.0) + 5.0));
+    current_layer.set_word_spacing(3000 as f64);
+    current_layer.set_character_spacing(10 as f64);
+    current_layer.set_text_rendering_mode(TextRenderingMode::Stroke);
+    current_layer.write_text(text2.clone(), &font);
+    current_layer.end_text_section();
+
     doc.save(&mut BufWriter::new(File::create("target/hello.pdf").unwrap())).unwrap();
 }
