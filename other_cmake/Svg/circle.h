@@ -6,7 +6,6 @@
 #define ANTOOLS_EXE_CIRCLE_H
 
 #include <iostream>
-#include "../../include/antools.h"
 #include "svg.h"
 
 using namespace std;

@@ -27,7 +27,7 @@ add_subdirectory(other_cmake/SweInterface)
 
 IF (WITH_IOS)
     add_library(antools STATIC src/antools.cpp include/antools.h)
-    target_link_libraries(antools ${CMAKE_SOURCE_DIR}/rust/lib/generic/librantools.a)
+    #target_link_libraries(antools ${CMAKE_SOURCE_DIR}/rust/lib/generic/librantools.a)
 endif()
 IF (WITH_MACOS)
     include_directories(include)

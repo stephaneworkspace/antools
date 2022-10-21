@@ -22,7 +22,7 @@
 #include "swe08.h"
 #include "swe14.h"
 
-const char* theme_astral_svg(int year, int month, int day, int hour, int min, double lat, double lng, int gmt, const char* ephem_path) {
+extern "C" const char* theme_astral_svg(int year, int month, int day, int hour, int min, double lat, double lng, int gmt, const char* ephem_path) {
     // Charger le path des ephem, depuis swift il est a préciser, sinon ça utilise de ce répertoire
     string ephem_path_string;
     if (strcmp(ephem_path, "") == 0) {

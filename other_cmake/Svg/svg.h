@@ -6,6 +6,7 @@
 #define ANTOOLS_EXE_SVG_H
 
 #include <iostream>
+#include "struct.h"
 
 using namespace std;
 

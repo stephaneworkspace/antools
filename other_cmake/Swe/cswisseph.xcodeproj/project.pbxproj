@@ -9,7 +9,7 @@
 /* Begin PBXAggregateTarget section */
 		6480D792E2EF434288B439EA /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 4FCF46193B364F38873AB310 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 2D47F6D4C368466EA459B8E9 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				F667B010955D3D835AF7EDBB /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -20,13 +20,13 @@
 		};
 		DC73121302AB44CCB3EC9F48 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 07F8B152DEC44A8D89DC883A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = CC9D9D704E8D485CAB2FF43A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
 				81BB2DFAA49BF270F0A8E20C /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
-				5A7A75221D54400AAB7169CC /* PBXTargetDependency */,
-				33C3488FA0414AFAABC1FA98 /* PBXTargetDependency */,
+				8995B2107E114A068AAD1F3E /* PBXTargetDependency */,
+				2C124B06C1C24CDD8E1B7083 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -34,44 +34,44 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		093D3FDC506743AE9420FF15 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */ = {isa = PBXBuildFile; fileRef = 64489D7BAB3A40C08C9B4814 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */; };
-		0D523A3614E94C4C8E5752CE /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 5AF85CC1E63D4D65B93E8BBA /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */; };
-		309D46D88DAE42078B12DBB6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */ = {isa = PBXBuildFile; fileRef = BC8BFF35220B4EF4A2236BB2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */; };
-		37938CA9F3144BD9ABECD9B7 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.h */ = {isa = PBXBuildFile; fileRef = A0673386FE344531821BAEF8 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.h */; };
-		3F88364C77624CE0AB0DD666 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */ = {isa = PBXBuildFile; fileRef = 5A28C6879D6247649CCEF71E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */; };
-		44D0C64657EE4331A3EB1A26 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */ = {isa = PBXBuildFile; fileRef = 34DF4CD39FBB4DE7B14DAB6E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */; };
-		5049138C8A42462C9D9ACCE3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */ = {isa = PBXBuildFile; fileRef = 128E87E5CA154723BC02C14A /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */; };
-		7A82FF7F80964D0F8A301B9F /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */ = {isa = PBXBuildFile; fileRef = E90E35821D464321859F4469 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */; };
-		AD9C4039C90C46E295E3FA0A /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */ = {isa = PBXBuildFile; fileRef = AF0C3E4EE106487797CB5DDD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */; };
-		B1A5556CD3094B2A9325B275 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */ = {isa = PBXBuildFile; fileRef = E87955BF0D594864955A32FD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */; };
-		B6879FC61CCF4DB8A075E9E0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */ = {isa = PBXBuildFile; fileRef = 1258A2ABA5004411B658E3F3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */; };
-		D3940250F6A64F0DB223DCE9 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */ = {isa = PBXBuildFile; fileRef = 60A5A3DDC86A43B79AB607DD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */; };
-		DC70B45A693544DC9928DE7C /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */ = {isa = PBXBuildFile; fileRef = 496099BD141C4CA5A28A9E52 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */; };
+		28B0CBB4BBE9495187B95665 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */ = {isa = PBXBuildFile; fileRef = FDAC457C555547EBB550B088 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */; };
+		5B77F348734B412EBA3362FB /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */ = {isa = PBXBuildFile; fileRef = 514A1AE2E02B47B5915B5C4E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */; };
+		5F35CDFAE2F84095A6601F06 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */ = {isa = PBXBuildFile; fileRef = C7CDE305117F48F1BCF5CA64 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */; };
+		704D1425C22D44769CED3A75 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */ = {isa = PBXBuildFile; fileRef = 376E271DBC9C42C18F514DA5 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */; };
+		94BB6CC369174340BC14D65E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */ = {isa = PBXBuildFile; fileRef = 96F91BA3BEF5457297B71AC5 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */; };
+		9FFF3FA9613E40C9A3E2C793 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */ = {isa = PBXBuildFile; fileRef = 110028AFAAAD47ECA792A294 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */; };
+		AAEB3C0AB08248CD96318D79 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */ = {isa = PBXBuildFile; fileRef = 40A23C450AB2410389EA3D44 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */; };
+		B31348CC543F4B4E92E9B656 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A7F6B79E2C0B406497B8CBDA /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */; };
+		BDA6B9ECAFD846AD879246F1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */ = {isa = PBXBuildFile; fileRef = 21DACA5C839C47E1B6E3A842 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */; };
+		CBC284F145564FB6A37F35BD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */ = {isa = PBXBuildFile; fileRef = 589688213FF546518C18857B /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */; };
+		D7874C3E4E7341C3B105BC8E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.h */ = {isa = PBXBuildFile; fileRef = 2D712BB3EF304394A830CF7D /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.h */; };
+		E5EB334C29004040B879EB32 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */ = {isa = PBXBuildFile; fileRef = E6D4B91115C74C6190350A06 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */; };
+		E93EC4B466934EA39E1E71D6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */ = {isa = PBXBuildFile; fileRef = 03CCF9E8605B432592A2083D /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		49BD25AA05AA41918F78A2F7 /* MinSizeRel */ = {
+		0F471E600B0D4EA8A4BDDFEE /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
-		70A68C87E2274F099590073F /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		7722394F49ED4E6788FFD400 /* Release */ = {
+		2B4FFB9E9297443D8F81B69C /* Release */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Release;
 		};
-		8501FA66A82A43328A1622B7 /* RelWithDebInfo */ = {
+		2D90267338D34C9CA0C9C601 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		5988B376126C4ABF8FDB03F5 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -81,21 +81,21 @@
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		22CF0833821347E0A022D53C /* PBXContainerItemProxy */ = {
+		5D8F4AB07EE243E5A49B3BAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 875A7C4059CC4678897727DE /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D0DFD6B600B3464E835222A2;
 			remoteInfo = swe;
 		};
-		3E23DA938DCA4BF48291886F /* PBXContainerItemProxy */ = {
+		97D334833748457DB5A5B7EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 875A7C4059CC4678897727DE /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6480D792E2EF434288B439EA;
 			remoteInfo = ZERO_CHECK;
 		};
-		7607560295C14C7798CF04B3 /* PBXContainerItemProxy */ = {
+		B41BD8B074494424936D3439 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 875A7C4059CC4678897727DE /* Project object */;
 			proxyType = 1;
@@ -105,25 +105,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1258A2ABA5004411B658E3F3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swehel.c; path = swehel.c; sourceTree = SOURCE_ROOT; };
-		128E87E5CA154723BC02C14A /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swehouse.c; path = swehouse.c; sourceTree = SOURCE_ROOT; };
-		34DF4CD39FBB4DE7B14DAB6E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swedate.c; path = swedate.c; sourceTree = SOURCE_ROOT; };
-		496099BD141C4CA5A28A9E52 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swejpl.c; path = swejpl.c; sourceTree = SOURCE_ROOT; };
-		5A28C6879D6247649CCEF71E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swemmoon.c; path = swemmoon.c; sourceTree = SOURCE_ROOT; };
-		5AF85CC1E63D4D65B93E8BBA /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		60A5A3DDC86A43B79AB607DD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swepcalc.c; path = swepcalc.c; sourceTree = SOURCE_ROOT; };
-		64489D7BAB3A40C08C9B4814 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = data.cpp; path = ../Svg/data.cpp; sourceTree = SOURCE_ROOT; };
-		8D835997C1F34C19970A5AD9 /* swe */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libswe.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0673386FE344531821BAEF8 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = data.h; path = ../Svg/data.h; sourceTree = SOURCE_ROOT; };
-		AF0C3E4EE106487797CB5DDD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sweph.c; path = sweph.c; sourceTree = SOURCE_ROOT; };
-		BC8BFF35220B4EF4A2236BB2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swemplan.c; path = swemplan.c; sourceTree = SOURCE_ROOT; };
-		E87955BF0D594864955A32FD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swecl.c; path = swecl.c; sourceTree = SOURCE_ROOT; };
-		E90E35821D464321859F4469 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swephlib.c; path = swephlib.c; sourceTree = SOURCE_ROOT; };
-		F5984390FD674ECABD079FA2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		03CCF9E8605B432592A2083D /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swemmoon.c; path = swemmoon.c; sourceTree = SOURCE_ROOT; };
+		110028AFAAAD47ECA792A294 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swephlib.c; path = swephlib.c; sourceTree = SOURCE_ROOT; };
+		1E528EB6206E4BDFBFD3309F /* swe */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libswe.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DACA5C839C47E1B6E3A842 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swedate.c; path = swedate.c; sourceTree = SOURCE_ROOT; };
+		2D712BB3EF304394A830CF7D /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = data.h; path = ../Svg/data.h; sourceTree = SOURCE_ROOT; };
+		376E271DBC9C42C18F514DA5 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swejpl.c; path = swejpl.c; sourceTree = SOURCE_ROOT; };
+		40A23C450AB2410389EA3D44 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swepcalc.c; path = swepcalc.c; sourceTree = SOURCE_ROOT; };
+		514A1AE2E02B47B5915B5C4E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swehel.c; path = swehel.c; sourceTree = SOURCE_ROOT; };
+		589688213FF546518C18857B /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = data.cpp; path = ../Svg/data.cpp; sourceTree = SOURCE_ROOT; };
+		96F91BA3BEF5457297B71AC5 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swecl.c; path = swecl.c; sourceTree = SOURCE_ROOT; };
+		A236DE4BA5934F0489ED94F1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A7F6B79E2C0B406497B8CBDA /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C7CDE305117F48F1BCF5CA64 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sweph.c; path = sweph.c; sourceTree = SOURCE_ROOT; };
+		E6D4B91115C74C6190350A06 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swehouse.c; path = swehouse.c; sourceTree = SOURCE_ROOT; };
+		FDAC457C555547EBB550B088 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = swemplan.c; path = swemplan.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		83813336A13B4BB4917EF78C /* Frameworks */ = {
+		8592678B441F414E8C7507C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,81 +133,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03628035D24F4AE4A1B9A7FC /* swe */ = {
+		2B9A1C23CF1A4C16BB1CCADD /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
-				63D03963994F4BB89E5B4062 /* Source Files */,
-				A1676E536C6E4138B86D55A5 /* Header Files */,
-				5AF85CC1E63D4D65B93E8BBA /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */,
 			);
-			name = swe;
+			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		63D03963994F4BB89E5B4062 /* Source Files */ = {
+		4AED12C108E4408BAB32EB65 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64489D7BAB3A40C08C9B4814 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */,
-				E87955BF0D594864955A32FD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */,
-				34DF4CD39FBB4DE7B14DAB6E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */,
-				1258A2ABA5004411B658E3F3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */,
-				128E87E5CA154723BC02C14A /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */,
-				496099BD141C4CA5A28A9E52 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */,
-				5A28C6879D6247649CCEF71E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */,
-				BC8BFF35220B4EF4A2236BB2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */,
-				60A5A3DDC86A43B79AB607DD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */,
-				AF0C3E4EE106487797CB5DDD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */,
-				E90E35821D464321859F4469 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */,
+				1E528EB6206E4BDFBFD3309F /* swe */,
 			);
-			name = "Source Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		91E37B3323BA4CE7A5820A74 = {
+		5C094F1C55FF4A1AB346597E /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				03628035D24F4AE4A1B9A7FC /* swe */,
-				A80E331B238B48C99A6C43F4 /* ALL_BUILD */,
-				F5BDFE3A509A49368B57D383 /* Products */,
-				EB94C7CCC49C493E9EEDE8C9 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		A1676E536C6E4138B86D55A5 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				A0673386FE344531821BAEF8 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.h */,
+				2D712BB3EF304394A830CF7D /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
 		};
-		A80E331B238B48C99A6C43F4 /* ALL_BUILD */ = {
+		7055EDD54B774058AB760B54 /* swe */ = {
 			isa = PBXGroup;
 			children = (
-				F86004D2827F4EEF80790810 /* CMake Rules */,
-				F5984390FD674ECABD079FA2 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */,
+				EA8BF4FC25D34710A3C21A94 /* Source Files */,
+				5C094F1C55FF4A1AB346597E /* Header Files */,
+				A7F6B79E2C0B406497B8CBDA /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */,
 			);
-			name = ALL_BUILD;
+			name = swe;
 			sourceTree = "<group>";
 		};
-		EB94C7CCC49C493E9EEDE8C9 /* Frameworks */ = {
+		82817BEF287D45F19B8977B4 = {
+			isa = PBXGroup;
+			children = (
+				7055EDD54B774058AB760B54 /* swe */,
+				E2FFE7AD459A43D3B7E133FD /* ALL_BUILD */,
+				4AED12C108E4408BAB32EB65 /* Products */,
+				98C158ED218749F4AE445EC3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		98C158ED218749F4AE445EC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F5BDFE3A509A49368B57D383 /* Products */ = {
+		E2FFE7AD459A43D3B7E133FD /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				8D835997C1F34C19970A5AD9 /* swe */,
+				2B9A1C23CF1A4C16BB1CCADD /* CMake Rules */,
+				A236DE4BA5934F0489ED94F1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/CMakeLists.txt */,
 			);
-			name = Products;
+			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		F86004D2827F4EEF80790810 /* CMake Rules */ = {
+		EA8BF4FC25D34710A3C21A94 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				589688213FF546518C18857B /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */,
+				96F91BA3BEF5457297B71AC5 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */,
+				21DACA5C839C47E1B6E3A842 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */,
+				514A1AE2E02B47B5915B5C4E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */,
+				E6D4B91115C74C6190350A06 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */,
+				376E271DBC9C42C18F514DA5 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */,
+				03CCF9E8605B432592A2083D /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */,
+				FDAC457C555547EBB550B088 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */,
+				40A23C450AB2410389EA3D44 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */,
+				C7CDE305117F48F1BCF5CA64 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */,
+				110028AFAAAD47ECA792A294 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */,
 			);
-			name = "CMake Rules";
+			name = "Source Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,19 +215,19 @@
 /* Begin PBXNativeTarget section */
 		D0DFD6B600B3464E835222A2 /* swe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A2AA46B3ADFD454AB524E065 /* Build configuration list for PBXNativeTarget "swe" */;
+			buildConfigurationList = 1895B77D788C4FD08CEA0A5B /* Build configuration list for PBXNativeTarget "swe" */;
 			buildPhases = (
-				B1BF590D25934942B884E20E /* Sources */,
-				83813336A13B4BB4917EF78C /* Frameworks */,
+				B379452503484103BDB9964C /* Sources */,
+				8592678B441F414E8C7507C6 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				056CAC0A0BC141C2957175B1 /* PBXTargetDependency */,
+				642AFBE30E79421BAE2A1D74 /* PBXTargetDependency */,
 			);
 			name = swe;
 			productName = swe;
-			productReference = 8D835997C1F34C19970A5AD9 /* swe */;
+			productReference = 1E528EB6206E4BDFBFD3309F /* swe */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -239,18 +239,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1400;
 			};
-			buildConfigurationList = BDE49462CFF546868EECBCFF /* Build configuration list for PBXProject "cswisseph" */;
+			buildConfigurationList = 017DFE2F01AB4C828D3B599A /* Build configuration list for PBXProject "cswisseph" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				70A68C87E2274F099590073F /* Debug */,
-				7722394F49ED4E6788FFD400 /* Release */,
-				49BD25AA05AA41918F78A2F7 /* MinSizeRel */,
-				8501FA66A82A43328A1622B7 /* RelWithDebInfo */,
+				2D90267338D34C9CA0C9C601 /* Debug */,
+				2B4FFB9E9297443D8F81B69C /* Release */,
+				0F471E600B0D4EA8A4BDDFEE /* MinSizeRel */,
+				5988B376126C4ABF8FDB03F5 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 91E37B3323BA4CE7A5820A74;
+			mainGroup = 82817BEF287D45F19B8977B4;
 			projectDirPath = .;
 			projectRoot = "";
 			targets = (
@@ -361,46 +361,46 @@ fi
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B1BF590D25934942B884E20E /* Sources */ = {
+		B379452503484103BDB9964C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				093D3FDC506743AE9420FF15 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */,
-				B1A5556CD3094B2A9325B275 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */,
-				44D0C64657EE4331A3EB1A26 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */,
-				B6879FC61CCF4DB8A075E9E0 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */,
-				5049138C8A42462C9D9ACCE3 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */,
-				DC70B45A693544DC9928DE7C /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */,
-				3F88364C77624CE0AB0DD666 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */,
-				309D46D88DAE42078B12DBB6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */,
-				D3940250F6A64F0DB223DCE9 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */,
-				AD9C4039C90C46E295E3FA0A /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */,
-				7A82FF7F80964D0F8A301B9F /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */,
+				CBC284F145564FB6A37F35BD /* /Users/stephane/Code/CL/C++/antools/other_cmake/Svg/data.cpp */,
+				94BB6CC369174340BC14D65E /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swecl.c */,
+				BDA6B9ECAFD846AD879246F1 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swedate.c */,
+				5B77F348734B412EBA3362FB /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehel.c */,
+				E5EB334C29004040B879EB32 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swehouse.c */,
+				704D1425C22D44769CED3A75 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swejpl.c */,
+				E93EC4B466934EA39E1E71D6 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemmoon.c */,
+				28B0CBB4BBE9495187B95665 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swemplan.c */,
+				AAEB3C0AB08248CD96318D79 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swepcalc.c */,
+				5F35CDFAE2F84095A6601F06 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/sweph.c */,
+				9FFF3FA9613E40C9A3E2C793 /* /Users/stephane/Code/CL/C++/antools/other_cmake/Swe/swephlib.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		056CAC0A0BC141C2957175B1 /* PBXTargetDependency */ = {
+		2C124B06C1C24CDD8E1B7083 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6480D792E2EF434288B439EA /* ZERO_CHECK */;
-			targetProxy = 7607560295C14C7798CF04B3 /* PBXContainerItemProxy */;
+			targetProxy = 97D334833748457DB5A5B7EF /* PBXContainerItemProxy */;
 		};
-		33C3488FA0414AFAABC1FA98 /* PBXTargetDependency */ = {
+		642AFBE30E79421BAE2A1D74 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6480D792E2EF434288B439EA /* ZERO_CHECK */;
-			targetProxy = 3E23DA938DCA4BF48291886F /* PBXContainerItemProxy */;
+			targetProxy = B41BD8B074494424936D3439 /* PBXContainerItemProxy */;
 		};
-		5A7A75221D54400AAB7169CC /* PBXTargetDependency */ = {
+		8995B2107E114A068AAD1F3E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0DFD6B600B3464E835222A2 /* swe */;
-			targetProxy = 22CF0833821347E0A022D53C /* PBXContainerItemProxy */;
+			targetProxy = 5D8F4AB07EE243E5A49B3BAE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05F72323B4104A2198BD5B74 /* MinSizeRel */ = {
+		26CCB92FDC204F36B7876B75 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -411,130 +411,7 @@ fi
 			};
 			name = MinSizeRel;
 		};
-		07A09FA9DB96460A96A2A9FE /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		11944B8D3FEE41F4A63D1832 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/build";
-			};
-			name = Release;
-		};
-		3152FB2C77634FC5AAC149E5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/.","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = ("    -DNDEBUG ","$(inherited)");
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++2a' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = swe;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		3A94119B3B944D7EA8A5A3CF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		47CF2F170DD64FF388C2C955 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		501F84C3FF8D4AFB87987AC9 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/.","$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = ("       -DNDEBUG ","$(inherited)");
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++2a' ";
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = swe;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		7C3B513AC36440739DFD0317 /* Debug */ = {
+		3A27DD26ED84477C94CA55CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -560,7 +437,33 @@ fi
 			};
 			name = Debug;
 		};
-		9542EE7756BA44D0B04E22FC /* Debug */ = {
+		43409528CD924049AE3FE273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/.","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = ("    -DNDEBUG ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++2a' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = swe;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		46BF1AD535DD4F5D8E5784E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -580,109 +483,7 @@ fi
 			};
 			name = Debug;
 		};
-		95F995B9A91E43AB8E7B958E /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		B96F303E386D47F58020C482 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		C58E5FA8EB094BC382CDDC39 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/build";
-			};
-			name = RelWithDebInfo;
-		};
-		EA7BA706A8984E139C04A551 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/build";
-			};
-			name = Debug;
-		};
-		F3B5448825E74F93AC092540 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		F417CFEE89EA44E0A21DB1BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		F42B9EE01BAA44E9B423313B /* MinSizeRel */ = {
+		4DE1CCA6474C41DAB3124C1F /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -708,49 +509,248 @@ fi
 			};
 			name = MinSizeRel;
 		};
+		51275C7B006F4D2599595DE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/build";
+			};
+			name = Debug;
+		};
+		581A8D6E88384654BFF85605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		5EAF0D40620041F09FDCA8B3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		64B4488A28204BCD979AB849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		6695C73571AC4572B18F01D3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/.","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = ("       -DNDEBUG ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++2a' ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = swe;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		8CE5A6C9A1914366B056843F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9A320A2DDD2D4E44AC638051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		A9E49F8CBA1F4890883FBD47 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		AEE2C3819FC44973A2369928 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/build";
+			};
+			name = RelWithDebInfo;
+		};
+		CBBAA9532CEC4428BD999D30 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		EF0C6EF2CA3744FA9BC5FD49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/stephane/Code/CL/C++/antools/other_cmake/Swe/build";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07F8B152DEC44A8D89DC883A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		017DFE2F01AB4C828D3B599A /* Build configuration list for PBXProject "cswisseph" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9542EE7756BA44D0B04E22FC /* Debug */,
-				B96F303E386D47F58020C482 /* Release */,
-				95F995B9A91E43AB8E7B958E /* MinSizeRel */,
-				07A09FA9DB96460A96A2A9FE /* RelWithDebInfo */,
+				51275C7B006F4D2599595DE5 /* Debug */,
+				EF0C6EF2CA3744FA9BC5FD49 /* Release */,
+				26CCB92FDC204F36B7876B75 /* MinSizeRel */,
+				AEE2C3819FC44973A2369928 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		4FCF46193B364F38873AB310 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		1895B77D788C4FD08CEA0A5B /* Build configuration list for PBXNativeTarget "swe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A94119B3B944D7EA8A5A3CF /* Debug */,
-				F417CFEE89EA44E0A21DB1BE /* Release */,
-				F3B5448825E74F93AC092540 /* MinSizeRel */,
-				47CF2F170DD64FF388C2C955 /* RelWithDebInfo */,
+				3A27DD26ED84477C94CA55CF /* Debug */,
+				43409528CD924049AE3FE273 /* Release */,
+				4DE1CCA6474C41DAB3124C1F /* MinSizeRel */,
+				6695C73571AC4572B18F01D3 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		A2AA46B3ADFD454AB524E065 /* Build configuration list for PBXNativeTarget "swe" */ = {
+		2D47F6D4C368466EA459B8E9 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C3B513AC36440739DFD0317 /* Debug */,
-				3152FB2C77634FC5AAC149E5 /* Release */,
-				F42B9EE01BAA44E9B423313B /* MinSizeRel */,
-				501F84C3FF8D4AFB87987AC9 /* RelWithDebInfo */,
+				64B4488A28204BCD979AB849 /* Debug */,
+				581A8D6E88384654BFF85605 /* Release */,
+				8CE5A6C9A1914366B056843F /* MinSizeRel */,
+				A9E49F8CBA1F4890883FBD47 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		BDE49462CFF546868EECBCFF /* Build configuration list for PBXProject "cswisseph" */ = {
+		CC9D9D704E8D485CAB2FF43A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA7BA706A8984E139C04A551 /* Debug */,
-				11944B8D3FEE41F4A63D1832 /* Release */,
-				05F72323B4104A2198BD5B74 /* MinSizeRel */,
-				C58E5FA8EB094BC382CDDC39 /* RelWithDebInfo */,
+				46BF1AD535DD4F5D8E5784E4 /* Debug */,
+				9A320A2DDD2D4E44AC638051 /* Release */,
+				CBBAA9532CEC4428BD999D30 /* MinSizeRel */,
+				5EAF0D40620041F09FDCA8B3 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

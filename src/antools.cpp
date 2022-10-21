@@ -1,6 +1,6 @@
 #include "../include/antools.h"
 
-extern "C" B64 theme_astral(int year,
+extern "C" BB64 theme_astral(int year,
                             int month,
                             int day,
                             int hour,
@@ -9,7 +9,7 @@ extern "C" B64 theme_astral(int year,
                             double lng,
                             int tz,
                             const char* ephem_path) {
-    B64 res;
+    BB64 res;
     res.b_64 = theme_astral_svg(year, month, day, hour, min, lat, lng, tz, ephem_path);
     return res;
 }
