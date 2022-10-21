@@ -12,6 +12,13 @@ mod tests {
     }
 
     #[test]
+   /* fn convert_svg() {
+        let cstring = CString::new("assets/svg/mysvg.svg").unwrap();
+        let file = cstring.as_ptr();
+        create_png_ff_nsvg(file).expect("Impossible de convertir");
+    }*/
+
+    #[test]
     fn svg_path_data_works() {
         let data = Data::new()
             .move_to((10, 10))

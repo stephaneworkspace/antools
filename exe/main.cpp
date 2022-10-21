@@ -4,6 +4,9 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include <assert.h>
+#include <stdio.h>
+#include <string.h>
 #include "../include/antools.h"
 #include "../other_cmake/SweInterface/base64.h"
 #include "../other_cmake/Svg/circle.h"
@@ -15,38 +18,40 @@
 using namespace std;
 
 int main() {
-    /*
     // Document
-    SDocument doc = SDocument(50, 50);
+    Document doc = Document(50, 50);
+    Document doc2 = Document(50, 50);
 
     // Data
-    SFill fill;
+    Fill fill;
     fill.fill = "none";
-    SStroke stroke;
+    Stroke stroke;
     stroke.stroke = "black";
     stroke.stroke_width = 3;
-    SData data = SData(fill, stroke);
+    /*
+    Data data = Data(fill, stroke);
     data.move_to(10.0,10.0);
     data.line_by(0.50,50.0);
     data.line_by(50,0);
     data.line_by(0,-50);
     data.close_by();
     doc << data.generate();
+*/
+    // Circle
+    //Circle circle = Circle(fill, stroke);
+    //doc << circle.generate(10,20,30);
 
     // Circle
-    SCircle circle = SCircle(fill, stroke);
-    doc << circle.generate(10,20,30);
-
-    // Circle
-    SLine line = SLine(stroke);
-    doc << line.generate(10,20,30,40);
+    //Line line = Line(stroke);
+    //doc << line.generate(10,20,30,40);
 
     // Image
-    doc << SImage::generate(10,20,30,40,"data:image/svg+xml;base64,");
+    //doc << Image::generate(10,20,30,40,"data:image/svg+xml;base64,");
 
     // Document
     cout << doc.generate() << endl;
-    */
+    cout << doc2.generate() << endl;
+    assert(doc.generate().compare(doc2.generate()) == 0);
 
     cout << "Hello, World!" << endl;
 
