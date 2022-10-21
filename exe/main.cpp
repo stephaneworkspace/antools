@@ -18,9 +18,9 @@
 using namespace std;
 
 int main() {
+    /*
     // Document
     Document doc = Document(50, 50);
-    Document doc2 = Document(50, 50);
 
     // Data
     Fill fill;
@@ -28,7 +28,7 @@ int main() {
     Stroke stroke;
     stroke.stroke = "black";
     stroke.stroke_width = 3;
-    /*
+
     Data data = Data(fill, stroke);
     data.move_to(10.0,10.0);
     data.line_by(0.50,50.0);
@@ -36,22 +36,22 @@ int main() {
     data.line_by(0,-50);
     data.close_by();
     doc << data.generate();
-*/
-    // Circle
-    //Circle circle = Circle(fill, stroke);
-    //doc << circle.generate(10,20,30);
 
     // Circle
-    //Line line = Line(stroke);
-    //doc << line.generate(10,20,30,40);
+    Circle circle = Circle(fill, stroke);
+    doc << circle.generate(10,20,30);
+
+    // Circle
+    Line line = Line(stroke);
+    doc << line.generate(10,20,30,40);
 
     // Image
-    //doc << Image::generate(10,20,30,40,"data:image/svg+xml;base64,");
+    doc << Image::generate(10,20,30,40,"data:image/svg+xml;base64,");
 
     // Document
     cout << doc.generate() << endl;
-    cout << doc2.generate() << endl;
-    assert(doc.generate().compare(doc2.generate()) == 0);
+    //assert(doc.generate().compare(doc2.generate()) == 0);
+     */
 
     cout << "Hello, World!" << endl;
 

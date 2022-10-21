@@ -20,19 +20,11 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/rantools/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="avancée">
+    <list default="true" id="9c3cf7a4-90e9-42b0-a4f1-0fb8e4ff43a2" name="Changes" comment="svg tout en c++">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/antools" beforeDir="false" afterPath="$PROJECT_DIR$/antools" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exe/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/exe/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/Svg.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/circle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/circle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/document.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/document.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/image.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/line.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Swe/cswisseph.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/SweInterface/SweInterface.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust/rantools/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/rantools/src/tests.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/data.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_cmake/Svg/data.h" beforeDir="false" afterPath="$PROJECT_DIR$/other_cmake/Svg/data.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,14 +342,7 @@
       <workItem from="1665398596883" duration="40000" />
       <workItem from="1665512772687" duration="1129000" />
       <workItem from="1665514447220" duration="556000" />
-      <workItem from="1666352283138" duration="3302000" />
-    </task>
-    <task id="LOCAL-00041" summary="renomage pour eviter des conflits">
-      <created>1664876648910</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1664876648910</updated>
+      <workItem from="1666352283138" duration="4460000" />
     </task>
     <task id="LOCAL-00042" summary="image + document avec test unitaire">
       <created>1664880268643</created>
@@ -695,7 +680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665259270591</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="svg tout en c++">
+      <created>1666356069921</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1666356069921</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,7 +705,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="renomage pour eviter des conflits" />
     <MESSAGE value="image + document avec test unitaire" />
     <MESSAGE value="image + document avec test unitaire (petites corrections)" />
     <MESSAGE value="ajout classe pour les images" />
@@ -738,6 +729,7 @@
     <MESSAGE value="clean up" />
     <MESSAGE value="better lib" />
     <MESSAGE value="avancée" />
-    <option name="LAST_COMMIT_MESSAGE" value="avancée" />
+    <MESSAGE value="svg tout en c++" />
+    <option name="LAST_COMMIT_MESSAGE" value="svg tout en c++" />
   </component>
 </project>

@@ -29,6 +29,7 @@ private:
     SvgData set_data(char c, int point_size);
     SvgPoint set_point(string point_string, int pos);
     void set_command(char c, string s);
+    string round(float var);
 public:
     Data(Fill fill, Stroke stroke);
     void move_to(float x, float y);

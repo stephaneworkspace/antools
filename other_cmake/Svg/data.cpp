@@ -59,6 +59,21 @@ void Data::set_command(char c, string s) {
     idx_point += size;
 }
 
+string Data::round(float var){
+    // we use array of chars to store number
+    // as a string.
+    char str[40];
+
+    // Print in string the value of var
+    // with two decimal point
+    sprintf(str, "%.1f", var);
+
+    // scan string value in var
+    sscanf(str, "%f", &var);
+
+    return str;
+}
+
 Data::Data(Fill fill, Stroke stroke) {
     idx_data = 0;
     idx_point = 0;
@@ -98,12 +113,46 @@ void Data::close_by() {
     vec_data.push_back(Data::set_data(c, 0));
     idx_data++;
 }
-
+/*
 string Data::generate() {
     SvgData* data = vec_data.data();
     SvgPoint* point = vec_point.data();
     const char* res = svg_path_data(data, point, idx_data, idx_point, properties);
     string s;
     s.assign(res);
+    return s;
+}*/
+
+string Data::generate() {
+    string fill;
+    fill.assign(properties.fill.fill);
+    string stroke;
+    stroke.assign(properties.stroke.stroke);
+    string d;
+
+    int l = 0;
+    for (int i = 0; i < idx_data; ++i) {
+        if (l > 0) {
+            d += " ";
+        }
+        d += vec_data[i].data;
+        int k = 0;
+        for (int j = 0; j < idx_point; ++j) {
+            if (vec_point[j].point_idx == vec_data[i].point_idx) {
+                if (k > 0) {
+                    d += ",";
+                }
+                if ((int) vec_point[j].point == vec_point[j].point ) {
+                    d += to_string((int) vec_point[j].point);
+                } else {
+                    d += Data::round(vec_point[j].point);
+                }
+                k++;
+            }
+        }
+        l++;
+    }
+
+    string s = "<path d=\"" + d + "\" fill=\"" + fill + "\" stroke=\""+ stroke +"\" stroke-width=\""+ to_string((int) properties.stroke.stroke_width) +"\"/>";
     return s;
 }
